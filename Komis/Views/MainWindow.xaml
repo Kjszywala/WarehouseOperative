@@ -1,0 +1,77 @@
+﻿<Window x:Class="Komis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Komis"
+        mc:Ignorable="d"
+        Title="Komis Samochodowy" Height="450" Width="800"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Margin="3">
+            <MenuItem Header="_Plik"/>
+            <MenuItem Header="_Magazyn">
+                <MenuItem Header="Towary">
+                    <MenuItem Header="Wszystkie"/>
+                    <MenuItem Header="Dodawanie"/>
+                </MenuItem>
+                <MenuItem Header="Przyjecie zewnetrzne (PZ)"/>
+                <MenuItem Header="Wydanie zewnetrzne (WZ)"/>
+            </MenuItem>
+            <MenuItem Header="Program"/>
+        </Menu>
+        <ToolBar Grid.Column="0" Grid.Row="1">
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <Separator/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <Separator/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+        </ToolBar>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0">
+                <HeaderedContentControl 
+                    Header="Operacje" 
+                    Background="Aqua"
+                    Margin="3"
+                    />
+                <!--Content="{Binding Path=Commands}"
+                    ContentTemplate="{StaticResource CommandsTemplate}"
+                    Style="{StaticResource MainHCCStyle}"-->
+            </Border>
+            <Border Grid.Column="1">
+                <HeaderedContentControl 
+                    Header="Przestrzen robocza" 
+                    Background="Aqua"
+                    Margin="3"
+                    />
+                <!--Content="{Binding Path=Workspaces}"
+                    ContentTemplate="{StaticResource WorkspacesTemplate}"
+                    Style="{StaticResource MainHCCStyle}"-->
+            </Border>
+        </Grid>
+        <StatusBar Grid.Row="3" Margin="3">
+            <StatusBarItem>
+                <TextBlock>Kamil Szywala</TextBlock>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock>WSB-NLU</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
