@@ -18,12 +18,12 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" Grid.Column="0" Margin="3">
-            <MenuItem Header="_Plik"/>
-            <MenuItem Header="_Magazyn">
-                <MenuItem Header="Towary">
-                    <MenuItem Header="Wszystkie"/>
-                    <MenuItem Header="Dodawanie"/>
+        <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
+            <MenuItem Header="_File"/>
+            <MenuItem Header="Store">
+                <MenuItem Header="Products">
+                    <MenuItem Header="All"/>
+                    <MenuItem Header="Add"/>
                 </MenuItem>
                 <MenuItem Header="Przyjecie zewnetrzne (PZ)"/>
                 <MenuItem Header="Wydanie zewnetrzne (WZ)"/>
@@ -50,7 +50,7 @@
             </Grid.ColumnDefinitions>
             <Border Grid.Column="0">
                 <HeaderedContentControl 
-                    Header="Operacje" 
+                    Header="Operations" 
                     Background="Aqua"
                     Margin="3"
                     Content="{Binding Path=Commands}"
@@ -61,7 +61,7 @@
             </Border>
             <Border Grid.Column="1">
                 <HeaderedContentControl 
-                    Header="Przestrzen robocza" 
+                    Header="Workspace" 
                     Background="Aqua"
                     Margin="3"
                     Content="{Binding Path=Workspaces}"
@@ -71,7 +71,7 @@
                 
             </Border>
         </Grid>
-        <StatusBar Grid.Row="3" Margin="3">
+        <StatusBar Grid.Row="3" Margin="3" Background="White">
             <StatusBarItem>
                 <TextBlock>Kamil Szywala</TextBlock>
             </StatusBarItem>
