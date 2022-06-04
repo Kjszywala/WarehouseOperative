@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:Komis"
         mc:Ignorable="d"
         Title="Komis Samochodowy" Height="450" Width="800"
-        WindowState="Maximized">
+        WindowState="Maximized"
+        >
+    <Window.Resources>
+        <ResourceDictionary Source="MainWindowResources.xaml"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -49,20 +53,22 @@
                     Header="Operacje" 
                     Background="Aqua"
                     Margin="3"
-                    />
-                <!--Content="{Binding Path=Commands}"
+                    Content="{Binding Path=Commands}"
                     ContentTemplate="{StaticResource CommandsTemplate}"
-                    Style="{StaticResource MainHCCStyle}"-->
+                    Style="{StaticResource MainHCCStyle}"
+                    />
+                
             </Border>
             <Border Grid.Column="1">
                 <HeaderedContentControl 
                     Header="Przestrzen robocza" 
                     Background="Aqua"
                     Margin="3"
-                    />
-                <!--Content="{Binding Path=Workspaces}"
+                    Content="{Binding Path=Workspaces}"
                     ContentTemplate="{StaticResource WorkspacesTemplate}"
-                    Style="{StaticResource MainHCCStyle}"-->
+                    Style="{StaticResource MainHCCStyle}"
+                    />
+                
             </Border>
         </Grid>
         <StatusBar Grid.Row="3" Margin="3">
