@@ -44,8 +44,8 @@ namespace KomisSamochodowy.ViewModels
             return new List<CommandViewModel>
             {
                 // Creat buttons
-                new CommandViewModel("Towary", new BaseCommand(showAllTowar)),
-                new CommandViewModel("Nowy Towar", new BaseCommand(createTowar))
+                new CommandViewModel("Products", new BaseCommand(showAllTowar)),
+                new CommandViewModel("New Product", new BaseCommand(createTowar))
             };
         }
         #endregion
