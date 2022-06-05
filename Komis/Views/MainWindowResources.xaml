@@ -82,16 +82,35 @@
         <ItemsControl IsTabStop="False" ItemsSource="{Binding}" Margin="6,2">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    
-                    <Button Command="{Binding Path=Command}" HorizontalAlignment="Center" Background="Blue" Foreground="White" Content="{Binding Path=DisplayName}">          
-                    
+                    <Button Command="{Binding Path=Command}" HorizontalAlignment="Center" Content="{Binding Path=DisplayName}" Background="Blue" Foreground="White">
                     </Button>
-                    
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
     </DataTemplate>
 
+    <!--<Style x:Key="NewMenuButtonStyle" TargetType="{x:Type Button}">
+        
+    </Style>
+    
+    <DataTemplate x:Key="NewMenuTemplate">
+        <ItemsControl IsTabStop="False" ItemsSource="{Binding}" Margin="0,6,0,0" Background="Brown">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Style="{StaticResource NewMenuButtonStyle}" Command="{Binding Path=Command}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image>
+                                    
+                                </Image>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DataTemplate>-->
+    
     <Style TargetType="Button">
         <Style.Resources>
             <Style TargetType="Border">
@@ -99,8 +118,10 @@
             </Style>
         </Style.Resources>
         <Setter Property="Height" Value="30"/>
-        <Setter Property="Width" Value="80"/>
+        <Setter Property="Width" Value="100"/>
         <Setter Property="Margin" Value="10"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Bold"/>
     </Style>
 
     <!-- 
@@ -142,5 +163,12 @@
       Margin="4"
       />
     </DataTemplate>
+    
+    <!--This is a status bar at the bottom.-->
+    
+    <Style x:Key="StatusBarStyle" TargetType="{x:Type StatusBar}">
+        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
     
 </ResourceDictionary>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Komis"
         mc:Ignorable="d"
-        Title="Komis Samochodowy" Height="450" Width="800"
+        Title="WareHouse" Height="450" Width="800"
         WindowState="Maximized"
         >
     <Window.Resources>
@@ -30,18 +30,30 @@
             </MenuItem>
             <MenuItem Header="Program"/>
         </Menu>
-        <ToolBar Grid.Column="0" Grid.Row="1">
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+        <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
+                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file.png" Stretch="Fill"/>
+            </ToggleButton>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
+                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file-document-multiple.png" Stretch="Fill"/>
+            </ToggleButton>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
+                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/archive.png" Stretch="Fill"/>
+            </ToggleButton>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
+                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/inbox-multiple.png" Stretch="Fill"/>
+            </ToggleButton>
             <Separator/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
+                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file.png" Stretch="Fill"/>
+            </ToggleButton>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
+                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file.png" Stretch="Fill"/>
+            </ToggleButton>
             <Separator/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2"/>
+            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
+                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file.png" Stretch="Fill"/>
+            </ToggleButton>
         </ToolBar>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -71,11 +83,11 @@
                 
             </Border>
         </Grid>
-        <StatusBar Grid.Row="3" Margin="3" Background="White">
+        <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">
             <StatusBarItem>
                 <TextBlock>Kamil Szywala</TextBlock>
             </StatusBarItem>
-            <StatusBarItem HorizontalAlignment="Right">
+            <StatusBarItem HorizontalAlignment="Right" >
                 <TextBlock>WSB-NLU</TextBlock>
             </StatusBarItem>
         </StatusBar>
