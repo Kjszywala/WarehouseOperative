@@ -14,12 +14,24 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
-            <MenuItem Header="_File"/>
+            <MenuItem Header="_File">
+                <MenuItem Header="New">
+                    <MenuItem Header="New Invoice"/>
+                    <MenuItem Header="New Product"/>
+                </MenuItem>
+                <MenuItem Header="Open">
+                    <MenuItem Header="Invoice"/>
+                    <MenuItem Header="Product"/>
+                </MenuItem>
+                <MenuItem Header="Save"/>
+                <MenuItem Header="Load"/>
+                <MenuItem Header="Exit"/>
+            </MenuItem>
             <MenuItem Header="Store">
                 <MenuItem Header="Products">
                     <MenuItem Header="All"/>
@@ -28,31 +40,54 @@
                 <MenuItem Header="Przyjecie zewnetrzne (PZ)"/>
                 <MenuItem Header="Wydanie zewnetrzne (WZ)"/>
             </MenuItem>
-            <MenuItem Header="Program"/>
+            
         </Menu>
         <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
-                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file.png" Stretch="Fill"/>
+            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
+                    <TextBlock Height="10" Text="New IV" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
-                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file-document-multiple.png" Stretch="Fill"/>
+            <ToggleButton Width="40" Height="50" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/invoices.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="Invoices" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
-                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/archive.png" Stretch="Fill"/>
+            <ToggleButton Width="40" Height="50" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/product.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="New PD" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
-                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/inbox-multiple.png" Stretch="Fill"/>
+            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/products.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="All PD" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
             </ToggleButton>
             <Separator/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
-                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file.png" Stretch="Fill"/>
+            <Separator/>
+            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/print.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="Print" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
-                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file.png" Stretch="Fill"/>
+            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/save.png" Stretch="Fill" IsEnabled="True"/>
+                    <TextBlock Height="10" Text="Save" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
             </ToggleButton>
             <Separator/>
-            <ToggleButton Width="32" Height="32" Background="Transparent" Margin="2">
-                <Image Height="24" Source="pack://application:,,,/Views/Content/Icons/file.png" Stretch="Fill"/>
+            <Separator/>
+            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/preview.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="Preview" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
             </ToggleButton>
         </ToolBar>
         <Grid Grid.Row="2">
@@ -88,7 +123,7 @@
                 <TextBlock>Kamil Szywala</TextBlock>
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right" >
-                <TextBlock>WSB-NLU</TextBlock>
+                <ProgressBar Width="100" Height="15" Value="70" Margin="1,4,0,1"/>
             </StatusBarItem>
         </StatusBar>
     </Grid>

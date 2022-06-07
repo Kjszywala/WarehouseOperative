@@ -20,7 +20,7 @@
             <Setter.Value>
                 <DataTemplate>
                     <Border 
-            Background="Blue" 
+            Background="Gray" 
             BorderBrush="LightGray" 
             BorderThickness="1" 
             CornerRadius="5" 
@@ -167,7 +167,7 @@
     <!--This is a status bar at the bottom.-->
     
     <Style x:Key="StatusBarStyle" TargetType="{x:Type StatusBar}">
-        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="Background" Value="Gray"/>
         <Setter Property="Foreground" Value="White"/>
     </Style>
     
