@@ -38,7 +38,7 @@
                     <MenuItem Header="Add"/>
                 </MenuItem>
             </MenuItem>
-            
+
         </Menu>
         <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
             <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
@@ -93,6 +93,7 @@
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
             <Border Grid.Column="0">
                 <HeaderedContentControl 
                     Header="Operations" 
@@ -103,8 +104,8 @@
                     Style="{StaticResource MainHCCStyle}"
                     />
                 
-            </Border>
-            <Border Grid.Column="1">
+                </Border>
+                <Border Grid.Column="1">
                 <HeaderedContentControl 
                     Header="Workspace" 
                     Background="Aqua"
@@ -113,8 +114,8 @@
                     ContentTemplate="{StaticResource WorkspacesTemplate}"
                     Style="{StaticResource MainHCCStyle}"
                     />
-                
-            </Border>
+                </Border>
+
         </Grid>
         <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">
             <StatusBarItem>

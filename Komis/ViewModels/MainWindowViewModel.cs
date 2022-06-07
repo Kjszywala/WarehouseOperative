@@ -48,7 +48,9 @@ namespace KomisSamochodowy.ViewModels
                 new CommandViewModel("New Product", new BaseCommand(createTowar)),
                 new CommandViewModel("Products", new BaseCommand(showAllTowar)),
                 new CommandViewModel("New Invoice", new BaseCommand(createInvoice)),
-                new CommandViewModel("Invoices", new BaseCommand(showAllInvoices))
+                new CommandViewModel("Invoices", new BaseCommand(showAllInvoices)),
+                new CommandViewModel("Add to database", new BaseCommand(addToDatabase)),
+                new CommandViewModel("Invoices", new BaseCommand(getDatabase))
             };
         }
         #endregion
@@ -88,6 +90,18 @@ namespace KomisSamochodowy.ViewModels
         #region HelpFunctions
         // This is function to open new bookmark.
         // This method each time it is called creating new bookmark.
+        private void getDatabase()
+        {
+            DatabaseViewModel database = new DatabaseViewModel();
+            this._Workspaces.Add(database);
+            this.setActiveWorkspace(database);
+        }
+        private void addToDatabase()
+        {
+            AddToDatabaseViewModel database = new AddToDatabaseViewModel();
+            this._Workspaces.Add(database);
+            this.setActiveWorkspace(database);
+        }
         private void createInvoice()
         {
             NewInvoiceViewModel newInvoiceViewModel = new NewInvoiceViewModel();
@@ -102,6 +116,7 @@ namespace KomisSamochodowy.ViewModels
             this._Workspaces.Add(workspace);
             this.setActiveWorkspace(workspace);
         }
+
         // This is function to open bookmark with all bookmarks.
         // This method when is called checks if bookmark exist, if exist making 
         // this bookmark active, if not creating a new one.
@@ -118,6 +133,7 @@ namespace KomisSamochodowy.ViewModels
             // Bookmark activation.
             this.setActiveWorkspace(workspace);
         }
+
         private void showAllInvoices()
         {
             AllInvoicesViewModel? workspace = this.Workspaces.FirstOrDefault(vm =>vm is AllInvoicesViewModel) as AllInvoicesViewModel;
@@ -128,6 +144,7 @@ namespace KomisSamochodowy.ViewModels
             }
             this.setActiveWorkspace(workspace);
         }
+
         // this is the standard method for adding setting bookmark active
         private void setActiveWorkspace(WorkspaceViewModel workspace) 
         {

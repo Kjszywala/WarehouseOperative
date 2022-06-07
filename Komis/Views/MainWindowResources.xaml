@@ -18,6 +18,9 @@
     <DataTemplate DataType="{x:Type vm:AllInvoicesViewModel}">
         <vw:AllInvoicesView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:AddToDatabaseViewModel}">
+        <vw:DatabaseViewModel/>
+    </DataTemplate>
     
     <!--Here is the end of conecting View with ViewModel-->
 
@@ -88,35 +91,15 @@
         <ItemsControl IsTabStop="False" ItemsSource="{Binding}" Margin="6,2">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Command="{Binding Path=Command}" HorizontalAlignment="Center" Content="{Binding Path=DisplayName}" Background="Blue" Foreground="White">
+                    <Button Command="{Binding Path=Command}" HorizontalAlignment="Center" Content="{Binding Path=DisplayName}" Background="DarkGray" Foreground="White">
+                        
                     </Button>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
     </DataTemplate>
 
-    <!--<Style x:Key="NewMenuButtonStyle" TargetType="{x:Type Button}">
-        
-    </Style>
-    
-    <DataTemplate x:Key="NewMenuTemplate">
-        <ItemsControl IsTabStop="False" ItemsSource="{Binding}" Margin="0,6,0,0" Background="Brown">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Button Style="{StaticResource NewMenuButtonStyle}" Command="{Binding Path=Command}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <Image>
-                                    
-                                </Image>
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-    </DataTemplate>-->
-    
+
     <Style TargetType="Button">
         <Style.Resources>
             <Style TargetType="Border">
@@ -130,10 +113,9 @@
         <Setter Property="FontWeight" Value="Bold"/>
     </Style>
 
-    <!-- 
-  This template explains how to render 
-  a tab item with a close button.
-  -->
+    <!--This template explains how to render 
+  a tab item with a close button.-->
+  
     
     <DataTemplate x:Key="ClosableTabItemTemplate">
         <DockPanel Width="120">

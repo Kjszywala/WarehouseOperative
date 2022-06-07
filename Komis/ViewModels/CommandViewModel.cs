@@ -15,8 +15,6 @@ namespace KomisSamochodowy.ViewModels
         public string DisplayName { get; set; }
         //Command for the button
         public ICommand Command { get; set; }
-        //public string IconURL { get; set; }
-        //public string IconHoverURL { get; set; }
         #endregion
         #region Constructor
         public CommandViewModel(string DisplayName, ICommand Command)
