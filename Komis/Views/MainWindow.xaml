@@ -37,8 +37,6 @@
                     <MenuItem Header="All"/>
                     <MenuItem Header="Add"/>
                 </MenuItem>
-                <MenuItem Header="Przyjecie zewnetrzne (PZ)"/>
-                <MenuItem Header="Wydanie zewnetrzne (WZ)"/>
             </MenuItem>
             
         </Menu>

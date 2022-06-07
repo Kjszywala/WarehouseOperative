@@ -1,4 +1,5 @@
-﻿using KomisSamochodowy.Helpers;
+﻿using KomisSamochodowy.ViewModels;
+using KomisSamochodowy.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -44,8 +45,10 @@ namespace KomisSamochodowy.ViewModels
             return new List<CommandViewModel>
             {
                 // Creat buttons
+                new CommandViewModel("New Product", new BaseCommand(createTowar)),
                 new CommandViewModel("Products", new BaseCommand(showAllTowar)),
-                new CommandViewModel("New Product", new BaseCommand(createTowar))
+                new CommandViewModel("New Invoice", new BaseCommand(createInvoice)),
+                new CommandViewModel("Invoices", new BaseCommand(showAllInvoices))
             };
         }
         #endregion
@@ -85,6 +88,12 @@ namespace KomisSamochodowy.ViewModels
         #region HelpFunctions
         // This is function to open new bookmark.
         // This method each time it is called creating new bookmark.
+        private void createInvoice()
+        {
+            NewInvoiceViewModel newInvoiceViewModel = new NewInvoiceViewModel();
+            this._Workspaces.Add(newInvoiceViewModel);
+            this.setActiveWorkspace(newInvoiceViewModel);
+        }
         private void createTowar()
         {
             // create new bookmark
@@ -109,11 +118,20 @@ namespace KomisSamochodowy.ViewModels
             // Bookmark activation.
             this.setActiveWorkspace(workspace);
         }
-
+        private void showAllInvoices()
+        {
+            AllInvoicesViewModel? workspace = this.Workspaces.FirstOrDefault(vm =>vm is AllInvoicesViewModel) as AllInvoicesViewModel;
+            if(workspace == null)
+            {
+                workspace = new AllInvoicesViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
         // this is the standard method for adding setting bookmark active
         private void setActiveWorkspace(WorkspaceViewModel workspace) 
-        { 
-            Debug.Assert(this.Workspaces.Contains(workspace)); 
+        {
+            Debug.Assert(this.Workspaces.Contains(workspace));
             ICollectionView collectionView = CollectionViewSource.GetDefaultView(this.Workspaces); 
             if (collectionView != null) 
                 collectionView.MoveCurrentTo(workspace); 

@@ -12,7 +12,7 @@ namespace KomisSamochodowy.ViewModels
         public WszystkieTowaryViewModel()
         {
             //set the bookmark name here
-            base.DisplayName = "Towary";
+            base.DisplayName = "Products";
         }
         #endregion
     }

@@ -12,6 +12,12 @@
     <DataTemplate DataType="{x:Type vm:NowyTowarViewModel}">
         <vw:NowyTowarView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:NewInvoiceViewModel}">
+        <vw:NewInvoiceView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:AllInvoicesViewModel}">
+        <vw:AllInvoicesView/>
+    </DataTemplate>
     
     <!--Here is the end of conecting View with ViewModel-->
 

@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace KomisSamochodowy.ViewModels
 {
-    public class NowyTowarViewModel : WorkspaceViewModel
+    public class AllInvoicesViewModel : WorkspaceViewModel
     {
-        #region FieldsAndProperties
-
-        #endregion
         #region Constructor
-        public NowyTowarViewModel()
+        public AllInvoicesViewModel()
         {
-            //set the bookmark name here
-            base.DisplayName = "Product";
+            base.DisplayName = "All Invoices";
         }
         #endregion
     }
