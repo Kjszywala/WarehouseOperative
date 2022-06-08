@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Komis"
+        xmlns:local="clr-namespace:Komis" 
+        xmlns:viewmodels="clr-namespace:KomisSamochodowy.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
         Title="WareHouse" Height="550" Width="800"
         WindowState="Maximized"
@@ -21,18 +22,18 @@
         <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
             <MenuItem Header="File">
                 <MenuItem Header="New">
-                    <MenuItem Header="_New Invoice"/>
-                    <MenuItem Header="_New Product"/>
+                    <MenuItem Header="_New Invoice" Command="{Binding Path=NewInvoiceCommand}"/>
+                    <MenuItem Header="_New Product" Command="{Binding Path=NewProductCommand}"/>
                 </MenuItem>
                 <MenuItem Header="Open">
-                    <MenuItem Header="Invoice"/>
-                    <MenuItem Header="Product"/>
+                    <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}"/>
+                    <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}"/>
                 </MenuItem>
                 <Separator/>
                 <MenuItem Header="Save"/>
                 <MenuItem Header="Load"/>
                 <Separator/>
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Command="{Binding Path=CloseCommand}"/>
             </MenuItem>
             <MenuItem Header="Edit">
                 <MenuItem Header="Go to">
@@ -59,16 +60,16 @@
             </MenuItem>
             <MenuItem Header="Store">
                 <MenuItem Header="Invoices">
-                    <MenuItem Header="_Add invoice"/>
-                    <MenuItem Header="_All invoices"/>
+                    <MenuItem Header="_Add invoice" Command="{Binding Path=NewInvoiceCommand}"/>
+                    <MenuItem Header="_All invoices" Command="{Binding Path=AllInvoicesCommand}"/>
                 </MenuItem>
                 <MenuItem Header="Products">
-                    <MenuItem Header="_Add product"/>
-                    <MenuItem Header="_All products"/>
+                    <MenuItem Header="_Add product" Command="{Binding Path=NewProductCommand}"/>
+                    <MenuItem Header="_All products" Command="{Binding Path=AllProductsCommand}"/>
                 </MenuItem>
                 <MenuItem Header="Database">
-                    <MenuItem Header="_Add to database"/>
-                    <MenuItem Header="_Search in database"/>
+                    <MenuItem Header="_Add to database" Command="{Binding Path=AddToDatabase}"/>
+                    <MenuItem Header="_Search in database" Command="{Binding Path=GetDatabase}"/>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Action"/>
@@ -77,37 +78,37 @@
             <MenuItem Header="Help"/>
         </Menu>
         <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}">
                 <StackPanel>
                     <Image Height="auto"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
                     <TextBlock Height="10" Width="49" Text="New Invoice" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllInvoicesCommand}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/invoices.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Invoices" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewProductCommand}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/product.png" Stretch="Fill"/>
                     <TextBlock Height="10" Width="55" Text="New Product" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllProductsCommand}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/products.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="All Products" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AddToDatabase}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/addtodatabase.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Add to DB" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=GetDatabase}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/database.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Database" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
@@ -162,7 +163,6 @@
                     Content="{Binding Path=Commands}"
                     ContentTemplate="{StaticResource CommandsTemplate}"
                     Style="{StaticResource MainHCCStyle}"
-                    
                     />
                 
                 </Border>

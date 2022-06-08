@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
+using System.Windows.Input;
+using System.Windows;
 
 namespace KomisSamochodowy.ViewModels
 {
@@ -19,8 +21,59 @@ namespace KomisSamochodowy.ViewModels
         /// It will include collections of commends from left menu and 
         /// collection of bookmarks.
         /// </summary>
-        #region Buttons in left side menu
+        #region Commands
+        public ICommand NewInvoiceCommand
+        {
+            get
+            {
+                return new BaseCommand(createInvoice);
+            }
+        }
+        public ICommand AllInvoicesCommand
+        {
+            get
+            {
+                return new BaseCommand(showAllInvoices);
+            }
+        }
+        public ICommand NewProductCommand
+        {
+            get
+            {
+                return new BaseCommand(createTowar);
+            }
+        }
+        public ICommand AllProductsCommand
+        {
+            get
+            {
+                return new BaseCommand(showAllTowar);
+            }
+        }
+        public ICommand AddToDatabase
+        {
+            get
+            {
+                return new BaseCommand(addToDatabase);
+            }
+        }
+        public ICommand GetDatabase
+        {
+            get
+            {
+                return new BaseCommand(getDatabase);
+            }
+        }
+        public ICommand CloseCommand
+        {
+            get
+            {
+                return new BaseCommand(getClose);
+            }
+        }
+        #endregion
 
+        #region Buttons in left side menu
         // This is the collection of command in left menu.
         private ReadOnlyCollection<CommandViewModel> _Commands;
         public ReadOnlyCollection<CommandViewModel> Commands
@@ -90,6 +143,10 @@ namespace KomisSamochodowy.ViewModels
         #region HelpFunctions
         // This is function to open new bookmark.
         // This method each time it is called creating new bookmark.
+        private void getClose()
+        {
+            Application.Current.MainWindow.Close();
+        }
         private void getDatabase()
         {
             DatabaseViewModel database = new DatabaseViewModel();
@@ -144,6 +201,15 @@ namespace KomisSamochodowy.ViewModels
             }
             this.setActiveWorkspace(workspace);
         }
+
+        public event EventHandler RequestClose;
+        private void OnRequestClose()
+        {
+            EventHandler handler = this.RequestClose;
+            if (handler != null)
+                handler(this, EventArgs.Empty);
+        }
+
 
         // this is the standard method for adding setting bookmark active
         private void setActiveWorkspace(WorkspaceViewModel workspace) 
