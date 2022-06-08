@@ -109,11 +109,17 @@
                 <Setter Property="CornerRadius" Value="5"/>
             </Style>
         </Style.Resources>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="Black" Opacity=".50" ShadowDepth="8"/>
+            </Setter.Value>
+        </Setter>
         <Setter Property="Height" Value="30"/>
         <Setter Property="Width" Value="100"/>
         <Setter Property="Margin" Value="10"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontWeight" Value="Bold"/>
+        
     </Style>
 
     <!--This template explains how to render 

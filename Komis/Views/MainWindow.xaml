@@ -162,6 +162,7 @@
                     Content="{Binding Path=Commands}"
                     ContentTemplate="{StaticResource CommandsTemplate}"
                     Style="{StaticResource MainHCCStyle}"
+                    
                     />
                 
                 </Border>
