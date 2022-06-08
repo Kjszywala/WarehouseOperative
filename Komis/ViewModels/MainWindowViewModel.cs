@@ -50,7 +50,7 @@ namespace KomisSamochodowy.ViewModels
                 new CommandViewModel("New Invoice", new BaseCommand(createInvoice)),
                 new CommandViewModel("Invoices", new BaseCommand(showAllInvoices)),
                 new CommandViewModel("Add to database", new BaseCommand(addToDatabase)),
-                new CommandViewModel("Invoices", new BaseCommand(getDatabase))
+                new CommandViewModel("Database", new BaseCommand(getDatabase))
             };
         }
         #endregion

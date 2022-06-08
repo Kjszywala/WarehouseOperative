@@ -8,13 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\Content\Icons\addtodatabase.png" />
     <None Remove="Views\Content\Icons\cubes.png" />
+    <None Remove="Views\Content\Icons\database.png" />
+    <None Remove="Views\Content\Icons\info.png" />
     <None Remove="Views\Content\Icons\invoice.png" />
     <None Remove="Views\Content\Icons\invoices.png" />
     <None Remove="Views\Content\Icons\preview.png" />
     <None Remove="Views\Content\Icons\print.png" />
     <None Remove="Views\Content\Icons\product.png" />
     <None Remove="Views\Content\Icons\products.png" />
+    <None Remove="Views\Content\Icons\restore.png" />
     <None Remove="Views\Content\Icons\save.png" />
   </ItemGroup>
 
@@ -23,7 +27,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Views\Content\Icons\addtodatabase.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Views\Content\Icons\cubes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\database.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\info.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\invoice.png">
@@ -42,6 +55,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\products.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\restore.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\save.png">

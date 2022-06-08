@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Komis"
         mc:Ignorable="d"
-        Title="WareHouse" Height="450" Width="800"
+        Title="WareHouse" Height="550" Width="800"
         WindowState="Maximized"
         >
     <Window.Resources>
@@ -14,7 +14,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
@@ -28,52 +28,97 @@
                     <MenuItem Header="Invoice"/>
                     <MenuItem Header="Product"/>
                 </MenuItem>
+                <Separator/>
                 <MenuItem Header="Save"/>
                 <MenuItem Header="Load"/>
+                <Separator/>
                 <MenuItem Header="Exit"/>
             </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Go to">
+                    <MenuItem Header="Go to all"/>
+                    <MenuItem Header="Go to file"/>
+                    <MenuItem Header="Go to recent file"/>
+                    <MenuItem Header="Go to type"/>
+                    <MenuItem Header="Go to file"/>
+                    <Separator/>
+                    <MenuItem Header="Go to next"/>
+                    <MenuItem Header="Go to previous"/>
+                </MenuItem>
+                <MenuItem Header="Find">
+                    <MenuItem Header="Find invoice"/>
+                    <MenuItem Header="Find product"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Cut"/>
+                <MenuItem Header="Copy"/>
+                <MenuItem Header="Paste"/>
+                <Separator/>
+                <MenuItem Header="Duplicate"/>
+                <MenuItem Header="Delete"/>
+            </MenuItem>
             <MenuItem Header="Store">
+                <MenuItem Header="Invoices">
+                    <MenuItem Header="Add invoice"/>
+                    <MenuItem Header="All invoices"/>
+                </MenuItem>
                 <MenuItem Header="Products">
-                    <MenuItem Header="All"/>
-                    <MenuItem Header="Add"/>
+                    <MenuItem Header="Add product"/>
+                    <MenuItem Header="All products"/>
+                </MenuItem>
+                <MenuItem Header="Database">
+                    <MenuItem Header="Add to database"/>
+                    <MenuItem Header="Search in database"/>
                 </MenuItem>
             </MenuItem>
 
         </Menu>
         <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
-            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
                 <StackPanel>
                     <Image Height="auto"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
-                    <TextBlock Height="10" Text="New IV" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <TextBlock Height="10" Width="49" Text="New Invoice" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="40" Height="50" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/invoices.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Invoices" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="40" Height="50" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/product.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="New PD" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <TextBlock Height="10" Width="55" Text="New Product" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/products.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="All PD" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <TextBlock Height="10" Text="All Products" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </ToggleButton>
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/addtodatabase.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="Add to DB" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </ToggleButton>
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/database.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="Database" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
             <Separator/>
             <Separator/>
-            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/print.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Print" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/save.png" Stretch="Fill" IsEnabled="True"/>
                     <TextBlock Height="10" Text="Save" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
@@ -81,10 +126,22 @@
             </ToggleButton>
             <Separator/>
             <Separator/>
-            <ToggleButton Width="35" Height="50" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/preview.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Preview" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </ToggleButton>
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/restore.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="Restore" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </ToggleButton>
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/info.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="Information" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
         </ToolBar>

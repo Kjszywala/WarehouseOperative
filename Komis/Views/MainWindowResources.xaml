@@ -19,9 +19,12 @@
         <vw:AllInvoicesView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:AddToDatabaseViewModel}">
+        <vw:AddToDatabaseViewModel/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:DatabaseViewModel}">
         <vw:DatabaseViewModel/>
     </DataTemplate>
-    
+
     <!--Here is the end of conecting View with ViewModel-->
 
     <Style x:Key="MainHCCStyle" TargetType="{x:Type HeaderedContentControl}">
