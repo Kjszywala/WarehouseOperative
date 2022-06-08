@@ -19,8 +19,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="130"/>
@@ -36,7 +35,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Label Grid.Column="5" Content="Date: " VerticalAlignment="Top" Margin="0,2,0,0"/>
-        <TextBox Grid.Column="7" Text="19/05/2006" VerticalAlignment="Center" Grid.ColumnSpan="6" Margin="0,0,10,0"/>
+        <DatePicker Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="7" VerticalAlignment="Center" Margin="0,0,10,0"/>
         <Label Grid.Column="0" Grid.Row="1" Content="Invoice Customer: " VerticalAlignment="Center" Margin="10,0,0,0"/>
         <Label Grid.Column="5" Grid.Row="1" Content="Terms: " VerticalAlignment="Center"/>
         <ComboBox Grid.Column="7" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,10,0"/>
@@ -58,6 +57,16 @@
         <Label Content="Tracking Ref#: " Grid.Row="8" Grid.Column="5" HorizontalAlignment="Left"/>
         <ComboBox Grid.Row="7" Grid.Column="7" VerticalAlignment="Center" Grid.ColumnSpan="4" Margin="0,0,10,0"/>
         <TextBox Grid.Column="7" Grid.Row="8" Text="30" Grid.ColumnSpan="5" VerticalAlignment="Center" Margin="0,0,10,0"/>
-        
+        <DataGrid Grid.Row="9" Grid.RowSpan="2" Grid.ColumnSpan="11" Margin="10,0,10,0" Name="DG1" AutoGenerateColumns="False" ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Qty" Width="40"/>
+                <DataGridTextColumn Header="Item" Width="*"/>
+                <DataGridTextColumn Header="Description" Width="*"/>
+                <DataGridTextColumn Header="Tax" Width="*"/>
+                <DataGridTextColumn Header="Unit Value" Width="*"/>
+                <DataGridTextColumn Header="Total" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ToggleButton Content="Add" Grid.Column="8" Grid.Row="11" Grid.ColumnSpan="3" Margin="10"/>
     </Grid>
 </UserControl>
