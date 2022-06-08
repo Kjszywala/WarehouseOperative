@@ -19,10 +19,10 @@
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
-            <MenuItem Header="_File">
+            <MenuItem Header="File">
                 <MenuItem Header="New">
-                    <MenuItem Header="New Invoice"/>
-                    <MenuItem Header="New Product"/>
+                    <MenuItem Header="_New Invoice"/>
+                    <MenuItem Header="_New Product"/>
                 </MenuItem>
                 <MenuItem Header="Open">
                     <MenuItem Header="Invoice"/>
@@ -59,19 +59,22 @@
             </MenuItem>
             <MenuItem Header="Store">
                 <MenuItem Header="Invoices">
-                    <MenuItem Header="Add invoice"/>
-                    <MenuItem Header="All invoices"/>
+                    <MenuItem Header="_Add invoice"/>
+                    <MenuItem Header="_All invoices"/>
                 </MenuItem>
                 <MenuItem Header="Products">
-                    <MenuItem Header="Add product"/>
-                    <MenuItem Header="All products"/>
+                    <MenuItem Header="_Add product"/>
+                    <MenuItem Header="_All products"/>
                 </MenuItem>
                 <MenuItem Header="Database">
-                    <MenuItem Header="Add to database"/>
-                    <MenuItem Header="Search in database"/>
+                    <MenuItem Header="_Add to database"/>
+                    <MenuItem Header="_Search in database"/>
                 </MenuItem>
             </MenuItem>
-
+            <MenuItem Header="Action"/>
+            <MenuItem Header="Tools"/>
+            <MenuItem Header="Setup"/>
+            <MenuItem Header="Help"/>
         </Menu>
         <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
