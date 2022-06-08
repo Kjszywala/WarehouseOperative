@@ -141,7 +141,7 @@
                     <TextBlock Height="10" Text="Restore" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=InfoCommand}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/info.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Information" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>

@@ -71,6 +71,13 @@ namespace KomisSamochodowy.ViewModels
                 return new BaseCommand(getClose);
             }
         }
+        public ICommand InfoCommand
+        {
+            get
+            {
+                return new BaseCommand(getInfo);
+            }
+        }
         #endregion
 
         #region Buttons in left side menu
@@ -143,6 +150,10 @@ namespace KomisSamochodowy.ViewModels
         #region HelpFunctions
         // This is function to open new bookmark.
         // This method each time it is called creating new bookmark.
+        private void getInfo()
+        {
+            MessageBox.Show("Author: KAmil Szywala.\nThis program was made for\nWyzsza Szkola Biznesu - National Luis University\nin a purpose of end-semester project from\nC# Interfaces.");
+        }
         private void getClose()
         {
             Application.Current.MainWindow.Close();
