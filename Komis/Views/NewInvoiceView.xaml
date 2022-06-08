@@ -7,6 +7,57 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
-        <Label Content="Invoices"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="5" Content="Date: " VerticalAlignment="Top" Margin="0,2,0,0"/>
+        <TextBox Grid.Column="7" Text="19/05/2006" VerticalAlignment="Center" Grid.ColumnSpan="6" Margin="0,0,10,0"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Invoice Customer: " VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <Label Grid.Column="5" Grid.Row="1" Content="Terms: " VerticalAlignment="Center"/>
+        <ComboBox Grid.Column="7" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,10,0"/>
+        <TextBox Grid.Column="9" Grid.Row="1" Text="30" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="10,0,10,0"/>
+        <ComboBox Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="10,0,10,0"/>
+        <Label Grid.Column="5" Grid.Row="2" Content="Sales person: "/>
+        <ComboBox Grid.Row="2" Grid.Column="7" VerticalAlignment="Center" Grid.ColumnSpan="4" Margin="0,0,10,0"/>
+        <Label Grid.Column="5" Grid.Row="3" Content="Tax: "/>
+        <ComboBox Grid.Row="3" Grid.Column="7" VerticalAlignment="Center" Grid.ColumnSpan="4" Margin="0,0,10,0"/>
+        <CheckBox Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+        <Label Grid.Row="3" Grid.Column="0" Content="Save changes" VerticalAlignment="Center" RenderTransformOrigin="0.537,0.73" Margin="31,0,0,0" Width="99"/>
+        <Label Content="Bill to: " Grid.Row="4" VerticalAlignment="Bottom" Margin="10,0,0,0"/>
+        <Label Content="Bill to: " Grid.Row="4" Grid.Column="5" VerticalAlignment="Bottom"/>
+        <TextBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2" Margin="10,5,10,5" Text="29 canberra road," TextWrapping="Wrap"/>
+        <TextBox Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="6" Grid.RowSpan="2" Margin="10,5,10,5"/>
+        <Label Content="Customer PD#: " Grid.Row="7" Margin="10,0,0,0" HorizontalAlignment="Left"/>
+        <TextBox Grid.Column="1" Grid.Row="7" Text="012345" Grid.ColumnSpan="4" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        <Label Content="Ship by: " Grid.Row="7" Grid.Column="5" HorizontalAlignment="Left"/>
+        <Label Content="Tracking Ref#: " Grid.Row="8" Grid.Column="5" HorizontalAlignment="Left"/>
+        <ComboBox Grid.Row="7" Grid.Column="7" VerticalAlignment="Center" Grid.ColumnSpan="4" Margin="0,0,10,0"/>
+        <TextBox Grid.Column="7" Grid.Row="8" Text="30" Grid.ColumnSpan="5" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        
     </Grid>
 </UserControl>

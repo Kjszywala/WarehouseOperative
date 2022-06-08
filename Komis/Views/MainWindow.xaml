@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:Komis" 
         xmlns:viewmodels="clr-namespace:KomisSamochodowy.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="WareHouse" Height="550" Width="800"
-        WindowState="Maximized"
+        Title="WareHouse" Height="750" Width="1100"
         >
     <Window.Resources>
         <ResourceDictionary Source="MainWindowResources.xaml"/>
