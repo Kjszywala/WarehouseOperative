@@ -152,7 +152,7 @@ namespace KomisSamochodowy.ViewModels
         // This method each time it is called creating new bookmark.
         private void getInfo()
         {
-            MessageBox.Show("Author: KAmil Szywala.\nThis program was made for\nWyzsza Szkola Biznesu - National Luis University\nin a purpose of end-semester project from\nC# Interfaces.");
+            MessageBox.Show("Author: Kamil Szywala.\nThis program was made for\nWyzsza Szkola Biznesu - National Luis University\nin a purpose of end-semester project from\nC# Interfaces.");
         }
         private void getClose()
         {
@@ -204,7 +204,7 @@ namespace KomisSamochodowy.ViewModels
 
         private void showAllInvoices()
         {
-            AllInvoicesViewModel? workspace = this.Workspaces.FirstOrDefault(vm =>vm is AllInvoicesViewModel) as AllInvoicesViewModel;
+            AllInvoicesViewModel? workspace = this.Workspaces.FirstOrDefault(vm => vm is AllInvoicesViewModel) as AllInvoicesViewModel;
             if(workspace == null)
             {
                 workspace = new AllInvoicesViewModel();
