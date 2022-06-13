@@ -23,12 +23,12 @@
             
             <MenuItem Header="File">
                 <MenuItem Header="New">
-                    <MenuItem Header="_New Invoice" Command="{Binding Path=NewInvoiceCommand}"/>
-                    <MenuItem Header="_New Product" Command="{Binding Path=NewProductCommand}"/>
+                    <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P"/>
+                    <MenuItem Header="New Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O"/>
                 </MenuItem>
                 <MenuItem Header="Open">
-                    <MenuItem Header="_Invoice" Command="{Binding Path=NewInvoiceCommand}"/>
-                    <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}"/>
+                    <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P"/>
+                    <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O"/>
                 </MenuItem>
                 <Separator/>
                 <MenuItem Header="Save"/>
@@ -61,16 +61,16 @@
             </MenuItem>
             <MenuItem Header="Store">
                 <MenuItem Header="Invoices">
-                    <MenuItem Header="_Add invoice" Command="{Binding Path=NewInvoiceCommand}"/>
-                    <MenuItem Header="_All invoices" Command="{Binding Path=AllInvoicesCommand}"/>
+                    <MenuItem Header="Add invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P"/>
+                    <MenuItem Header="All invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+L"/>
                 </MenuItem>
                 <MenuItem Header="Products">
-                    <MenuItem Header="_Add product" Command="{Binding Path=NewProductCommand}"/>
-                    <MenuItem Header="_All products" Command="{Binding Path=AllProductsCommand}"/>
+                    <MenuItem Header="Add product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O"/>
+                    <MenuItem Header="All products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+K"/>
                 </MenuItem>
                 <MenuItem Header="Database">
-                    <MenuItem Header="_Add to database" Command="{Binding Path=AddToDatabase}"/>
-                    <MenuItem Header="_Search in database" Command="{Binding Path=GetDatabase}"/>
+                    <MenuItem Header="Add to database" Command="{Binding Path=AddToDatabase}" InputGestureText="Alt+I"/>
+                    <MenuItem Header="Search in database" Command="{Binding Path=GetDatabase}" InputGestureText="Alt+J"/>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Action"/>
@@ -80,39 +80,46 @@
         </Menu>
         <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}">
+                
                 <StackPanel>
                     <Image Height="auto"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
                     <TextBlock Height="10" Width="49" Text="New Invoice" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <AccessText>_P</AccessText>
                 </StackPanel>
             </ToggleButton>
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllInvoicesCommand}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/invoices.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Invoices" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <AccessText>_L</AccessText>
                 </StackPanel>
             </ToggleButton>
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewProductCommand}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/product.png" Stretch="Fill"/>
                     <TextBlock Height="10" Width="55" Text="New Product" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <AccessText>_O</AccessText>
                 </StackPanel>
             </ToggleButton>
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllProductsCommand}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/products.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="All Products" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <AccessText>_K</AccessText>
                 </StackPanel>
             </ToggleButton>
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AddToDatabase}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/addtodatabase.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Add to DB" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <AccessText>_I</AccessText>
                 </StackPanel>
             </ToggleButton>
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=GetDatabase}">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/database.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Database" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <AccessText>_J</AccessText>
                 </StackPanel>
             </ToggleButton>
             <Separator/>
@@ -147,6 +154,7 @@
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/info.png" Stretch="Fill"/>
                     <TextBlock Height="10" Text="Information" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <AccessText>_Y</AccessText>
                 </StackPanel>
             </ToggleButton>
         </ToolBar>
