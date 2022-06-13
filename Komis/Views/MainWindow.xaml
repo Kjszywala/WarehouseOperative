@@ -11,6 +11,14 @@
     <Window.Resources>
         <ResourceDictionary Source="MainWindowResources.xaml"/>
     </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Gesture="Ctrl+q" Command="{Binding AddToDatabase}"/>
+        <KeyBinding Gesture="Ctrl+w" Command="{Binding AllInvoicesCommand}"/>
+        <KeyBinding Gesture="Ctrl+e" Command="{Binding AllProductsCommand}"/>
+        <KeyBinding Gesture="Ctrl+r" Command="{Binding GetDatabase}"/>
+        <KeyBinding Gesture="Ctrl+t" Command="{Binding NewInvoiceCommand}"/>
+        <KeyBinding Gesture="Ctrl+a" Command="{Binding NewProductCommand}"/>
+    </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -21,22 +29,22 @@
         
         <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
             
-            <MenuItem Header="File">
+            <MenuItem Header="_File">
                 <MenuItem Header="New">
-                    <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P"/>
-                    <MenuItem Header="New Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O"/>
+                    <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                    <MenuItem Header="New Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
                 </MenuItem>
                 <MenuItem Header="Open">
-                    <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P"/>
-                    <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O"/>
+                    <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                    <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
                 </MenuItem>
                 <Separator/>
                 <MenuItem Header="Save"/>
                 <MenuItem Header="Load"/>
                 <Separator/>
-                <MenuItem Header="Exit" Command="{Binding Path=CloseCommand}"/>
+                <MenuItem Header="Exit" Command="{Binding Path=getCloseCommand}"/>
             </MenuItem>
-            <MenuItem Header="Edit">
+            <MenuItem Header="_Edit">
                 <MenuItem Header="Go to">
                     <MenuItem Header="Go to all"/>
                     <MenuItem Header="Go to file"/>
@@ -59,18 +67,18 @@
                 <MenuItem Header="Duplicate"/>
                 <MenuItem Header="Delete"/>
             </MenuItem>
-            <MenuItem Header="Store">
+            <MenuItem Header="_Store">
                 <MenuItem Header="Invoices">
-                    <MenuItem Header="Add invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P"/>
-                    <MenuItem Header="All invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+L"/>
+                    <MenuItem Header="Add invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                    <MenuItem Header="All invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+L, Ctrl+W"/>
                 </MenuItem>
                 <MenuItem Header="Products">
-                    <MenuItem Header="Add product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O"/>
-                    <MenuItem Header="All products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+K"/>
+                    <MenuItem Header="Add product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                    <MenuItem Header="All products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+K, Ctrl+E"/>
                 </MenuItem>
                 <MenuItem Header="Database">
-                    <MenuItem Header="Add to database" Command="{Binding Path=AddToDatabase}" InputGestureText="Alt+I"/>
-                    <MenuItem Header="Search in database" Command="{Binding Path=GetDatabase}" InputGestureText="Alt+J"/>
+                    <MenuItem Header="Add to database" Command="{Binding Path=AddToDatabase}" InputGestureText="Alt+I,  Ctrl+Q"/>
+                    <MenuItem Header="Search in database" Command="{Binding Path=GetDatabase}" InputGestureText="Alt+J,  Ctrl+R"/>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Action"/>
@@ -163,7 +171,6 @@
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
             <Border Grid.Column="0">
                 <HeaderedContentControl 
                     Header="Operations" 
@@ -173,9 +180,8 @@
                     ContentTemplate="{StaticResource CommandsTemplate}"
                     Style="{StaticResource MainHCCStyle}"
                     />
-                
-                </Border>
-                <Border Grid.Column="1">
+            </Border>
+            <Border Grid.Column="1">
                 <HeaderedContentControl 
                     Header="Workspace" 
                     Background="Aqua"
@@ -184,7 +190,7 @@
                     ContentTemplate="{StaticResource WorkspacesTemplate}"
                     Style="{StaticResource MainHCCStyle}"
                     />
-                </Border>
+            </Border>
 
         </Grid>
         <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">
