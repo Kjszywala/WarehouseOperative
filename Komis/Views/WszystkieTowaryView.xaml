@@ -8,6 +8,66 @@
              d:DesignHeight="450" d:DesignWidth="800"
              >
     <Grid Background="White">
-        <Label Content="Tu beda wszystkie towary"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Expander Header="View by" IsExpanded="True" Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <CheckBox Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                <Label Content="Product No:" Grid.Row="0" Grid.Column="1" Margin="0,15,0,0"/>
+                <ComboBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+                <CheckBox Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                <Label Content="Product:" Grid.Row="0" Grid.Column="3" Margin="0,15,0,0"/>
+                <ComboBox Grid.Row="0" Grid.Column="3" VerticalAlignment="Center"/>
+                <CheckBox Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                <Label Content="Client:" Grid.Row="0" Grid.Column="5" Margin="0,15,0,0"/>
+                <ComboBox Grid.Row="0" Grid.Column="5" VerticalAlignment="Center"/>
+                <Label Content="Calculate Late Fee Up To:" Grid.Row="0" Grid.Column="7" Margin="0,1,0,0" Grid.ColumnSpan="2"/>
+                <DatePicker Grid.Row="0" Grid.Column="7" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+                <ToggleButton Grid.Column="7" Grid.Row="0" Margin="15,75,15,5" Content="Calculate Late Fee" Grid.ColumnSpan="2" IsManipulationEnabled="False"/>
+                <CheckBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,10,0"/>
+                <Label Content="Open" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                <CheckBox Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,10,0"/>
+                <Label Content="Closed" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,10,0"/>
+                <Label Content="Posted" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,10,0"/>
+                <Label Content="Unposted" Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0"/>
+                <CheckBox Grid.Row="1" Grid.Column="8" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,10,0"/>
+                <Label Content="Late Fee" Grid.Row="1" Grid.Column="8" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox Grid.Row="1" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,10,0"/>
+                <Label Content="Draft" Grid.Row="1" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+        </Expander>
+        <DataGrid Grid.Row="1" Name="DG2" ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Width="30"/>
+                <DataGridTextColumn Header="Product #" Width="*"/>
+                <DataGridTextColumn Header="Date" Width="*"/>
+                <DataGridTextColumn Header="Product ID" Width="*"/>
+                <DataGridTextColumn Header="Net Amount" Width="*"/>
+                <DataGridTextColumn Header="Net Price" Width="*"/>
+                <DataGridTextColumn Header="Balance" Width="*"/>
+                <DataGridTextColumn Header="Amount" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>

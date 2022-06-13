@@ -18,14 +18,16 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
+        
         <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
+            
             <MenuItem Header="File">
                 <MenuItem Header="New">
                     <MenuItem Header="_New Invoice" Command="{Binding Path=NewInvoiceCommand}"/>
                     <MenuItem Header="_New Product" Command="{Binding Path=NewProductCommand}"/>
                 </MenuItem>
                 <MenuItem Header="Open">
-                    <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}"/>
+                    <MenuItem Header="_Invoice" Command="{Binding Path=NewInvoiceCommand}"/>
                     <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}"/>
                 </MenuItem>
                 <Separator/>

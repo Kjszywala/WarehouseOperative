@@ -61,7 +61,7 @@
                 <DataGridCheckBoxColumn Width="30"/>
                 <DataGridTextColumn Header="Invoice #" Width="*"/>
                 <DataGridTextColumn Header="Date" Width="*"/>
-                <DataGridTextColumn Header="Product ID" Width="*"/>
+                <DataGridTextColumn Header="Invoice ID" Width="*"/>
                 <DataGridTextColumn Header="Net Amount" Width="*"/>
                 <DataGridTextColumn Header="Paid" Width="*"/>
                 <DataGridTextColumn Header="Balance" Width="*"/>

@@ -150,6 +150,7 @@ namespace KomisSamochodowy.ViewModels
         #region HelpFunctions
         // This is function to open new bookmark.
         // This method each time it is called creating new bookmark.
+        
         private void getInfo()
         {
             MessageBox.Show("Author: Kamil Szywala.\nThis program was made for\nWyzsza Szkola Biznesu - National Luis University\nin a purpose of end-semester project from\nC# Interfaces.");
