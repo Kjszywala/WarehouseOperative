@@ -152,6 +152,12 @@
                     <TextBlock Height="10" Text="Preview" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </ToggleButton>
+            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=CloseBookmark}">
+                <StackPanel>
+                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/delete.png" Stretch="Fill"/>
+                    <TextBlock Height="10" Text="Delete" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </ToggleButton>
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
                 <StackPanel>
                     <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/restore.png" Stretch="Fill"/>

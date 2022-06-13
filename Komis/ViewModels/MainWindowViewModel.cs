@@ -78,6 +78,13 @@ namespace KomisSamochodowy.ViewModels
                 return new BaseCommand(getInfo);
             }
         }
+        public ICommand CloseBookmark
+        {
+            get
+            {
+                return new BaseCommand(deleteBookmark);
+            }
+        }
         #endregion
 
         #region Buttons in left side menu
@@ -152,7 +159,11 @@ namespace KomisSamochodowy.ViewModels
         // This method each time it is called creating new bookmark.
         private void deleteBookmark()
         {
+            if (Workspaces.Count>0)
+            {
+                Workspaces.RemoveAt(Workspaces.Count - 1);
 
+            }
         }
         private void getInfo()
         {

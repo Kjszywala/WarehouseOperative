@@ -11,6 +11,7 @@
     <None Remove="Views\Content\Icons\addtodatabase.png" />
     <None Remove="Views\Content\Icons\cubes.png" />
     <None Remove="Views\Content\Icons\database.png" />
+    <None Remove="Views\Content\Icons\delete.png" />
     <None Remove="Views\Content\Icons\info.png" />
     <None Remove="Views\Content\Icons\invoice.png" />
     <None Remove="Views\Content\Icons\invoices.png" />
@@ -34,6 +35,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\database.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\delete.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\info.png">
