@@ -18,6 +18,7 @@
         <KeyBinding Gesture="Ctrl+r" Command="{Binding GetDatabase}"/>
         <KeyBinding Gesture="Ctrl+t" Command="{Binding NewInvoiceCommand}"/>
         <KeyBinding Gesture="Ctrl+a" Command="{Binding NewProductCommand}"/>
+        <KeyBinding Gesture="Ctrl+x" Command="{Binding CloseBookmark}"/>
     </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
@@ -201,10 +202,10 @@
         </Grid>
         <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">
             <StatusBarItem>
-                <TextBlock>Kamil Szywala</TextBlock>
+                <TextBlock>WSB-NLU Kamil Szywala</TextBlock>
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right" >
-                <ProgressBar Width="100" Height="15" Value="70" Margin="1,4,0,1"/>
+                <ProgressBar Width="100" Height="15" Value="70" Margin="1,0,0,1"/>
             </StatusBarItem>
         </StatusBar>
     </Grid>
