@@ -1,2 +1,2 @@
 UniProject
-Adding bookmarks, button commands, view of the application.
+WarehouseOperative application used to manage the company warehouse.
