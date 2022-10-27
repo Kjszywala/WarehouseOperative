@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KomisSamochodowy.ViewModels
+namespace WarehouseOperative.ViewModels
 {
-    public class AddToDatabaseViewModel :WorkspaceViewModel
+    public class AddToDatabaseViewModel : WorkspaceViewModel
     {
         #region Constructor
         public AddToDatabaseViewModel()

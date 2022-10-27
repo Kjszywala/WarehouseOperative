@@ -1,5 +1,5 @@
-﻿using KomisSamochodowy.ViewModels;
-using KomisSamochodowy.Helpers;
+﻿using WarehouseOperative.ViewModels;
+using WarehouseOperative.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,7 +13,7 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows;
 
-namespace KomisSamochodowy.ViewModels
+namespace WarehouseOperative.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
@@ -194,7 +194,7 @@ namespace KomisSamochodowy.ViewModels
         private void createTowar()
         {
             // create new bookmark
-            NowyTowarViewModel workspace = new NowyTowarViewModel();
+            NewProductViewmodel workspace = new NewProductViewmodel();
             // add bookmark to active bookmark collection.
             this._Workspaces.Add(workspace);
             this.setActiveWorkspace(workspace);
@@ -206,7 +206,7 @@ namespace KomisSamochodowy.ViewModels
         private void showAllTowar()
         {
             // First we looking for in bookmark collection a bookmark which is all bookmarks.
-            WszystkieTowaryViewModel? workspace = this.Workspaces.FirstOrDefault(vm => vm is WszystkieTowaryViewModel) as WszystkieTowaryViewModel;
+            WszystkieTowaryViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is WszystkieTowaryViewModel) as WszystkieTowaryViewModel;
             // If there is no bookmarks like this, then we creating a new one.
             if(workspace == null)
             {
@@ -219,7 +219,7 @@ namespace KomisSamochodowy.ViewModels
 
         private void showAllInvoices()
         {
-            AllInvoicesViewModel? workspace = this.Workspaces.FirstOrDefault(vm => vm is AllInvoicesViewModel) as AllInvoicesViewModel;
+            AllInvoicesViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllInvoicesViewModel) as AllInvoicesViewModel;
             if(workspace == null)
             {
                 workspace = new AllInvoicesViewModel();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KomisSamochodowy.ViewModels
+namespace WarehouseOperative.ViewModels
 {
     public class NewInvoiceViewModel : WorkspaceViewModel
     {

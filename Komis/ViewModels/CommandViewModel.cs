@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace KomisSamochodowy.ViewModels
+namespace WarehouseOperative.ViewModels
 {
     //This class creating commands in left side menu.
     public class CommandViewModel : BaseViewModel

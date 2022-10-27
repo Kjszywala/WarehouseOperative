@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KomisSamochodowy.Views
+namespace WarehouseOperative.Views
 {
     /// <summary>
     /// Interaction logic for AddToDatabaseViewModel.xaml

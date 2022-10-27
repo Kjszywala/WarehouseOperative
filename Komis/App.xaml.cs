@@ -1,13 +1,8 @@
-﻿using KomisSamochodowy.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using WarehouseOperative.ViewModels;
 using System.Windows;
+using WarehouseOperative.Views;
 
-namespace Komis
+namespace WarehouseOperative
 {
     /// <summary>
     /// Interaction logic for App.xaml

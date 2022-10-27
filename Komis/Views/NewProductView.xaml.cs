@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KomisSamochodowy.Views
+namespace WarehouseOperative.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy WszystkieTowaryView.xaml
+    /// Logika interakcji dla klasy NowyTowarView.xaml
     /// </summary>
-    public partial class WszystkieTowaryView : UserControl
+    public partial class NowyTowarView : UserControl
     {
-        public WszystkieTowaryView()
+        public NowyTowarView()
         {
             InitializeComponent();
         }

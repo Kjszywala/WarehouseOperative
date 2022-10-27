@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:vm="clr-namespace:KomisSamochodowy.ViewModels"
-                    xmlns:vw="clr-namespace:KomisSamochodowy.Views"
+                    xmlns:vm="clr-namespace:WarehouseOperative.ViewModels"
+                    xmlns:vw="clr-namespace:WarehouseOperative.Views"
                     >
     
     <!--Here we connecting View with ViewModel-->
@@ -9,7 +9,7 @@
     <DataTemplate DataType="{x:Type vm:WszystkieTowaryViewModel}">
         <vw:WszystkieTowaryView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type vm:NowyTowarViewModel}">
+    <DataTemplate DataType="{x:Type vm:NewProductViewmodel}">
         <vw:NowyTowarView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:NewInvoiceViewModel}">

@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KomisSamochodowy.ViewModels
+namespace WarehouseOperative.ViewModels
 {
-    public class NowyTowarViewModel : WorkspaceViewModel
+    public class NewProductViewmodel : WorkspaceViewModel
     {
         #region FieldsAndProperties
 
         #endregion
         #region Constructor
-        public NowyTowarViewModel()
+        public NewProductViewmodel()
         {
             //set the bookmark name here
             base.DisplayName = "Product";

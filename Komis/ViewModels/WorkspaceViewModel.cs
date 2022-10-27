@@ -1,4 +1,4 @@
-﻿using KomisSamochodowy.Helpers;
+﻿using WarehouseOperative.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace KomisSamochodowy.ViewModels
+namespace WarehouseOperative.ViewModels
 {
     //All bookmark ViewModels will extend this class 
     public class WorkspaceViewModel : BaseViewModel
