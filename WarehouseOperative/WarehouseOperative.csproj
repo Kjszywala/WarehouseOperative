@@ -88,4 +88,8 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\Abstract\" />
+  </ItemGroup>
+
 </Project>
