@@ -172,7 +172,7 @@ namespace WarehouseOperative.ViewModels
         }
         private void getDatabase()
         {
-            DatabaseViewModel database = new DatabaseViewModel();
+            AllCustomersViewModel database = new AllCustomersViewModel();
             this._Workspaces.Add(database);
             this.setActiveWorkspace(database);
         }

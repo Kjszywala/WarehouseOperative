@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace WarehouseOperative.ViewModels
 {
-    public class DatabaseViewModel : WorkspaceViewModel
+    public class AllCustomersViewModel : WorkspaceViewModel
     {
         #region Constructor
-        public DatabaseViewModel()
+        public AllCustomersViewModel()
         {
             base.DisplayName = "Database";
         }

@@ -21,8 +21,8 @@
     <DataTemplate DataType="{x:Type vm:AllEmloyeesViewModel}">
         <vw:AllEmloyeesView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type vm:DatabaseViewModel}">
-        <vw:DatabaseViewModel/>
+    <DataTemplate DataType="{x:Type vm:AllCustomersViewModel}">
+        <vw:AllCustomersView/>
     </DataTemplate>
 
     <!--Here is the end of conecting View with ViewModel-->

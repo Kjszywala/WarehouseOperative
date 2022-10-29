@@ -18,9 +18,9 @@ namespace WarehouseOperative.Views
     /// <summary>
     /// Interaction logic for DatabaseViewModel.xaml
     /// </summary>
-    public partial class DatabaseViewModel : UserControl
+    public partial class AllCustomersView : UserControl
     {
-        public DatabaseViewModel()
+        public AllCustomersView()
         {
             InitializeComponent();
         }
