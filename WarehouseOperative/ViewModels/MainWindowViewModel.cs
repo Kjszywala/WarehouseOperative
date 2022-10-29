@@ -1,5 +1,4 @@
-﻿using WarehouseOperative.ViewModels;
-using WarehouseOperative.Helpers;
+﻿using WarehouseOperative.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,8 +6,6 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows;
@@ -181,7 +178,7 @@ namespace WarehouseOperative.ViewModels
         }
         private void addToDatabase()
         {
-            AddToDatabaseViewModel database = new AddToDatabaseViewModel();
+            AllEmloyeesViewModel database = new AllEmloyeesViewModel();
             this._Workspaces.Add(database);
             this.setActiveWorkspace(database);
         }
@@ -206,11 +203,11 @@ namespace WarehouseOperative.ViewModels
         private void showAllTowar()
         {
             // First we looking for in bookmark collection a bookmark which is all bookmarks.
-            WszystkieTowaryViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is WszystkieTowaryViewModel) as WszystkieTowaryViewModel;
+            AllProductsViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllProductsViewModel) as AllProductsViewModel;
             // If there is no bookmarks like this, then we creating a new one.
             if(workspace == null)
             {
-                workspace = new WszystkieTowaryViewModel();
+                workspace = new AllProductsViewModel();
                 this.Workspaces.Add(workspace);
             }
             // Bookmark activation.

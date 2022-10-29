@@ -6,11 +6,11 @@
     
     <!--Here we connecting View with ViewModel-->
 
-    <DataTemplate DataType="{x:Type vm:WszystkieTowaryViewModel}">
-        <vw:WszystkieTowaryView/>
+    <DataTemplate DataType="{x:Type vm:AllProductsViewModel}">
+        <vw:AllProductsView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:NewProductViewmodel}">
-        <vw:NowyTowarView/>
+        <vw:NewProductView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:NewInvoiceViewModel}">
         <vw:NewInvoiceView/>
@@ -18,8 +18,8 @@
     <DataTemplate DataType="{x:Type vm:AllInvoicesViewModel}">
         <vw:AllInvoicesView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type vm:AddToDatabaseViewModel}">
-        <vw:AddToDatabaseViewModel/>
+    <DataTemplate DataType="{x:Type vm:AllEmloyeesViewModel}">
+        <vw:AllEmloyeesView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:DatabaseViewModel}">
         <vw:DatabaseViewModel/>

@@ -18,9 +18,9 @@ namespace WarehouseOperative.Views
     /// <summary>
     /// Logika interakcji dla klasy NowyTowarView.xaml
     /// </summary>
-    public partial class NowyTowarView : UserControl
+    public partial class NewProductView : UserControl
     {
-        public NowyTowarView()
+        public NewProductView()
         {
             InitializeComponent();
         }

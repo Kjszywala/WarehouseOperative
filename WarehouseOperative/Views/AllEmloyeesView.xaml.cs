@@ -3,11 +3,11 @@
 namespace WarehouseOperative.Views
 {
     /// <summary>
-    /// Interaction logic for AllInvoicesView.xaml
+    /// Interaction logic for AddToDatabaseViewModel.xaml
     /// </summary>
-    public partial class AllInvoicesView : UserControl
+    public partial class AllEmloyeesView: UserControl
     {
-        public AllInvoicesView()
+        public AllEmloyeesView()
         {
             InitializeComponent();
         }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace WarehouseOperative.ViewModels
 {
-    public class WszystkieTowaryViewModel : WorkspaceViewModel
+    public class AllProductsViewModel : WorkspaceViewModel
     {
         #region Constructor
-        public WszystkieTowaryViewModel()
+        public AllProductsViewModel()
         {
             //set the bookmark name here
             base.DisplayName = "Products";
