@@ -57,16 +57,7 @@
         <Label Content="Tracking Ref#: " Grid.Row="8" Grid.Column="5" HorizontalAlignment="Left"/>
         <ComboBox Grid.Row="7" Grid.Column="7" VerticalAlignment="Center" Grid.ColumnSpan="4" Margin="0,0,10,0"/>
         <TextBox Grid.Column="7" Grid.Row="8" Text="30" Grid.ColumnSpan="5" VerticalAlignment="Center" Margin="0,0,10,0"/>
-        <DataGrid Grid.Row="9" Grid.RowSpan="2" Grid.ColumnSpan="11" Margin="10,0,10,0" Name="DG1" AutoGenerateColumns="False" ItemsSource="{Binding}">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Qty" Width="40"/>
-                <DataGridTextColumn Header="Item" Width="*"/>
-                <DataGridTextColumn Header="Description" Width="*"/>
-                <DataGridTextColumn Header="Tax" Width="*"/>
-                <DataGridTextColumn Header="Unit Value" Width="*"/>
-                <DataGridTextColumn Header="Total" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        
         <ToggleButton Content="Add" Grid.Column="8" Grid.Row="11" Grid.ColumnSpan="3" Margin="10"/>
     </Grid>
 </local:AllViewBase>

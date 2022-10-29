@@ -33,6 +33,13 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(showAllInvoices);
             }
         }
+        public ICommand ErrorLog
+        {
+            get
+            {
+                return new BaseCommand(getErrorLog);
+            }
+        }
         public ICommand NewProductCommand
         {
             get
@@ -114,7 +121,8 @@ namespace WarehouseOperative.ViewModels
                 new CommandViewModel("New Invoice", new BaseCommand(createInvoice)),
                 new CommandViewModel("All Invoices", new BaseCommand(showAllInvoices)),
                 new CommandViewModel("New Employee", new BaseCommand(addEmployees)),
-                new CommandViewModel("All Employees", new BaseCommand(getEmployees))
+                new CommandViewModel("All Employees", new BaseCommand(getEmployees)),
+                new CommandViewModel("Error Log", new BaseCommand(getErrorLog))
             };
         }
         #endregion
@@ -215,6 +223,17 @@ namespace WarehouseOperative.ViewModels
             if(workspace == null)
             {
                 workspace = new AllInvoicesViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
+
+        private void getErrorLog()
+        {
+            ErrorLogViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is ErrorLogViewModel) as ErrorLogViewModel;
+            if (workspace == null)
+            {
+                workspace = new ErrorLogViewModel();
                 this.Workspaces.Add(workspace);
             }
             this.setActiveWorkspace(workspace);

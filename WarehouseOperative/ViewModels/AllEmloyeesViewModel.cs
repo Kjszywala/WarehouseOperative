@@ -5,7 +5,7 @@
         #region Constructor
         public AllEmloyeesViewModel()
         {
-            base.DisplayName = "Add to Database";
+            base.DisplayName = "All Employees";
         }
         #endregion
     }

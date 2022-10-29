@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using WarehouseOperative.Models.Entities;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels
 {
-    public class AllInvoicesViewModel : AllViewModel<Invoices>
+    public class ErrorLogViewModel : AllViewModel<ErrorLog>
     {
         #region Konstruktor
-        public AllInvoicesViewModel()
-            : base("All Invoices")
+        public ErrorLogViewModel()
+            : base("Error Log")
         {
         }
         #endregion
@@ -25,13 +22,11 @@ namespace WarehouseOperative.ViewModels
             try
             {
                 //To jest zapytanie LINQ (obiektowa wersja SQL)
-                List = new ObservableCollection<Invoices>(
+                List = new ObservableCollection<ErrorLog>(
                         //dla kazdego towaru z tabeli towar wybierz ten towar.
                         //SELECT * FROM Towar
-                        //WHERE CzyAktywny = true
-                        from invoices in FakturyEntities.Invoices
-                        where invoices.isActive == true
-                        select invoices
+                        from errorLog in FakturyEntities.ErrorLog
+                        select errorLog
                     );
             }
             catch (Exception e)

@@ -7,28 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="230"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Content="Write your code here:" Margin="10,0,0,0"/>
-            <TextBox Grid.Row="1" Margin="10,10,10,-197"/>
         </Grid>
-        <DataGrid Margin="10" Grid.Row="1" Name="DG3" ItemsSource="{Binding}" AutoGenerateColumns="False">
+        <DataGrid Margin="10" Grid.Row="0" Name="DG3" ItemsSource="{Binding List}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="auto" Header="Product ID"/>
-                <DataGridTextColumn Width="auto" Header="Product name"/>
-                <DataGridTextColumn Width="auto" Header="Part Number"/>
-                <DataGridTextColumn Width="auto" Header="Product Label"/>
-                <DataGridTextColumn Width="auto" Header="Starting Inventory"/>
-                <DataGridTextColumn Width="auto" Header="Inventory Receivedd"/>
-                <DataGridTextColumn Width="auto" Header="Inventory On Hand"/>
-                <DataGridTextColumn Width="auto" Header="Minimum Required"/>
+                <DataGridTextColumn Width="auto" Header="Customer Id" Binding="{Binding Path=Customer_Id}"/>
+                <DataGridTextColumn Width="auto" Header="Company Name" Binding="{Binding Path=CompanyName}"/>
+                <DataGridTextColumn Width="auto" Header="Price Paid" Binding="{Binding Path=PricePaid}"/>
+                <DataGridTextColumn Width="auto" Header="Customer Address Id" Binding="{Binding Path=CustomerAddressId}"/>
+                <DataGridTextColumn Width="auto" Header="Is Active" Binding="{Binding Path=IsActive}"/>
             </DataGrid.Columns>            
         </DataGrid>
     </Grid>
