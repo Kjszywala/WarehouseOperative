@@ -37,28 +37,28 @@ namespace WarehouseOperative.ViewModels
         {
             get
             {
-                return new BaseCommand(createTowar);
+                return new BaseCommand(createProduct);
             }
         }
         public ICommand AllProductsCommand
         {
             get
             {
-                return new BaseCommand(showAllTowar);
+                return new BaseCommand(showAllProducts);
             }
         }
         public ICommand AddToDatabase
         {
             get
             {
-                return new BaseCommand(addToDatabase);
+                return new BaseCommand(addEmployees);
             }
         }
         public ICommand GetDatabase
         {
             get
             {
-                return new BaseCommand(getDatabase);
+                return new BaseCommand(getEmployees);
             }
         }
         public ICommand getCloseCommand
@@ -109,12 +109,12 @@ namespace WarehouseOperative.ViewModels
             return new List<CommandViewModel>
             {
                 // Creat buttons
-                new CommandViewModel("New Product", new BaseCommand(createTowar)),
-                new CommandViewModel("Products", new BaseCommand(showAllTowar)),
+                new CommandViewModel("New Product", new BaseCommand(createProduct)),
+                new CommandViewModel("All Products", new BaseCommand(showAllProducts)),
                 new CommandViewModel("New Invoice", new BaseCommand(createInvoice)),
-                new CommandViewModel("Invoices", new BaseCommand(showAllInvoices)),
-                new CommandViewModel("Add to database", new BaseCommand(addToDatabase)),
-                new CommandViewModel("Database", new BaseCommand(getDatabase))
+                new CommandViewModel("All Invoices", new BaseCommand(showAllInvoices)),
+                new CommandViewModel("New Employee", new BaseCommand(addEmployees)),
+                new CommandViewModel("All Employees", new BaseCommand(getEmployees))
             };
         }
         #endregion
@@ -170,13 +170,13 @@ namespace WarehouseOperative.ViewModels
         {
             Application.Current.MainWindow.Close();
         }
-        private void getDatabase()
+        private void getEmployees()
         {
-            AllCustomersViewModel database = new AllCustomersViewModel();
+            AllEmloyeesViewModel database = new AllEmloyeesViewModel();
             this._Workspaces.Add(database);
             this.setActiveWorkspace(database);
         }
-        private void addToDatabase()
+        private void addEmployees()
         {
             AllEmloyeesViewModel database = new AllEmloyeesViewModel();
             this._Workspaces.Add(database);
@@ -188,7 +188,7 @@ namespace WarehouseOperative.ViewModels
             this._Workspaces.Add(newInvoiceViewModel);
             this.setActiveWorkspace(newInvoiceViewModel);
         }
-        private void createTowar()
+        private void createProduct()
         {
             // create new bookmark
             NewProductViewmodel workspace = new NewProductViewmodel();
@@ -200,7 +200,7 @@ namespace WarehouseOperative.ViewModels
         // This is function to open bookmark with all bookmarks.
         // This method when is called checks if bookmark exist, if exist making 
         // this bookmark active, if not creating a new one.
-        private void showAllTowar()
+        private void showAllProducts()
         {
             // First we looking for in bookmark collection a bookmark which is all bookmarks.
             AllProductsViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllProductsViewModel) as AllProductsViewModel;
