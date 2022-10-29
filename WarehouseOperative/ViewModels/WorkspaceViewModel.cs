@@ -30,7 +30,7 @@ namespace WarehouseOperative.ViewModels
         #endregion
         #region RequestClose [evant]
         public event EventHandler RequestClose;
-        private void OnRequestClose()
+        public void OnRequestClose()
         {
             EventHandler handler = RequestClose;
             if(handler != null)

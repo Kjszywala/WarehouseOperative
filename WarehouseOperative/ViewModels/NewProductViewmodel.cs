@@ -8,9 +8,6 @@ namespace WarehouseOperative.ViewModels
 {
     public class NewProductViewmodel : WorkspaceViewModel
     {
-        #region FieldsAndProperties
-
-        #endregion
         #region Constructor
         public NewProductViewmodel()
         {

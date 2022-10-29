@@ -29,7 +29,7 @@ namespace WarehouseOperative.ViewModels
                         //dla kazdego towaru z tabeli towar wybierz ten towar.
                         //SELECT * FROM Towar
                         //WHERE CzyAktywny = true
-                        from invoices in FakturyEntities.Invoices
+                        from invoices in WarehouseEntities.Invoices
                         where invoices.isActive == true
                         select invoices
                     );

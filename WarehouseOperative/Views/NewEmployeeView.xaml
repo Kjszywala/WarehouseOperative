@@ -1,0 +1,52 @@
+﻿<local:AllViewBase x:Class="WarehouseOperative.Views.NewEmployeeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WarehouseOperative.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ToggleButton Grid.Column="1" Grid.Row="0" Margin="10,10,30,10" Content="Add To DB"/>
+        <Label Grid.Row="0" Content="Choose What To Add" Margin="10"/>
+        <ComboBox Margin="150,10,105,10">
+            <ComboBoxItem Content="Product"/>
+            <ComboBoxItem Content="Invoice"/>
+            <ComboBoxItem Content="Customer"/>
+        </ComboBox>
+        <Label Content="Product ID: " Margin="10,10,10,10" Grid.Row="1"/>
+        <Label Content="Product Name: " Margin="10,10,10,10" Grid.Row="2"/>
+        <Label Content="Part Number: " Margin="10,10,10,10" Grid.Row="3"/>
+        <Label Content="Product Label: " Margin="10,10,10,10" Grid.Row="4"/>
+        <Label Content="Starting Inventory: " Margin="10,10,10,10" Grid.Row="5"/>
+        <Label Content="Inventory Received: " Margin="10,10,10,10" Grid.Row="6"/>
+        <Label Content="Inventory Shipped: " Margin="10,10,10,10" Grid.Row="7"/>
+        <Label Content="Inventory On Hand: " Margin="10,10,10,10" Grid.Row="8"/>
+        <Label Content="Minimum Required: " Margin="10,10,10,10" Grid.Row="9"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="1"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="2"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="3"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="4"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="5"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="6"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="7"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="8"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="9"/>
+    </Grid>
+</local:AllViewBase>

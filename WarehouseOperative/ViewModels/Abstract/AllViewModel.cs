@@ -14,12 +14,12 @@ namespace WarehouseOperative.ViewModels.Abstract
     {
         #region Fields
         // To jest obiekt ktory bedzie sluzyl do operacji na bazie danych.
-        private readonly WarehouseEntities fakturyEntities;
-        public WarehouseEntities FakturyEntities
+        private readonly WarehouseEntities warehouseEntities;
+        public WarehouseEntities WarehouseEntities
         {
             get
             {
-                return fakturyEntities;
+                return warehouseEntities;
             }
         }
         //to jest komenda do zaladowania towarow.
@@ -62,7 +62,7 @@ namespace WarehouseOperative.ViewModels.Abstract
         public AllViewModel(string displayName)
         {
             base.DisplayName = displayName;
-            this.fakturyEntities = new WarehouseEntities();
+            this.warehouseEntities = new WarehouseEntities();
         }
         #endregion
 
