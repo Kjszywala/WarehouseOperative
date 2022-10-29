@@ -18,11 +18,11 @@
     <DataTemplate DataType="{x:Type vm:AllInvoicesViewModel}">
         <vw:AllInvoicesView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:NewEmployeeViewModel}">
+        <vw:NewEmployeeView/>
+    </DataTemplate>
     <DataTemplate DataType="{x:Type vm:AllEmloyeesViewModel}">
         <vw:AllEmloyeesView/>
-    </DataTemplate>
-    <DataTemplate DataType="{x:Type vm:AllCustomersViewModel}">
-        <vw:AllCustomersView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:ErrorLogViewModel}">
         <vw:ErrorLogView/>

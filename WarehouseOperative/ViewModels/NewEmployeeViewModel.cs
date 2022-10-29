@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using WarehouseOperative.Models.Entities;
 using WarehouseOperative.ViewModels.Abstract;
 
@@ -111,6 +112,11 @@ namespace WarehouseOperative.ViewModels
         public override void Save()
         {
             Item.IsActive = true;
+            if (string.IsNullOrEmpty(Item.First_Name))
+            {
+                MessageBox.Show("Item is empty!!");
+                return;
+            }
             Db.Employees.AddObject(Item);
             Db.SaveChanges();
         }

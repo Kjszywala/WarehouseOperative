@@ -13,13 +13,13 @@
 
         <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding List}" AutoGenerateColumns="False" Margin="10" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Employee Id" Width="60" Binding="{Binding Path=Invoice_Id}"/>
-                <DataGridTextColumn Header="First Name" Width="90" Binding="{Binding Path=Invoicenumber}"/>
-                <DataGridTextColumn Header="Last Name" Width="80" Binding="{Binding Path=InvoiceDate}"/>
-                <DataGridTextColumn Header="E-mail" Width="60" Binding="{Binding Path=OrderId}"/>
-                <DataGridTextColumn Header="Phone Number" Width="120" Binding="{Binding Path=PaymentMethodId}"/>
-                <DataGridTextColumn Header="Hire Date" Width="80" Binding="{Binding Path=IsConfirmed}"/>
-                <DataGridTextColumn Header="Job Title" Width="90" Binding="{Binding Path=ProductId}"/>
+                <DataGridTextColumn Header="Employee Id" Width="60" Binding="{Binding Path=Employee_Id}"/>
+                <DataGridTextColumn Header="First Name" Width="90" Binding="{Binding Path=First_Name}"/>
+                <DataGridTextColumn Header="Last Name" Width="80" Binding="{Binding Path=Last_Name}"/>
+                <DataGridTextColumn Header="E-mail" Width="60" Binding="{Binding Path=Email}"/>
+                <DataGridTextColumn Header="Phone Number" Width="120" Binding="{Binding Path=Phone}"/>
+                <DataGridTextColumn Header="Hire Date" Width="80" Binding="{Binding Path=Hire_Date}"/>
+                <DataGridTextColumn Header="Job Title" Width="90" Binding="{Binding Path=Job_Title}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

@@ -18,7 +18,7 @@ namespace WarehouseOperative.Views
     /// <summary>
     /// Interaction logic for NewEmloyeeView.xaml
     /// </summary>
-    public partial class NewEmployeeView : AllViewBase
+    public partial class NewEmployeeView : AddRowViewBase
     {
         public NewEmployeeView()
         {

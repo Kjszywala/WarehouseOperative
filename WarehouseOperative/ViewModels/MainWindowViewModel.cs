@@ -181,7 +181,7 @@ namespace WarehouseOperative.ViewModels
        
         private void addEmployees()
         {
-            AllEmloyeesViewModel database = new AllEmloyeesViewModel();
+            NewEmployeeViewModel database = new NewEmployeeViewModel();
             this._Workspaces.Add(database);
             this.setActiveWorkspace(database);
         }
