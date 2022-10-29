@@ -47,14 +47,14 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(showAllProducts);
             }
         }
-        public ICommand AddToDatabase
+        public ICommand AddEmployee
         {
             get
             {
                 return new BaseCommand(addEmployees);
             }
         }
-        public ICommand GetDatabase
+        public ICommand GetEmployees
         {
             get
             {
@@ -170,12 +170,7 @@ namespace WarehouseOperative.ViewModels
         {
             Application.Current.MainWindow.Close();
         }
-        private void getEmployees()
-        {
-            AllEmloyeesViewModel database = new AllEmloyeesViewModel();
-            this._Workspaces.Add(database);
-            this.setActiveWorkspace(database);
-        }
+       
         private void addEmployees()
         {
             AllEmloyeesViewModel database = new AllEmloyeesViewModel();
@@ -220,6 +215,17 @@ namespace WarehouseOperative.ViewModels
             if(workspace == null)
             {
                 workspace = new AllInvoicesViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
+
+        private void getEmployees()
+        {
+            AllEmloyeesViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllEmloyeesViewModel) as AllEmloyeesViewModel;
+            if (workspace == null)
+            {
+                workspace = new AllEmloyeesViewModel();
                 this.Workspaces.Add(workspace);
             }
             this.setActiveWorkspace(workspace);

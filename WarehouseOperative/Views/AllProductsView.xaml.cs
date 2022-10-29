@@ -18,7 +18,7 @@ namespace WarehouseOperative.Views
     /// <summary>
     /// Logika interakcji dla klasy WszystkieTowaryView.xaml
     /// </summary>
-    public partial class AllProductsView : UserControl
+    public partial class AllProductsView : AllViewBase
     {
         public AllProductsView()
         {

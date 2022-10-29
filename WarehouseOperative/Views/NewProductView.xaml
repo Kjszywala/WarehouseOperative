@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WarehouseOperative.Views.NewProductView"
+﻿<local:AllViewBase x:Class="WarehouseOperative.Views.NewProductView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -43,4 +43,4 @@
         <TextBox Margin="150,10,107,10" Grid.Row="7"/>
         <TextBox Margin="150,10,107,10" Grid.Row="8"/>
     </Grid>
-</UserControl>
+</local:AllViewBase>

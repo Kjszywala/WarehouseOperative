@@ -18,7 +18,7 @@ namespace WarehouseOperative.Views
     /// <summary>
     /// Interaction logic for NewInvoiceView.xaml
     /// </summary>
-    public partial class NewInvoiceView : UserControl
+    public partial class NewInvoiceView : AllViewBase
     {
         public NewInvoiceView()
         {

@@ -13,10 +13,10 @@
         <ResourceDictionary Source="MainWindowResources.xaml"/>
     </Window.Resources>
     <Window.InputBindings>
-        <KeyBinding Gesture="Ctrl+q" Command="{Binding AddToDatabase}"/>
+        <KeyBinding Gesture="Ctrl+q" Command="{Binding AddEmployee}"/>
         <KeyBinding Gesture="Ctrl+w" Command="{Binding AllInvoicesCommand}"/>
         <KeyBinding Gesture="Ctrl+e" Command="{Binding AllProductsCommand}"/>
-        <KeyBinding Gesture="Ctrl+r" Command="{Binding GetDatabase}"/>
+        <KeyBinding Gesture="Ctrl+r" Command="{Binding GetEmployees}"/>
         <KeyBinding Gesture="Ctrl+t" Command="{Binding NewInvoiceCommand}"/>
         <KeyBinding Gesture="Ctrl+a" Command="{Binding NewProductCommand}"/>
         <KeyBinding Gesture="Ctrl+x" Command="{Binding CloseBookmark}"/>
