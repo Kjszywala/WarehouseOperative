@@ -112,9 +112,9 @@ namespace WarehouseOperative.ViewModels
         public override void Save()
         {
             Item.IsActive = true;
-            if (string.IsNullOrEmpty(Item.First_Name))
+            if (string.IsNullOrEmpty(Job_Title))
             {
-                MessageBox.Show("Item is empty!!");
+                MessageBox.Show("Item is empty.");
                 return;
             }
             Db.Employees.AddObject(Item);

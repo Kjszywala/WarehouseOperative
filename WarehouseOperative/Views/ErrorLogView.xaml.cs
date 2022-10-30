@@ -18,7 +18,7 @@ namespace WarehouseOperative.Views
     /// <summary>
     /// Interaction logic for ErrorLogView.xaml
     /// </summary>
-    public partial class ErrorLogView : AllViewBase
+    public partial class ErrorLogView : UserControl
     {
         public ErrorLogView()
         {

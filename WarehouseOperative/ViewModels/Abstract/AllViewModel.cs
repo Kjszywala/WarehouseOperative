@@ -14,7 +14,7 @@ namespace WarehouseOperative.ViewModels.Abstract
     {
         #region Fields
         // To jest obiekt ktory bedzie sluzyl do operacji na bazie danych.
-        private readonly WarehouseEntities warehouseEntities;
+        public readonly WarehouseEntities warehouseEntities;
         public WarehouseEntities WarehouseEntities
         {
             get
