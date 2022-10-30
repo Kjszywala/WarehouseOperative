@@ -16,7 +16,7 @@
                 <DataGridTextColumn Header="Error Log Id" Width="80" Binding="{Binding Path=ErrorLog_Id}"/>
                 <DataGridTextColumn Header="Error Description" Width="*" Binding="{Binding Path=Description}"/>
                 <DataGridTextColumn Header="Line Number" Width="*" Binding="{Binding Path=LineNumber}"/>
-                <DataGridTextColumn Header="Data and Time" Width="*" Binding="{Binding Path=DataTime}"/>
+                <DataGridTextColumn Header="Date and Time" Width="*" Binding="{Binding Path=DataTime}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

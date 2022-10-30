@@ -9,6 +9,7 @@ using System.Linq;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows;
+using System.Data.Entity;
 
 namespace WarehouseOperative.ViewModels
 {
@@ -23,7 +24,7 @@ namespace WarehouseOperative.ViewModels
         {
             get
             {
-                return new BaseCommand(createInvoice);
+                return new BaseCommand(() => addBookmarkCreateNew(new NewInvoiceViewModel()));
             }
         }
         public ICommand AllInvoicesCommand
@@ -44,7 +45,7 @@ namespace WarehouseOperative.ViewModels
         {
             get
             {
-                return new BaseCommand(createProduct);
+                return new BaseCommand(() => addBookmarkCreateNew(new NewProductViewmodel()));
             }
         }
         public ICommand AllProductsCommand
@@ -58,7 +59,7 @@ namespace WarehouseOperative.ViewModels
         {
             get
             {
-                return new BaseCommand(addEmployees);
+                return new BaseCommand(() => addBookmarkCreateNew(new NewEmployeeViewModel()));
             }
         }
         public ICommand GetEmployees
@@ -116,11 +117,11 @@ namespace WarehouseOperative.ViewModels
             return new List<CommandViewModel>
             {
                 // Creat buttons
-                new CommandViewModel("New Product", new BaseCommand(createProduct)),
+                new CommandViewModel("New Product", new BaseCommand(()=>addBookmarkCreateNew(new NewProductViewmodel()))),
                 new CommandViewModel("All Products", new BaseCommand(showAllProducts)),
-                new CommandViewModel("New Invoice", new BaseCommand(createInvoice)),
+                new CommandViewModel("New Invoice", new BaseCommand(()=>addBookmarkCreateNew(new NewInvoiceViewModel()))),
                 new CommandViewModel("All Invoices", new BaseCommand(showAllInvoices)),
-                new CommandViewModel("New Employee", new BaseCommand(addEmployees)),
+                new CommandViewModel("New Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel()))),
                 new CommandViewModel("All Employees", new BaseCommand(getEmployees)),
                 new CommandViewModel("Error Log", new BaseCommand(getErrorLog))
             };
@@ -160,37 +161,70 @@ namespace WarehouseOperative.ViewModels
         }
         #endregion
         #region HelpFunctions
-        // This is function to open new bookmark.
-        // This method each time it is called creating new bookmark.
+        /// <summary>
+        /// Delete current bookmark.
+        /// </summary>
         private void deleteBookmark()
         {
             if (Workspaces.Count>0)
             {
-                Workspaces.RemoveAt(Workspaces.Count - 1);
-
+                ICollectionView collectionView = CollectionViewSource.GetDefaultView(this.Workspaces);
+                Workspaces.RemoveAt(collectionView.CurrentPosition);
             }
         }
+
+        /// <summary>
+        /// Get information about application.
+        /// </summary>
         private void getInfo()
         {
             MessageBox.Show("Author: Kamil Szywala.\nThis program was made for\nWyzsza Szkola Biznesu - National Luis University\nin a purpose of end-semester project from\nC# Interfaces.");
         }
+
+        /// <summary>
+        /// Close the aplication.
+        /// </summary>
         private void getClose()
         {
             Application.Current.MainWindow.Close();
         }
-       
+
+        /// <summary>
+        /// Create a bookmark method, we do not need to write this method for each bookmark
+        /// instead of it we can just pass parameter to this function and then call it like below
+        /// new BaseCommand(()=>addBookmark(new NewEmployeeViewModel()))
+        /// </summary>
+        /// <param name="workspace"></param>
+        private void addBookmarkCreateNew(WorkspaceViewModel workspace)
+        {
+            // add bookmark to active bookmark collection.
+            this._Workspaces.Add(workspace);
+            this.setActiveWorkspace(workspace);
+        }
+
+        /// <summary>
+        /// Show bookmark with adding new Employee.
+        /// </summary>
         private void addEmployees()
         {
             NewEmployeeViewModel database = new NewEmployeeViewModel();
             this._Workspaces.Add(database);
             this.setActiveWorkspace(database);
         }
+
+        /// <summary>
+        /// Show bookmark with creating new invoice.
+        /// </summary>
         private void createInvoice()
         {
             NewInvoiceViewModel newInvoiceViewModel = new NewInvoiceViewModel();
             this._Workspaces.Add(newInvoiceViewModel);
             this.setActiveWorkspace(newInvoiceViewModel);
         }
+
+        /// <summary>
+        /// Show bookmark with adding new product.
+        /// </summary>
         private void createProduct()
         {
             // create new bookmark

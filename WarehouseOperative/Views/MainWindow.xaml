@@ -92,7 +92,7 @@
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}">
                 
                 <StackPanel>
-                    <Image Height="auto"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
+                    <Image Height="40" Width="40"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
                     <TextBlock Height="10" Width="49" Text="New Invoice" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                     <AccessText>_P</AccessText>
                 </StackPanel>
