@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WarehouseOperative.Views" 
         xmlns:viewmodels="clr-namespace:WarehouseOperative.ViewModels" 
         d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
@@ -42,18 +41,18 @@
             <Image Source="pack://application:,,,/Views/Content/Icons/warehouse(4).png" Grid.Column="0" Grid.ColumnSpan="2" Margin="-2,0,293,7"/>
             <StackPanel Grid.Row="0" Grid.Column="2">
             </StackPanel>
-            <ToggleButton Width="30" Height="30" Grid.Column="5" Background="Transparent" Command="{Binding getCloseCommand}">
-                <StackPanel>
+            <ToggleButton Width="30" Height="30" Grid.Column="5" Background="Transparent" Command="{Binding getCloseCommand}" Style="{StaticResource NavigationButton}">
+                <StackPanel VerticalAlignment="Center">
                     <Image Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/close.png" Stretch="Fill" IsEnabled="True"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="30" Height="30" Grid.Column="4" Background="Transparent" Click="MinMax_Click">
+            <ToggleButton Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="4" Background="Transparent" Click="MinMax_Click">
                 <StackPanel>
                     <Image x:Name="MinMaxImage" Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/maximize.png" Stretch="Fill" IsEnabled="True"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="30" Height="30" Grid.Column="3" Background="Transparent" Click="Min_Click">
-                <StackPanel>
+            <ToggleButton Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="3" Background="Transparent" Click="Min_Click">
+                <StackPanel VerticalAlignment="Center">
                     <Image Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/subtract.png" Stretch="Fill" IsEnabled="True"/>
                 </StackPanel>
             </ToggleButton>
