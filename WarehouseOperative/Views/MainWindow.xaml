@@ -8,11 +8,16 @@
         mc:Ignorable="d"
         MouseDown="Window_MouseDown"
         WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent" 
+        ResizeMode="CanResize"
         Title="WareHouse" Height="750" Width="1100"
         >
+    
     <Window.Resources>
         <ResourceDictionary Source="MainWindowResources.xaml"/>
     </Window.Resources>
+    
     <Window.InputBindings>
         <KeyBinding Gesture="Ctrl+q" Command="{Binding AddEmployee}"/>
         <KeyBinding Gesture="Ctrl+w" Command="{Binding AllInvoicesCommand}"/>
@@ -22,7 +27,9 @@
         <KeyBinding Gesture="Ctrl+a" Command="{Binding NewProductCommand}"/>
         <KeyBinding Gesture="Ctrl+x" Command="{Binding CloseBookmark}"/>
     </Window.InputBindings>
-    <Grid>
+
+    <Border CornerRadius="20" BorderBrush="Black" BorderThickness="1" Padding="6" Background="White">
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="80"/>
@@ -46,7 +53,7 @@
                     <Image Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/close.png" Stretch="Fill" IsEnabled="True"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="4" Background="Transparent" Click="MinMax_Click">
+            <ToggleButton x:Name="MinMaxButton" Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="4" Background="Transparent" Click="MinMax_Click">
                 <StackPanel>
                     <Image x:Name="MinMaxImage" Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/maximize.png" Stretch="Fill" IsEnabled="True"/>
                 </StackPanel>
@@ -230,11 +237,12 @@
         </Grid>
         <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">
             <StatusBarItem>
-                <TextBlock>WSB-NLU Kamil Szywala</TextBlock>
+                <TextBlock Margin="5,0,0,0" >WSB-NLU Kamil Szywala</TextBlock>
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right" >
-                <ProgressBar Width="100" Height="15" Value="70" Margin="1,0,0,1"/>
+                <ProgressBar Width="100" Height="15" Value="70" Margin="1,0,5,1"/>
             </StatusBarItem>
         </StatusBar>
     </Grid>
+    </Border>
 </Window>

@@ -34,6 +34,9 @@ namespace WarehouseOperative.Views
                 this.WindowState = WindowState.Maximized;
                 string packUri = "pack://application:,,,/Views/Content/Icons/collapse(2).png";
                 MinMaxImage.Source = new ImageSourceConverter().ConvertFromString(packUri) as ImageSource;
+
+                Style style = this.FindResource("NavigationButton") as Style;
+                MinMaxButton.Style = style;
             }
         }
 

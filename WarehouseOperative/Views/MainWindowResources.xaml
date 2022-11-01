@@ -169,6 +169,11 @@
     <Style x:Key="StatusBarStyle" TargetType="{x:Type StatusBar}">
         <Setter Property="Background" Value="Gray"/>
         <Setter Property="Foreground" Value="White"/>
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="5"/>
+            </Style>
+        </Style.Resources>
     </Style>
     
     <!-- ToggleButton style-->
