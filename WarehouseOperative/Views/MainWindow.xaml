@@ -39,8 +39,22 @@
                 <ColumnDefinition Width="40"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Row="0" Grid.Column="1">
-                
             </StackPanel>
+            <ToggleButton Width="30" Height="30" Grid.Column="4" Background="Transparent" >
+                <StackPanel>
+                    <Image VerticalAlignment="Top" Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/close.png" Stretch="Fill" IsEnabled="True"/>
+                </StackPanel>
+            </ToggleButton>
+            <ToggleButton Width="30" Height="30" Grid.Column="3" Background="Transparent" >
+                <StackPanel>
+                    <Image Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/maximize.png" Stretch="Fill" IsEnabled="True"/>
+                </StackPanel>
+            </ToggleButton>
+            <ToggleButton Width="30" Height="30" Grid.Column="2" Background="Transparent" >
+                <StackPanel>
+                    <Image Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/subtract.png" Stretch="Fill" IsEnabled="True"/>
+                </StackPanel>
+            </ToggleButton>
             <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
                 <MenuItem Header="_File">
                     <MenuItem Header="New">
@@ -103,7 +117,6 @@
         
         <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}">
-                
                 <StackPanel>
                     <Image Height="40" Width="40"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
                     <TextBlock Height="10" Width="49" Text="New Invoice" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
