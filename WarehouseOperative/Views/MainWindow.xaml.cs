@@ -15,8 +15,11 @@ namespace WarehouseOperative.Views
 
         private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            if (e.ChangedButton == MouseButton.Left)
-                this.DragMove();
+            //if (e.ChangedButton == MouseButton.Left)
+            //    this.DragMove();
+            //if (Mouse.LeftButton == MouseButtonState.Pressed)
+            //    this.DragMove();
+            DragMove();
         }
     }
 }
