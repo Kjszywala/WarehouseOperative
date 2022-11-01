@@ -9,17 +9,18 @@
         MouseDown="Window_MouseDown"
         WindowStyle="None"
         AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
         Background="Transparent" 
         ResizeMode="CanResize"
         Title="WareHouse" 
         Height="600" 
         Width="1000"
         >
-    
+
     <Window.Resources>
         <ResourceDictionary Source="MainWindowResources.xaml"/>
     </Window.Resources>
-    
+
     <Window.InputBindings>
         <KeyBinding Gesture="Ctrl+q" Command="{Binding AddEmployee}"/>
         <KeyBinding Gesture="Ctrl+w" Command="{Binding AllInvoicesCommand}"/>
@@ -29,10 +30,6 @@
         <KeyBinding Gesture="Ctrl+a" Command="{Binding NewProductCommand}"/>
         <KeyBinding Gesture="Ctrl+x" Command="{Binding CloseBookmark}"/>
     </Window.InputBindings>
-    
-    <WindowChrome.WindowChrome>
-        <WindowChrome/>
-    </WindowChrome.WindowChrome>
 
     <Border 
         CornerRadius="20" 
@@ -48,193 +45,193 @@
             </DropShadowEffect>
         </Border.Effect>-->
 
-        
-        <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="300"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-            </Grid.ColumnDefinitions>
-            <Image Source="pack://application:,,,/Views/Content/Icons/warehouse(4).png" Grid.Column="0" Grid.ColumnSpan="2" Margin="-2,0,293,7"/>
-            <StackPanel Grid.Row="0" Grid.Column="2">
-            </StackPanel>
-            <ToggleButton Width="30" Height="30" Grid.Column="5" Background="Transparent" Command="{Binding getCloseCommand}" Style="{StaticResource NavigationButton}">
-                <StackPanel VerticalAlignment="Center">
-                    <Image Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/close.png" Stretch="Fill" IsEnabled="True"/>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton x:Name="MinMaxButton" Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="4" Background="Transparent" Click="MinMax_Click">
-                <StackPanel>
-                    <Image x:Name="MinMaxImage" Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/maximize.png" Stretch="Fill" IsEnabled="True"/>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="3" Background="Transparent" Click="Min_Click">
-                <StackPanel VerticalAlignment="Center">
-                    <Image Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/subtract.png" Stretch="Fill" IsEnabled="True"/>
-                </StackPanel>
-            </ToggleButton>
-            <Menu Grid.Row="0" Grid.Column="1" Margin="3" Background="White">
-                <MenuItem Header="_File">
-                    <MenuItem Header="New">
-                        <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
-                        <MenuItem Header="New Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
-                    </MenuItem>
-                    <MenuItem Header="Open">
-                        <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
-                        <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
-                    </MenuItem>
-                    <Separator/>
-                    <MenuItem Header="Save"/>
-                    <MenuItem Header="Load"/>
-                    <Separator/>
-                    <MenuItem Header="Exit" Command="{Binding Path=getCloseCommand}"/>
-                </MenuItem>
-                <MenuItem Header="_Edit">
-                    <MenuItem Header="Go to">
-                        <MenuItem Header="Go to all"/>
-                        <MenuItem Header="Go to file"/>
-                        <MenuItem Header="Go to recent file"/>
-                        <MenuItem Header="Go to type"/>
-                        <MenuItem Header="Go to file"/>
-                        <Separator/>
-                        <MenuItem Header="Go to next"/>
-                        <MenuItem Header="Go to previous"/>
-                    </MenuItem>
-                    <MenuItem Header="Find">
-                        <MenuItem Header="Find invoice"/>
-                        <MenuItem Header="Find product"/>
-                    </MenuItem>
-                    <Separator/>
-                    <MenuItem Header="Cut"/>
-                    <MenuItem Header="Copy"/>
-                    <MenuItem Header="Paste"/>
-                    <Separator/>
-                    <MenuItem Header="Duplicate"/>
-                    <MenuItem Header="Delete"/>
-                </MenuItem>
-                <MenuItem Header="_Store">
-                    <MenuItem Header="Invoices">
-                        <MenuItem Header="Add invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
-                        <MenuItem Header="All invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+L, Ctrl+W"/>
-                    </MenuItem>
-                    <MenuItem Header="Products">
-                        <MenuItem Header="Add product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
-                        <MenuItem Header="All products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+K, Ctrl+E"/>
-                    </MenuItem>
-                    <MenuItem Header="Database">
-                        <MenuItem Header="Add to database" Command="{Binding Path=AddToDatabase}" InputGestureText="Alt+I,  Ctrl+Q"/>
-                        <MenuItem Header="Search in database" Command="{Binding Path=GetDatabase}" InputGestureText="Alt+J,  Ctrl+R"/>
-                    </MenuItem>
-                </MenuItem>
-                <MenuItem Header="Action"/>
-                <MenuItem Header="Tools"/>
-                <MenuItem Header="Setup"/>
-                <MenuItem Header="Help"/>
-            </Menu>
-        </Grid>
 
-        <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}">
-                <StackPanel>
-                    <Image Height="40" Width="40"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
-                    <TextBlock Height="10" Width="49" Text="New Invoice" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                    <AccessText>_P</AccessText>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="pack://application:,,,/Views/Content/Icons/warehouse(4).png" Grid.Column="0" Grid.ColumnSpan="2" Margin="-2,0,293,7"/>
+                <StackPanel Grid.Row="0" Grid.Column="2">
                 </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllInvoicesCommand}">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/invoices.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="Invoices" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                    <AccessText>_L</AccessText>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewProductCommand}">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/product.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Width="55" Text="New Product" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                    <AccessText>_O</AccessText>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllProductsCommand}">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/products.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="All Products" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                    <AccessText>_K</AccessText>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AddToDatabase}">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/addtodatabase.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="Add to DB" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                    <AccessText>_I</AccessText>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=GetDatabase}">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/database.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="Database" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                    <AccessText>_J</AccessText>
-                </StackPanel>
-            </ToggleButton>
-            <Separator/>
-            <Separator/>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/print.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="Print" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/save.png" Stretch="Fill" IsEnabled="True"/>
-                    <TextBlock Height="10" Text="Save" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                </StackPanel>
-            </ToggleButton>
-            <Separator/>
-            <Separator/>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/preview.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="Preview" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=CloseBookmark}">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/delete.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="Delete" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/restore.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="Restore" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                </StackPanel>
-            </ToggleButton>
-            <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=InfoCommand}">
-                <StackPanel>
-                    <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/info.png" Stretch="Fill"/>
-                    <TextBlock Height="10" Text="Information" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                    <AccessText>_Y</AccessText>
-                </StackPanel>
-            </ToggleButton>
-        </ToolBar>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Border Grid.Column="0">
-                <HeaderedContentControl 
+                <ToggleButton Width="30" Height="30" Grid.Column="5" Background="Transparent" VerticalAlignment="Center" Command="{Binding getCloseCommand}" Style="{StaticResource NavigationButton}" MinWidth="30" MinHeight="30">
+                    <StackPanel VerticalAlignment="Top">
+                        <Image Height="23" Width="25" Source="pack://application:,,,/Views/Content/Icons/close.png" Stretch="Fill" IsEnabled="True"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton x:Name="MinMaxButton" Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="4" Background="Transparent" Click="MinMax_Click">
+                    <StackPanel>
+                        <Image x:Name="MinMaxImage" Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/maximize.png" Stretch="Fill" IsEnabled="True" RenderTransformOrigin="0.513,0.347"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="3" Background="Transparent" Click="Min_Click">
+                    <StackPanel VerticalAlignment="Center">
+                        <Image Height="23" Width="25" Source="pack://application:,,,/Views/Content/Icons/subtract.png" Stretch="Fill" IsEnabled="True"/>
+                    </StackPanel>
+                </ToggleButton>
+                <Menu Grid.Row="0" Grid.Column="1" Margin="3" Background="White" VerticalAlignment="Center">
+                    <MenuItem Header="_File">
+                        <MenuItem Header="New">
+                            <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                            <MenuItem Header="New Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                        </MenuItem>
+                        <MenuItem Header="Open">
+                            <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                            <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                        </MenuItem>
+                        <Separator/>
+                        <MenuItem Header="Save"/>
+                        <MenuItem Header="Load"/>
+                        <Separator/>
+                        <MenuItem Header="Exit" Command="{Binding Path=getCloseCommand}"/>
+                    </MenuItem>
+                    <MenuItem Header="_Edit">
+                        <MenuItem Header="Go to">
+                            <MenuItem Header="Go to all"/>
+                            <MenuItem Header="Go to file"/>
+                            <MenuItem Header="Go to recent file"/>
+                            <MenuItem Header="Go to type"/>
+                            <MenuItem Header="Go to file"/>
+                            <Separator/>
+                            <MenuItem Header="Go to next"/>
+                            <MenuItem Header="Go to previous"/>
+                        </MenuItem>
+                        <MenuItem Header="Find">
+                            <MenuItem Header="Find invoice"/>
+                            <MenuItem Header="Find product"/>
+                        </MenuItem>
+                        <Separator/>
+                        <MenuItem Header="Cut"/>
+                        <MenuItem Header="Copy"/>
+                        <MenuItem Header="Paste"/>
+                        <Separator/>
+                        <MenuItem Header="Duplicate"/>
+                        <MenuItem Header="Delete"/>
+                    </MenuItem>
+                    <MenuItem Header="_Store">
+                        <MenuItem Header="Invoices">
+                            <MenuItem Header="Add invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                            <MenuItem Header="All invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+L, Ctrl+W"/>
+                        </MenuItem>
+                        <MenuItem Header="Products">
+                            <MenuItem Header="Add product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                            <MenuItem Header="All products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+K, Ctrl+E"/>
+                        </MenuItem>
+                        <MenuItem Header="Database">
+                            <MenuItem Header="Add to database" InputGestureText="Alt+I,  Ctrl+Q"/>
+                            <MenuItem Header="Search in database" InputGestureText="Alt+J,  Ctrl+R"/>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Action"/>
+                    <MenuItem Header="Tools"/>
+                    <MenuItem Header="Setup"/>
+                    <MenuItem Header="Help"/>
+                </Menu>
+            </Grid>
+
+            <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}">
+                    <StackPanel>
+                        <Image Height="40" Width="40"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
+                        <TextBlock Height="10" Width="49" Text="New Invoice" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <AccessText>_P</AccessText>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllInvoicesCommand}">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/invoices.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Invoices" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <AccessText>_L</AccessText>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewProductCommand}">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/product.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Width="55" Text="New Product" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <AccessText>_O</AccessText>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllProductsCommand}">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/products.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="All Products" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <AccessText>_K</AccessText>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/addtodatabase.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <AccessText>_I</AccessText>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/database.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <AccessText>_J</AccessText>
+                    </StackPanel>
+                </ToggleButton>
+                <Separator/>
+                <Separator/>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/print.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Print" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/save.png" Stretch="Fill" IsEnabled="True"/>
+                        <TextBlock Height="10" Text="Save" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton>
+                <Separator/>
+                <Separator/>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/preview.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Preview" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=CloseBookmark}">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/delete.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Delete" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/restore.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Restore" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=InfoCommand}">
+                    <StackPanel>
+                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/info.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Information" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <AccessText>_Y</AccessText>
+                    </StackPanel>
+                </ToggleButton>
+            </ToolBar>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0">
+                    <HeaderedContentControl 
                     Header="Operations" 
                     Background="Aqua"
                     Margin="3"
@@ -242,9 +239,9 @@
                     ContentTemplate="{StaticResource CommandsTemplate}"
                     Style="{StaticResource MainHCCStyle}"
                     />
-            </Border>
-            <Border Grid.Column="1">
-                <HeaderedContentControl 
+                </Border>
+                <Border Grid.Column="1">
+                    <HeaderedContentControl 
                     Header="Workspace" 
                     Background="Aqua"
                     Margin="3"
@@ -252,9 +249,9 @@
                     ContentTemplate="{StaticResource WorkspacesTemplate}"
                     Style="{StaticResource MainHCCStyle}"
                     />
-            </Border>
+                </Border>
 
-        </Grid>
+            </Grid>
             <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">
                 <StatusBarItem>
                     <TextBlock Margin="5,0,0,0" >WSB-NLU Kamil Szywala</TextBlock>
@@ -265,5 +262,8 @@
             </StatusBar>
         </Grid>
     </Border>
-    
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="10"/>
+    </WindowChrome.WindowChrome>
 </Window>

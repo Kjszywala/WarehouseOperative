@@ -18,7 +18,9 @@ namespace WarehouseOperative.Views
 
         private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            DragMove();
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+                this.DragMove();
+                //DragMove();
         }
 
         private void MinMax_Click(object sender, RoutedEventArgs e)
@@ -28,6 +30,8 @@ namespace WarehouseOperative.Views
                 this.WindowState = WindowState.Normal;
                 string packUri = "pack://application:,,,/Views/Content/Icons/maximize.png";
                 MinMaxImage.Source = new ImageSourceConverter().ConvertFromString(packUri) as ImageSource;
+                //Style style = this.FindResource("NavigationButton") as Style;
+                //MinMaxButton.Style = style;
             }
             else
             {
@@ -35,8 +39,8 @@ namespace WarehouseOperative.Views
                 string packUri = "pack://application:,,,/Views/Content/Icons/collapse(2).png";
                 MinMaxImage.Source = new ImageSourceConverter().ConvertFromString(packUri) as ImageSource;
 
-                Style style = this.FindResource("NavigationButton") as Style;
-                MinMaxButton.Style = style;
+                //Style style = this.FindResource("NavigationButton") as Style;
+                //MinMaxButton.Style = style;
             }
         }
 
