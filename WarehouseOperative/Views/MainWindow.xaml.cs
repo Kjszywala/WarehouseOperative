@@ -1,8 +1,6 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace WarehouseOperative.Views
 {
@@ -11,6 +9,8 @@ namespace WarehouseOperative.Views
     /// </summary>
     public partial class MainWindow : Window
     {
+        public object Windowstyle { get; private set; }
+
         public MainWindow()
         {
             InitializeComponent();

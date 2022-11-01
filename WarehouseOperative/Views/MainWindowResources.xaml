@@ -30,6 +30,7 @@
 
     <!--Here is the end of conecting View with ViewModel-->
 
+    
     <Style x:Key="MainHCCStyle" TargetType="{x:Type HeaderedContentControl}">
         <Setter Property="HeaderTemplate">
             <Setter.Value>
@@ -77,7 +78,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    
     <!--
   This style ensures that the borders in the main window are consistent.
   -->
@@ -217,5 +218,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+
     
 </ResourceDictionary>
