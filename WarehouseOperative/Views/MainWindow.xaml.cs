@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 namespace WarehouseOperative.Views
 {
@@ -10,6 +11,12 @@ namespace WarehouseOperative.Views
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
     }
 }

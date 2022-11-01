@@ -160,6 +160,7 @@ namespace WarehouseOperative.ViewModels
             this.Workspaces.Remove(workspace); 
         }
         #endregion
+
         #region HelpFunctions
         /// <summary>
         /// Delete current bookmark.
@@ -205,34 +206,34 @@ namespace WarehouseOperative.ViewModels
         /// <summary>
         /// Show bookmark with adding new Employee.
         /// </summary>
-        private void addEmployees()
-        {
-            NewEmployeeViewModel database = new NewEmployeeViewModel();
-            this._Workspaces.Add(database);
-            this.setActiveWorkspace(database);
-        }
+        //private void addEmployees()
+        //{
+        //    NewEmployeeViewModel database = new NewEmployeeViewModel();
+        //    this._Workspaces.Add(database);
+        //    this.setActiveWorkspace(database);
+        //}
 
-        /// <summary>
-        /// Show bookmark with creating new invoice.
-        /// </summary>
-        private void createInvoice()
-        {
-            NewInvoiceViewModel newInvoiceViewModel = new NewInvoiceViewModel();
-            this._Workspaces.Add(newInvoiceViewModel);
-            this.setActiveWorkspace(newInvoiceViewModel);
-        }
+        ///// <summary>
+        ///// Show bookmark with creating new invoice.
+        ///// </summary>
+        //private void createInvoice()
+        //{
+        //    NewInvoiceViewModel newInvoiceViewModel = new NewInvoiceViewModel();
+        //    this._Workspaces.Add(newInvoiceViewModel);
+        //    this.setActiveWorkspace(newInvoiceViewModel);
+        //}
 
-        /// <summary>
-        /// Show bookmark with adding new product.
-        /// </summary>
-        private void createProduct()
-        {
-            // create new bookmark
-            NewProductViewmodel workspace = new NewProductViewmodel();
-            // add bookmark to active bookmark collection.
-            this._Workspaces.Add(workspace);
-            this.setActiveWorkspace(workspace);
-        }
+        ///// <summary>
+        ///// Show bookmark with adding new product.
+        ///// </summary>
+        //private void createProduct()
+        //{
+        //    // create new bookmark
+        //    NewProductViewmodel workspace = new NewProductViewmodel();
+        //    // add bookmark to active bookmark collection.
+        //    this._Workspaces.Add(workspace);
+        //    this.setActiveWorkspace(workspace);
+        //}
 
         // This is function to open bookmark with all bookmarks.
         // This method when is called checks if bookmark exist, if exist making 

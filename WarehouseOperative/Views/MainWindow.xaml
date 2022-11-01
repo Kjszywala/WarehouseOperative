@@ -7,6 +7,8 @@
         xmlns:viewmodels="clr-namespace:WarehouseOperative.ViewModels" 
         d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
+        MouseDown="Window_MouseDown"
+        WindowStyle="None"
         Title="WareHouse" Height="750" Width="1100"
         >
     <Window.Resources>
@@ -28,9 +30,16 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
         <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
-            
             <MenuItem Header="_File">
                 <MenuItem Header="New">
                     <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
