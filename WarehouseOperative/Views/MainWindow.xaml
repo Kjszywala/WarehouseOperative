@@ -38,7 +38,7 @@
                 <ColumnDefinition Width="40"/>
                 <ColumnDefinition Width="40"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Row="0" Grid.Column="1" MouseLeftButtonDown="Window_MouseDown">
+            <StackPanel Grid.Row="0" Grid.Column="1">
                 
             </StackPanel>
             <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
