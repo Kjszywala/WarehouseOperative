@@ -32,30 +32,32 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
                 <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="40"/>
                 <ColumnDefinition Width="40"/>
                 <ColumnDefinition Width="40"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Row="0" Grid.Column="1">
+            <Image Source="pack://application:,,,/Views/Content/Icons/warehouse(3).png" Grid.Column="0" Grid.ColumnSpan="2" Margin="-2,0,293,1"/>
+            <StackPanel Grid.Row="0" Grid.Column="2">
             </StackPanel>
-            <ToggleButton Width="30" Height="30" Grid.Column="4" Background="Transparent" Command="{Binding getCloseCommand}">
+            <ToggleButton Width="30" Height="30" Grid.Column="5" Background="Transparent" Command="{Binding getCloseCommand}">
                 <StackPanel>
                     <Image Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/close.png" Stretch="Fill" IsEnabled="True"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="30" Height="30" Grid.Column="3" Background="Transparent" Click="MinMax_Click">
+            <ToggleButton Width="30" Height="30" Grid.Column="4" Background="Transparent" Click="MinMax_Click">
                 <StackPanel>
                     <Image x:Name="MinMaxImage" Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/maximize.png" Stretch="Fill" IsEnabled="True"/>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Width="30" Height="30" Grid.Column="2" Background="Transparent" Click="Min_Click">
+            <ToggleButton Width="30" Height="30" Grid.Column="3" Background="Transparent" Click="Min_Click">
                 <StackPanel>
                     <Image Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/subtract.png" Stretch="Fill" IsEnabled="True"/>
                 </StackPanel>
             </ToggleButton>
-            <Menu Grid.Row="0" Grid.Column="0" Margin="3" Background="White">
+            <Menu Grid.Row="0" Grid.Column="1" Margin="3" Background="White">
                 <MenuItem Header="_File">
                     <MenuItem Header="New">
                         <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
@@ -114,7 +116,7 @@
                 <MenuItem Header="Help"/>
             </Menu>
         </Grid>
-        
+
         <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
             <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}">
                 <StackPanel>

@@ -10,9 +10,7 @@
     <None Remove="Models\Entities\Model1.edmx" />
     <None Remove="Views\Content\Icons\addtodatabase.png" />
     <None Remove="Views\Content\Icons\close.png" />
-    <None Remove="Views\Content\Icons\collapse%281%29.png" />
     <None Remove="Views\Content\Icons\collapse%282%29.png" />
-    <None Remove="Views\Content\Icons\collapse.png" />
     <None Remove="Views\Content\Icons\cubes.png" />
     <None Remove="Views\Content\Icons\database.png" />
     <None Remove="Views\Content\Icons\delete.png" />
@@ -27,6 +25,10 @@
     <None Remove="Views\Content\Icons\restore.png" />
     <None Remove="Views\Content\Icons\save.png" />
     <None Remove="Views\Content\Icons\subtract.png" />
+    <None Remove="Views\Content\Icons\warehouse%281%29.png" />
+    <None Remove="Views\Content\Icons\warehouse%282%29.png" />
+    <None Remove="Views\Content\Icons\warehouse%283%29.png" />
+    <None Remove="Views\Content\Icons\warehouse.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,13 +53,7 @@
     <Resource Include="Views\Content\Icons\close.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\collapse(1).png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Views\Content\Icons\collapse(2).png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Views\Content\Icons\collapse.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\cubes.png">
@@ -100,6 +96,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\subtract.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\warehouse(1).png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\warehouse(2).png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\warehouse(3).png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\warehouse.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
