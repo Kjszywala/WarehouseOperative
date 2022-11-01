@@ -158,7 +158,8 @@
   -->
     <DataTemplate x:Key="WorkspacesTemplate">
         <TabControl 
-      IsSynchronizedWithCurrentItem="True" 
+      IsSynchronizedWithCurrentItem="True"
+      Background="Gray"
       ItemsSource="{Binding}" 
       ItemTemplate="{StaticResource ClosableTabItemTemplate}"
       Margin="4"
@@ -178,7 +179,7 @@
     </Style>
     
     <!-- ToggleButton style-->
-    <SolidColorBrush Color="#E6E6E6" x:Key="NormalRed" />
+    <SolidColorBrush Color="#3B3B3C" x:Key="NormalRed" />
     <SolidColorBrush Color="Transparent" x:Key="DarkRed" />
     <Style x:Key="ButtonSingleTrigger" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource NormalRed}" />
@@ -218,6 +219,44 @@
         </Setter>
     </Style>
 
-
+     <!--MenuItem style-->
     
+    <Style TargetType="{x:Type MenuItem}">
+        <Setter Property="OverridesDefaultStyle"
+          Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type MenuItem}">
+                    <Popup x:Name="PART_Popup">
+                        <Border >
+                            
+                        </Border>
+                    </Popup>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="5,0,5,0"/>
+        <Style.Triggers>
+            
+            <Trigger Property="Role"
+             Value="TopLevelHeader">
+                <Setter Property="Template" Value="{StaticResource {x:Static MenuItem.TopLevelHeaderTemplateKey}}" />
+                <Setter Property="Grid.IsSharedSizeScope" Value="true" />
+            </Trigger>
+            <Trigger Property="Role" Value="TopLevelItem">
+                <Setter Property="Template" Value="{StaticResource {x:Static MenuItem.TopLevelItemTemplateKey}}" />
+            </Trigger>
+            <Trigger Property="Role" Value="SubmenuHeader">
+                <Setter Property="Template" Value="{StaticResource {x:Static MenuItem.SubmenuHeaderTemplateKey}}" />
+            </Trigger>
+            <Trigger Property="Role" Value="SubmenuItem">
+                <Setter Property="Template" Value="{StaticResource {x:Static MenuItem.SubmenuItemTemplateKey}}" >
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#3B3B3C"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
 </ResourceDictionary>

@@ -33,10 +33,10 @@
 
     <Border 
         CornerRadius="20" 
-        BorderBrush="Black" 
+        BorderBrush="#FF252526" 
         BorderThickness="1" 
         Padding="6" 
-        Background="White"
+        Background="#FF252526"
         x:Name="border"
         >
         <!--<Border.Effect>
@@ -80,7 +80,7 @@
                         <Image Height="23" Width="25" Source="pack://application:,,,/Views/Content/Icons/subtract.png" Stretch="Fill" IsEnabled="True"/>
                     </StackPanel>
                 </ToggleButton>
-                <Menu Grid.Row="0" Grid.Column="1" Margin="3" Background="White" VerticalAlignment="Center">
+                <Menu Grid.Row="0" Grid.Column="1" Margin="3" Foreground="White" Background="Transparent" VerticalAlignment="Center">
                     <MenuItem Header="_File">
                         <MenuItem Header="New">
                             <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
@@ -140,88 +140,88 @@
                 </Menu>
             </Grid>
 
-            <ToolBar Grid.Column="0" Grid.Row="1" Background="White">
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}">
+            <ToolBar Grid.Column="0" Grid.Row="1" Background="Transparent">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}" Style="{StaticResource NavigationButton}">
                     <StackPanel>
                         <Image Height="40" Width="40"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
-                        <TextBlock Height="10" Width="49" Text="New Invoice" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <AccessText>_P</AccessText>
+                        <TextBlock Height="10" Width="49" Foreground="White" Text="New Invoice" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <!--<AccessText>_P</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllInvoicesCommand}">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllInvoicesCommand}" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/invoices.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Text="Invoices" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <AccessText>_L</AccessText>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/invoices.png" Stretch="Fill"/>
+                        <TextBlock Height="10"  Foreground="White" Text="Invoices" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <!--<AccessText>_L</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewProductCommand}">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewProductCommand}" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/product.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Width="55" Text="New Product" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <AccessText>_O</AccessText>
+                        <Image Height="40" Width="auto" Source="pack://application:,,,/Views/Content/Icons/product.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Width="55"  Foreground="White" Text="New Product" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <!--<AccessText>_O</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllProductsCommand}">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=AllProductsCommand}" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/products.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Text="All Products" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <AccessText>_K</AccessText>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/products.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="All Products" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <!--<AccessText>_K</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/addtodatabase.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Text="" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <AccessText>_I</AccessText>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/addtodatabase.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <!--<AccessText>_I</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/database.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Text="" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <AccessText>_J</AccessText>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/database.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <!--<AccessText>_J</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
-                <Separator/>
-                <Separator/>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <Separator Background="Black"/>
+                <Separator Background="Black"/>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/print.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Text="Print" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/print.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Print" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/save.png" Stretch="Fill" IsEnabled="True"/>
-                        <TextBlock Height="10" Text="Save" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/save.png" Stretch="Fill" IsEnabled="True"/>
+                        <TextBlock Height="10" Text="Save" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <Separator/>
-                <Separator/>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <Separator Background="Black"/>
+                <Separator Background="Black"/>
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/preview.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Text="Preview" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/preview.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Preview" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=CloseBookmark}">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=CloseBookmark}" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/delete.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Text="Delete" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/delete.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Delete" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/restore.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Text="Restore" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/restore.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Restore" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=InfoCommand}">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=InfoCommand}" Style="{StaticResource NavigationButton}">
                     <StackPanel>
-                        <Image Height="auto" Width="auto" Source="pack://application:,,,/Views/Content/Icons/info.png" Stretch="Fill"/>
-                        <TextBlock Height="10" Text="Information" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <AccessText>_Y</AccessText>
+                        <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/info.png" Stretch="Fill"/>
+                        <TextBlock Height="10" Text="Information" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <!--<AccessText>_Y</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
             </ToolBar>
@@ -233,7 +233,8 @@
                 <Border Grid.Column="0">
                     <HeaderedContentControl 
                     Header="Operations" 
-                    Background="Aqua"
+                    Background="Transparent"
+                    Foreground="White"
                     Margin="3"
                     Content="{Binding Path=Commands}"
                     ContentTemplate="{StaticResource CommandsTemplate}"
@@ -243,7 +244,8 @@
                 <Border Grid.Column="1">
                     <HeaderedContentControl 
                     Header="Workspace" 
-                    Background="Aqua"
+                    Background="Transparent"
+                    Foreground="White"
                     Margin="3"
                     Content="{Binding Path=Workspaces}"
                     ContentTemplate="{StaticResource WorkspacesTemplate}"
