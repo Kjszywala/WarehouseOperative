@@ -25,10 +25,8 @@
     <None Remove="Views\Content\Icons\restore.png" />
     <None Remove="Views\Content\Icons\save.png" />
     <None Remove="Views\Content\Icons\subtract.png" />
-    <None Remove="Views\Content\Icons\warehouse%281%29.png" />
-    <None Remove="Views\Content\Icons\warehouse%282%29.png" />
     <None Remove="Views\Content\Icons\warehouse%283%29.png" />
-    <None Remove="Views\Content\Icons\warehouse.png" />
+    <None Remove="Views\Content\Icons\warehouse%284%29.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -98,16 +96,10 @@
     <Resource Include="Views\Content\Icons\subtract.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\warehouse(1).png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Views\Content\Icons\warehouse(2).png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Views\Content\Icons\warehouse(3).png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\warehouse.png">
+    <Resource Include="Views\Content\Icons\warehouse(4).png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
