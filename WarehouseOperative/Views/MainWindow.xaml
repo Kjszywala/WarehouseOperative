@@ -68,17 +68,17 @@
                 </StackPanel>
                 <ToggleButton Width="30" Height="30" Grid.Column="5" Background="Transparent" VerticalAlignment="Center" Command="{Binding getCloseCommand}" Style="{StaticResource NavigationButton}" MinWidth="30" MinHeight="30">
                     <StackPanel VerticalAlignment="Top">
-                        <Image Height="23" Width="25" Source="pack://application:,,,/Views/Content/Icons/close.png" Stretch="Fill" IsEnabled="True"/>
+                        <Image Height="23" Width="25" Source="pack://application:,,,/Views/Content/Icons/close2.png" Stretch="Fill" IsEnabled="True"/>
                     </StackPanel>
                 </ToggleButton>
                 <ToggleButton x:Name="MinMaxButton" Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="4" Background="Transparent" Click="MinMax_Click">
                     <StackPanel>
-                        <Image x:Name="MinMaxImage" Height="25" Width="25" Source="pack://application:,,,/Views/Content/Icons/maximize.png" Stretch="Fill" IsEnabled="True" RenderTransformOrigin="0.513,0.347"/>
+                        <Image x:Name="MinMaxImage" Height="18" Width="18" Source="pack://application:,,,/Views/Content/Icons/maximize4.png" Stretch="Fill" IsEnabled="True" RenderTransformOrigin="0.513,0.347"/>
                     </StackPanel>
                 </ToggleButton>
                 <ToggleButton Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="3" Background="Transparent" Click="Min_Click">
                     <StackPanel VerticalAlignment="Center">
-                        <Image Height="23" Width="25" Source="pack://application:,,,/Views/Content/Icons/subtract.png" Stretch="Fill" IsEnabled="True"/>
+                        <Image Height="23" Width="25" Source="pack://application:,,,/Views/Content/Icons/substract2.png" Stretch="Fill" IsEnabled="True"/>
                     </StackPanel>
                 </ToggleButton>
                 <Menu Grid.Row="0" Grid.Column="1" Margin="3" Foreground="White" Background="Transparent" VerticalAlignment="Center">

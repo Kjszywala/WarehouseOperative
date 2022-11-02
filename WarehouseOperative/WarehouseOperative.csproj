@@ -9,22 +9,22 @@
   <ItemGroup>
     <None Remove="Models\Entities\Model1.edmx" />
     <None Remove="Views\Content\Icons\addtodatabase.png" />
-    <None Remove="Views\Content\Icons\close.png" />
-    <None Remove="Views\Content\Icons\collapse%282%29.png" />
+    <None Remove="Views\Content\Icons\close2.png" />
     <None Remove="Views\Content\Icons\cubes.png" />
     <None Remove="Views\Content\Icons\database.png" />
     <None Remove="Views\Content\Icons\delete.png" />
     <None Remove="Views\Content\Icons\info.png" />
     <None Remove="Views\Content\Icons\invoice.png" />
     <None Remove="Views\Content\Icons\invoices.png" />
-    <None Remove="Views\Content\Icons\maximize.png" />
+    <None Remove="Views\Content\Icons\maximize4.png" />
+    <None Remove="Views\Content\Icons\minimalize2.png" />
     <None Remove="Views\Content\Icons\preview.png" />
     <None Remove="Views\Content\Icons\print.png" />
     <None Remove="Views\Content\Icons\product.png" />
     <None Remove="Views\Content\Icons\products.png" />
     <None Remove="Views\Content\Icons\restore.png" />
     <None Remove="Views\Content\Icons\save.png" />
-    <None Remove="Views\Content\Icons\subtract.png" />
+    <None Remove="Views\Content\Icons\substract2.png" />
     <None Remove="Views\Content\Icons\warehouse%284%29.png" />
   </ItemGroup>
 
@@ -47,10 +47,7 @@
     <Resource Include="Views\Content\Icons\addtodatabase.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\close.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Views\Content\Icons\collapse(2).png">
+    <Resource Include="Views\Content\Icons\close2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\cubes.png">
@@ -71,7 +68,10 @@
     <Resource Include="Views\Content\Icons\invoices.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\maximize.png">
+    <Resource Include="Views\Content\Icons\maximize4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\minimalize2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\preview.png">
@@ -92,7 +92,7 @@
     <Resource Include="Views\Content\Icons\save.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\subtract.png">
+    <Resource Include="Views\Content\Icons\substract2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\warehouse(4).png">
