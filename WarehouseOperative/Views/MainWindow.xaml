@@ -11,12 +11,12 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         Background="Transparent" 
-        ResizeMode="CanResize"
+        ResizeMode="CanResizeWithGrip"
         Title="WareHouse" 
         Height="600" 
         Width="1000"
         >
-
+    
     <Window.Resources>
         <ResourceDictionary Source="MainWindowResources.xaml"/>
     </Window.Resources>
@@ -39,6 +39,7 @@
         Background="#FF252526"
         x:Name="border"
         >
+        
         <!--<Border.Effect>
             <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="0" Opacity="0.25" Color="#FF5B5B5B">
                 
