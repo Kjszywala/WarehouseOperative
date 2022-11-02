@@ -82,21 +82,18 @@
                     </StackPanel>
                 </ToggleButton>
                 <Menu Grid.Row="0" Grid.Column="1" Margin="3" Foreground="White" Background="Transparent" VerticalAlignment="Center">
-                    <MenuItem Header="_File">
-                        <MenuItem Header="New">
-                            <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
-                            <MenuItem Header="New Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
-                        </MenuItem>
-                        <MenuItem Header="Open">
-                            <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
-                            <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
-                        </MenuItem>
+                    <MenuItem Header="File" Style="{StaticResource TopLevelHeaderStyle}">
+                        <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                        <MenuItem Header="New Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                        <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                        <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
                         <Separator/>
                         <MenuItem Header="Save"/>
                         <MenuItem Header="Load"/>
                         <Separator/>
                         <MenuItem Header="Exit" Command="{Binding Path=getCloseCommand}"/>
                     </MenuItem>
+                    
                     <MenuItem Header="_Edit">
                         <MenuItem Header="Go to">
                             <MenuItem Header="Go to all"/>
@@ -138,6 +135,7 @@
                     <MenuItem Header="Tools"/>
                     <MenuItem Header="Setup"/>
                     <MenuItem Header="Help"/>
+                        
                 </Menu>
             </Grid>
 
