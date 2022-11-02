@@ -93,22 +93,20 @@
                         <Separator/>
                         <MenuItem Header="Exit" Command="{Binding Path=getCloseCommand}"/>
                     </MenuItem>
-                    
-                    <MenuItem Header="_Edit">
-                        <MenuItem Header="Go to">
-                            <MenuItem Header="Go to all"/>
-                            <MenuItem Header="Go to file"/>
-                            <MenuItem Header="Go to recent file"/>
-                            <MenuItem Header="Go to type"/>
-                            <MenuItem Header="Go to file"/>
-                            <Separator/>
-                            <MenuItem Header="Go to next"/>
-                            <MenuItem Header="Go to previous"/>
-                        </MenuItem>
-                        <MenuItem Header="Find">
-                            <MenuItem Header="Find invoice"/>
-                            <MenuItem Header="Find product"/>
-                        </MenuItem>
+
+                    <MenuItem Header="Edit" Style="{StaticResource TopLevelHeaderStyle}">
+                        <MenuItem Header="Go to all"/>
+                        <MenuItem Header="Go to file"/>
+                        <MenuItem Header="Go to recent file"/>
+                        <MenuItem Header="Go to type"/>
+                        <MenuItem Header="Go to file"/>
+                        <Separator/>
+                        <MenuItem Header="Go to next"/>
+                        <MenuItem Header="Go to previous"/>
+
+                        <MenuItem Header="Find invoice"/>
+                        <MenuItem Header="Find product"/>
+
                         <Separator/>
                         <MenuItem Header="Cut"/>
                         <MenuItem Header="Copy"/>
@@ -117,24 +115,19 @@
                         <MenuItem Header="Duplicate"/>
                         <MenuItem Header="Delete"/>
                     </MenuItem>
-                    <MenuItem Header="_Store">
-                        <MenuItem Header="Invoices">
-                            <MenuItem Header="Add invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
-                            <MenuItem Header="All invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+L, Ctrl+W"/>
-                        </MenuItem>
-                        <MenuItem Header="Products">
-                            <MenuItem Header="Add product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
-                            <MenuItem Header="All products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+K, Ctrl+E"/>
-                        </MenuItem>
-                        <MenuItem Header="Database">
-                            <MenuItem Header="Add to database" InputGestureText="Alt+I,  Ctrl+Q"/>
-                            <MenuItem Header="Search in database" InputGestureText="Alt+J,  Ctrl+R"/>
-                        </MenuItem>
+                    <MenuItem Header="Store" Style="{StaticResource TopLevelHeaderStyle}">
+                        <MenuItem Header="Add invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                        <MenuItem Header="All invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+L, Ctrl+W"/>
+                        <MenuItem Header="Add product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                        <MenuItem Header="All products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+K, Ctrl+E"/>
+                        <MenuItem Header="Add to database" InputGestureText="Alt+I,  Ctrl+Q"/>
+                        <MenuItem Header="Search in database" InputGestureText="Alt+J,  Ctrl+R"/>
                     </MenuItem>
-                    <MenuItem Header="Action"/>
-                    <MenuItem Header="Tools"/>
-                    <MenuItem Header="Setup"/>
-                    <MenuItem Header="Help"/>
+
+                    <MenuItem Header="Action" Style="{StaticResource TopLevelHeaderStyle}"/>
+                    <MenuItem Header="Tools" Style="{StaticResource TopLevelHeaderStyle}"/>
+                    <MenuItem Header="Setup" Style="{StaticResource TopLevelHeaderStyle}"/>
+                    <MenuItem Header="Help" Style="{StaticResource TopLevelHeaderStyle}"/>
                         
                 </Menu>
             </Grid>
