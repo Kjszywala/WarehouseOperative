@@ -36,8 +36,8 @@
             <Setter.Value>
                 <DataTemplate>
                     <Border 
-            Background="Gray" 
-            BorderBrush="LightGray" 
+            Background="Green" 
+            BorderBrush="Gray" 
             BorderThickness="1" 
             CornerRadius="5" 
             Margin="4" 
@@ -47,7 +47,7 @@
                         <TextBlock 
               FontSize="14"
               FontWeight="Bold"
-              Foreground="White" 
+              Foreground="Gray" 
               HorizontalAlignment="Center"  
               Text="{TemplateBinding Content}" 
               />
@@ -83,8 +83,8 @@
   This style ensures that the borders in the main window are consistent.
   -->
     <Style x:Key="MainBorderStyle" TargetType="{x:Type Border}">
-        <Setter Property="Background" Value="WhiteSmoke" />
-        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="Background" Value="Gray" />
+        <Setter Property="BorderBrush" Value="Gray" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -98,7 +98,12 @@
         <ItemsControl IsTabStop="False" ItemsSource="{Binding}" Margin="6,2">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Command="{Binding Path=Command}" HorizontalAlignment="Center" Content="{Binding Path=DisplayName}" Background="DarkGray" Foreground="White">
+                    <Button 
+                        Command="{Binding Path=Command}" 
+                        HorizontalAlignment="Center" 
+                        Content="{Binding Path=DisplayName}" 
+                        Background="DarkGray" 
+                        Foreground="White">
                         
                     </Button>
                 </DataTemplate>
@@ -128,42 +133,68 @@
 
     <!--This template explains how to render 
   a tab item with a close button.-->
-  
-    
+
     <DataTemplate x:Key="ClosableTabItemTemplate">
-        <DockPanel Width="120">
+
+        <DockPanel Width="120" Background="Transparent">
             <Button 
-        Command="{Binding Path=CloseCommand}"
-        Content="X"
-        Cursor="Hand"
-        DockPanel.Dock="Right"
-        Focusable="False"
-        FontFamily="Courier" 
-        FontSize="9"
-        FontWeight="Bold"  
-        Margin="0,1,0,0"
-        Padding="0"
-        VerticalContentAlignment="Bottom"
-        Width="16" Height="16" 
-        />
+                Command="{Binding Path=CloseCommand}"
+                Content="X"
+                Cursor="Hand"
+                DockPanel.Dock="Right"
+                Focusable="False"
+                FontFamily="Courier" 
+                Background="#3B3B3C"
+                FontSize="9"
+                FontWeight="Bold"  
+                Margin="0,1,0,0"
+                Padding="0"
+                VerticalContentAlignment="Bottom"
+                Width="16" 
+                Height="16" 
+                />
             <ContentPresenter 
-        Content="{Binding Path=DisplayName}" 
-        VerticalAlignment="Center" 
+            Content="{Binding Path=DisplayName}" 
+            VerticalAlignment="Center"
         />
         </DockPanel>
     </DataTemplate>
+
+    <Style TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+                    <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="#FFF5F5F5" CornerRadius="4,4,0,0" Margin="0,0">
+                        <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2,0,0"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#FFA2A4A5" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="False">
+                            <Setter TargetName="Border" Property="Background" Value="#FF656565" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <!--
   This template explains how to render the 'Workspace' content area in the main window.
   -->
     <DataTemplate x:Key="WorkspacesTemplate">
         <TabControl 
-      IsSynchronizedWithCurrentItem="True"
-      Background="Gray"
-      ItemsSource="{Binding}" 
-      ItemTemplate="{StaticResource ClosableTabItemTemplate}"
-      Margin="4"
-      />
+          IsSynchronizedWithCurrentItem="True"
+          Background="Gray"
+          ItemsSource="{Binding}" 
+          ItemTemplate="{StaticResource ClosableTabItemTemplate}"
+          Margin="4"
+          />
     </DataTemplate>
     
     <!--This is a status bar at the bottom.-->

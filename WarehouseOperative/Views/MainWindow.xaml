@@ -224,27 +224,26 @@
                 </Grid.ColumnDefinitions>
                 <Border Grid.Column="0">
                     <HeaderedContentControl 
-                    Header="Operations" 
-                    Background="Transparent"
-                    Foreground="White"
-                    Margin="3"
-                    Content="{Binding Path=Commands}"
-                    ContentTemplate="{StaticResource CommandsTemplate}"
-                    Style="{StaticResource MainHCCStyle}"
-                    />
+                        Header="Operations" 
+                        Background="#ACACAC"
+                        Foreground="#ACACAC"
+                        Margin="3"
+                        Content="{Binding Path=Commands}"
+                        ContentTemplate="{StaticResource CommandsTemplate}"
+                        Style="{StaticResource MainHCCStyle}"
+                        />
                 </Border>
                 <Border Grid.Column="1">
                     <HeaderedContentControl 
-                    Header="Workspace" 
-                    Background="Transparent"
-                    Foreground="White"
-                    Margin="3"
-                    Content="{Binding Path=Workspaces}"
-                    ContentTemplate="{StaticResource WorkspacesTemplate}"
-                    Style="{StaticResource MainHCCStyle}"
-                    />
+                        Header="Workspace" 
+                        Background="#ACACAC"
+                        Foreground="#ACACAC"
+                        Margin="3"
+                        Content="{Binding Path=Workspaces}"
+                        ContentTemplate="{StaticResource WorkspacesTemplate}"
+                        Style="{StaticResource MainHCCStyle}"
+                        />
                 </Border>
-
             </Grid>
             <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">
                 <StatusBarItem>
