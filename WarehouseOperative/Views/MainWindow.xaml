@@ -3,17 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:viewmodels="clr-namespace:WarehouseOperative.ViewModels" 
+        xmlns:viewmodels="clr-namespace:WarehouseOperative.ViewModels"
         d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
         MouseDown="Window_MouseDown"
         WindowStyle="None"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        Background="Transparent" 
+        Background="Transparent"
         ResizeMode="CanResizeWithGrip"
-        Title="WareHouse" 
-        Height="600" 
+        Title="WareHouse"
+        Height="600"
         Width="1000"
         >
     
@@ -40,11 +40,7 @@
         Background="#FF252526"
         x:Name="border"
         >
-        <!--<Border.Effect>
-            <DropShadowEffect Direction="5" ShadowDepth="5" BlurRadius="5" Opacity="0.25" Color="#FF5B5B5B">
-
-            </DropShadowEffect>
-        </Border.Effect>-->
+        
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
@@ -241,13 +237,22 @@
                 </Border>
                 
                 <Border Grid.Column="1">
-                    <HeaderedContentControl 
-                        Header="Workspace"
-                        Margin="3"
-                        Content="{Binding Path=Workspaces}"
-                        ContentTemplate="{StaticResource WorkspacesTemplate}"
-                        Style="{StaticResource MainHCCStyle}"
+                    <ScrollViewer 
+                        RenderTransformOrigin="0.5,0.5"
+                        HorizontalAlignment="Stretch"
+                        VerticalScrollBarVisibility="Auto"
+                        Margin="0,0,0,0"
+                        Width="Auto"
+                        Style="{StaticResource FavsScrollViewer}"
+                        >
+                        <HeaderedContentControl 
+                            Header="Workspace"
+                            Margin="3"
+                            Content="{Binding Path=Workspaces}"
+                            ContentTemplate="{StaticResource WorkspacesTemplate}"
+                            Style="{StaticResource MainHCCStyle}"
                         />
+                    </ScrollViewer>
                 </Border>
             </Grid>
             <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">
