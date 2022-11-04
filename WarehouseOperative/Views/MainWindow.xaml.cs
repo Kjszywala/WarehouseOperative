@@ -19,6 +19,11 @@ namespace WarehouseOperative.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Method draging the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             if (Mouse.LeftButton == MouseButtonState.Pressed)
@@ -26,6 +31,11 @@ namespace WarehouseOperative.Views
                 //DragMove();
         }
 
+        /// <summary>
+        /// Changing the minimalize icon.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MinMax_Click(object sender, RoutedEventArgs e)
         {
             if (this.WindowState == WindowState.Maximized)
@@ -46,28 +56,21 @@ namespace WarehouseOperative.Views
             }
         }
 
+        /// <summary>
+        /// Hiding the app in menu bar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Min_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
 
-        private void Expander_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            FrameworkElement fe = e.OriginalSource as FrameworkElement;
-
-            if (fe is ToggleButton && fe.Name == "HeaderSite")
-            {
-                if (ButtonExpander.IsExpanded == true)
-                {
-                    Buttons_column.Width = new GridLength(25);
-                }
-                else
-                {
-                    Buttons_column.Width = new GridLength(150);
-                }
-            }
-        }
-
+        /// <summary>
+        /// Overflow button style.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToolBar_Loaded(object sender, RoutedEventArgs e)
         {
             ToolBar toolBar = sender as ToolBar;

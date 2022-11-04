@@ -46,7 +46,7 @@
                         <TextBlock 
               FontSize="14"
               FontWeight="Bold"
-              Foreground="Gray" 
+              Foreground="White" 
               HorizontalAlignment="Center"  
               Text="{TemplateBinding Content}" 
               />
