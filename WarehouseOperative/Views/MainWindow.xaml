@@ -31,6 +31,7 @@
         <KeyBinding Gesture="Ctrl+x" Command="{Binding CloseBookmark}"/>
     </Window.InputBindings>
 
+
     <Border 
         CornerRadius="20" 
         BorderBrush="#FF252526" 
@@ -39,14 +40,11 @@
         Background="#FF252526"
         x:Name="border"
         >
-        
         <!--<Border.Effect>
-            <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="0" Opacity="0.25" Color="#FF5B5B5B">
-                
+            <DropShadowEffect Direction="5" ShadowDepth="5" BlurRadius="5" Opacity="0.25" Color="#FF5B5B5B">
+
             </DropShadowEffect>
         </Border.Effect>-->
-
-
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
@@ -213,26 +211,40 @@
                     <StackPanel>
                         <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/info.png" Stretch="Fill"/>
                         <TextBlock Height="10" Text="Information" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <!--<AccessText>_Y</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
             </ToolBar>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150" x:Name="Buttons_column"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+               
                 <Border Grid.Column="0">
-                    <HeaderedContentControl 
-                        Header="Operations" 
-                        Background="#ACACAC"
-                        Foreground="#ACACAC"
-                        Margin="3"
-                        Content="{Binding Path=Commands}"
-                        ContentTemplate="{StaticResource CommandsTemplate}"
-                        Style="{StaticResource MainHCCStyle}"
-                        />
+                    <Expander 
+                        x:Name="ButtonExpander"
+                        Grid.Column="0"
+                        IsExpanded="True"
+                        VerticalContentAlignment="Top"
+                        HorizontalAlignment="Right"
+                        HorizontalContentAlignment="Center"
+                        Margin="-10,0,-5,-5"
+                        ExpandDirection="Left"
+                        PreviewMouseLeftButtonUp="Expander_PreviewMouseLeftButtonUp"
+                        Style="{StaticResource newExpanderStyle}"
+                        >
+                        <HeaderedContentControl 
+                            Header="Operations"
+                            Background="#ACACAC"
+                            Foreground="#ACACAC"
+                            Margin="3"
+                            Content="{Binding Path=Commands}"
+                            ContentTemplate="{StaticResource CommandsTemplate}"
+                            Style="{StaticResource MainHCCStyle}"
+                            />
+                    </Expander>
                 </Border>
+                
                 <Border Grid.Column="1">
                     <HeaderedContentControl 
                         Header="Workspace" 

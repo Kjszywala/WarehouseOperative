@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -46,6 +48,23 @@ namespace WarehouseOperative.Views
         private void Min_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
+        }
+
+        private void Expander_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            FrameworkElement fe = e.OriginalSource as FrameworkElement;
+
+            if (fe is ToggleButton && fe.Name == "HeaderSite")
+            {
+                if (ButtonExpander.IsExpanded == true)
+                {
+                    Buttons_column.Width = new GridLength(25);
+                }
+                else
+                {
+                    Buttons_column.Width = new GridLength(150);
+                }
+            }
         }
     }
 }
