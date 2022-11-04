@@ -61,7 +61,7 @@
                     <ColumnDefinition Width="40"/>
                     <ColumnDefinition Width="40"/>
                 </Grid.ColumnDefinitions>
-                <Image Source="pack://application:,,,/Views/Content/Icons/warehouse(4).png" Grid.Column="0" Grid.ColumnSpan="2" Margin="-2,0,293,7"/>
+                <Image Source="pack://application:,,,/Views/Content/Icons/boxes.png" Grid.Column="0" Grid.ColumnSpan="2" Margin="-3,4,294,4"/>
                 <StackPanel Grid.Row="0" Grid.Column="2">
                 </StackPanel>
                 <ToggleButton Width="30" Height="30" Grid.Column="5" Background="Transparent" VerticalAlignment="Center" Command="{Binding getCloseCommand}" Style="{StaticResource NavigationButton}" MinWidth="30" MinHeight="30">
@@ -71,7 +71,7 @@
                 </ToggleButton>
                 <ToggleButton x:Name="MinMaxButton" Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="4" Background="Transparent" Click="MinMax_Click">
                     <StackPanel>
-                        <Image x:Name="MinMaxImage" Height="18" Width="18" Source="pack://application:,,,/Views/Content/Icons/maximize4.png" Stretch="Fill" IsEnabled="True" RenderTransformOrigin="0.513,0.347"/>
+                        <Image x:Name="MinMaxImage" Height="21" Width="21" Source="pack://application:,,,/Views/Content/Icons/maximize5.png" Stretch="Fill" IsEnabled="True" RenderTransformOrigin="0.513,0.347"/>
                     </StackPanel>
                 </ToggleButton>
                 <ToggleButton Width="30" Height="30" Style="{StaticResource NavigationButton}" Grid.Column="3" Background="Transparent" Click="Min_Click">

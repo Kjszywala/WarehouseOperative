@@ -41,7 +41,7 @@ namespace WarehouseOperative.Views
             if (this.WindowState == WindowState.Maximized)
             {
                 this.WindowState = WindowState.Normal;
-                string packUri = "pack://application:,,,/Views/Content/Icons/maximize4.png";
+                string packUri = "pack://application:,,,/Views/Content/Icons/maximize5.png";
                 MinMaxImage.Source = new ImageSourceConverter().ConvertFromString(packUri) as ImageSource;
                 //Style style = this.FindResource("NavigationButton") as Style;
                 //MinMaxButton.Style = style;
@@ -49,7 +49,7 @@ namespace WarehouseOperative.Views
             else
             {
                 this.WindowState = WindowState.Maximized;
-                string packUri = "pack://application:,,,/Views/Content/Icons/minimalize2.png";
+                string packUri = "pack://application:,,,/Views/Content/Icons/minimalize3.png";
                 MinMaxImage.Source = new ImageSourceConverter().ConvertFromString(packUri) as ImageSource;
                 //Style style = this.FindResource("NavigationButton") as Style;
                 //MinMaxButton.Style = style;
