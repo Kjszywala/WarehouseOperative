@@ -216,7 +216,7 @@
             </ToolBar>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150" x:Name="Buttons_column"/>
+                    <ColumnDefinition Width="auto" x:Name="Buttons_column"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                
@@ -226,8 +226,6 @@
                         Grid.Column="0"
                         IsExpanded="True"
                         VerticalContentAlignment="Top"
-                        HorizontalAlignment="Right"
-                        HorizontalContentAlignment="Center"
                         Margin="-10,0,-5,-5"
                         ExpandDirection="Left"
                         PreviewMouseLeftButtonUp="Expander_PreviewMouseLeftButtonUp"

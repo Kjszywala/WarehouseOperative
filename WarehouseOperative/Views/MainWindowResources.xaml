@@ -135,11 +135,11 @@
     
     <LinearGradientBrush x:Key="NormalBrush" EndPoint="0,1" StartPoint="0,0">
         <GradientStop Color="#EEE" Offset="0.0"/>
-        <GradientStop Color="#CCC" Offset="1.0"/>
+        <GradientStop Color="#3B3B3B" Offset="1.0"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="NormalBorderBrush" EndPoint="0,1" StartPoint="0,0">
         <GradientStop Color="#CCC" Offset="0.0"/>
-        <GradientStop Color="#444" Offset="1.0"/>
+        <GradientStop Color="#3B3B3B" Offset="1.0"/>
     </LinearGradientBrush>
     <SolidColorBrush x:Key="GlyphBrush" Color="#444"/>
     <LinearGradientBrush x:Key="MouseOverBrush" EndPoint="0,1" StartPoint="0,0">
@@ -147,8 +147,8 @@
         <GradientStop Color="#AAA" Offset="1.0"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="PressedBrush" EndPoint="0,1" StartPoint="0,0">
-        <GradientStop Color="#BBB" Offset="0.0"/>
-        <GradientStop Color="#EEE" Offset="0.1"/>
+        <GradientStop Color="#3B3B3B" Offset="0.0"/>
+        <GradientStop Color="#3B3B3B" Offset="0.1"/>
         <GradientStop Color="#EEE" Offset="0.9"/>
         <GradientStop Color="#FFF" Offset="1.0"/>
     </LinearGradientBrush>
@@ -166,7 +166,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Fill="{DynamicResource GlyphBrush}"
-                Data="M 0 1 L 8 4 L 8 -3 Z"
+                Data="M 0 8 L 0 0 L 8 4 Z"
                 />
             <Path
                 x:Name="Down_Arrow"
@@ -174,9 +174,10 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Fill="{DynamicResource GlyphBrush}"
-                Data="M 0 8 L 0 0 L 8 4 Z"
+                Data="M 0 1 L 8 4 L 8 -3 Z"
                 />
         </Grid>
+
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Fill" Value="{DynamicResource NormalBorderBrush}" TargetName="Rectangle"/>
@@ -197,8 +198,9 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" x:Name="ContentRow"/>
-                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="15" />
                         </Grid.ColumnDefinitions>
+                        
                         <Border
                             Margin="0,190,0,190"
                             Background="Transparent"
@@ -210,24 +212,31 @@
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="15"/>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="0"/>
                                 </Grid.ColumnDefinitions>
                                 <ToggleButton
-                                        Template="{DynamicResource newToggleButtonControlTemplate}"
-                                        Background="{TemplateBinding Background}"
-                                        IsChecked="{Binding Path=IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
-                                        OverridesDefaultStyle="True"
+                                    Grid.Column="0"
+                                    Template="{DynamicResource newToggleButtonControlTemplate}"
+                                    Background="{TemplateBinding Background}"
+                                    IsChecked="{Binding Path=IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                    OverridesDefaultStyle="True"
+                                    HorizontalAlignment="Left"
+                                    Width="15"
+                                    Margin="0,0,0,0"
                                     />
-                                <ContentPresenter Grid.Column="1" Margin="4" RecognizesAccessKey="True" ContentSource="Header"/>
+                                <ContentPresenter Grid.Column="0" Margin="4" RecognizesAccessKey="True" ContentSource="Header"/>
                             </Grid>
+                            
                         </Border>
+                        
                         <Border
-                            Margin="1,0,0,0"
+                            Margin="5,0,0,0"
                             x:Name="ExpandSite"
                             Grid.Row="0"
                             Visibility="Collapsed"
                             BorderThickness="1,0,1,1"
                             CornerRadius="0,0,2,2"
+                            Background="Transparent"
                             >
                             <ContentPresenter
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
@@ -245,6 +254,12 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=ContentRow}" 
+                         Value="False">
+                <Setter Property="Width" Value="10" />
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
 
 
