@@ -156,30 +156,30 @@
     <ControlTemplate x:Key="newToggleButtonControlTemplate" TargetType="{x:Type ToggleButton}">
         <Grid Background="{TemplateBinding Background}">
             <Rectangle
-                    x:Name="Rectangle"
-                    Margin="0,0,0,0"
-                    Fill="Transparent"
-                    Stroke="{DynamicResource NormalBorderBrush}"
+                x:Name="Rectangle"
+                Margin="0,0,0,0"
+                Fill="Transparent"
+                Stroke="{DynamicResource NormalBorderBrush}"
                 />
             <Path
-                    x:Name="Up_Arrow"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Fill="{DynamicResource GlyphBrush}"
-                    Data="M 0 0 L 4 4 L 8 0 Z"
+                x:Name="Up_Arrow"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Fill="{DynamicResource GlyphBrush}"
+                Data="M 0 1 L 8 4 L 8 -3 Z"
                 />
             <Path
-                    x:Name="Down_Arrow"
-                    Visibility="Collapsed"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Fill="{DynamicResource GlyphBrush}"
-                    Data="M 0 4 L 4 0 L 8 4 Z"
+                x:Name="Down_Arrow"
+                Visibility="Collapsed"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Fill="{DynamicResource GlyphBrush}"
+                Data="M 0 8 L 0 0 L 8 4 Z"
                 />
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Fill" Value="{DynamicResource MouseOverBrush}" TargetName="Rectangle"/>
+                <Setter Property="Fill" Value="{DynamicResource NormalBorderBrush}" TargetName="Rectangle"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
                 <Setter Property="Fill" Value="{DynamicResource PressedBrush}" TargetName="Rectangle"/>
@@ -195,19 +195,21 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Expander}">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*" x:Name="ContentRow"/>
-                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" x:Name="ContentRow"/>
+                            <ColumnDefinition Width="20" />
+                        </Grid.ColumnDefinitions>
                         <Border
-                                x:Name="Border"
-                                Grid.Row="0"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="2,2,0,0"
+                            Margin="0,190,0,190"
+                            Background="Transparent"
+                            x:Name="Border"
+                            Grid.Column="1"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2,2,0,0"
                             >
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="15"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <ToggleButton
@@ -220,11 +222,12 @@
                             </Grid>
                         </Border>
                         <Border
-                                x:Name="ExpandSite"
-                                Grid.Row="1"
-                                Visibility="Collapsed"
-                                BorderThickness="1,0,1,1"
-                                CornerRadius="0,0,2,2"
+                            Margin="1,0,0,0"
+                            x:Name="ExpandSite"
+                            Grid.Row="0"
+                            Visibility="Collapsed"
+                            BorderThickness="1,0,1,1"
+                            CornerRadius="0,0,2,2"
                             >
                             <ContentPresenter
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
