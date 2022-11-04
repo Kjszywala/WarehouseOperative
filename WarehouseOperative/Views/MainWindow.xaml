@@ -130,7 +130,7 @@
                 </Menu>
             </Grid>
 
-            <ToolBar Grid.Column="0" Grid.Row="1" Background="Transparent">
+            <ToolBar Grid.Column="0" Grid.Row="1" Background="Transparent" Loaded="ToolBar_Loaded">
                 <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Command="{Binding Path=NewInvoiceCommand}" Style="{StaticResource NavigationButton}">
                     <StackPanel>
                         <Image Height="40" Width="40"  Source="pack://application:,,,/Views/Content/Icons/invoice.png" Stretch="Fill" IsEnabled="True"/>
@@ -216,7 +216,7 @@
             </ToolBar>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150" x:Name="Buttons_column"/>
+                    <ColumnDefinition Width="auto" x:Name="Buttons_column"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                

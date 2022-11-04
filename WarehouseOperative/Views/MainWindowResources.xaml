@@ -128,7 +128,11 @@
         <Setter Property="Margin" Value="10"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontWeight" Value="Bold"/>
-        
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#3B3B3C"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <!-- Expander -->
@@ -159,7 +163,7 @@
                 x:Name="Rectangle"
                 Margin="0,0,0,0"
                 Fill="Transparent"
-                Stroke="{DynamicResource NormalBorderBrush}"
+                Stroke="Transparent"
                 />
             <Path
                 x:Name="Up_Arrow"
@@ -198,7 +202,7 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" x:Name="ContentRow"/>
-                            <ColumnDefinition Width="15" />
+                            <ColumnDefinition Width="20" />
                         </Grid.ColumnDefinitions>
                         
                         <Border
@@ -211,8 +215,7 @@
                             >
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="15"/>
-                                    <ColumnDefinition Width="0"/>
+                                    <ColumnDefinition Width="20"/>
                                 </Grid.ColumnDefinitions>
                                 <ToggleButton
                                     Grid.Column="0"
@@ -220,9 +223,9 @@
                                     Background="{TemplateBinding Background}"
                                     IsChecked="{Binding Path=IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
                                     OverridesDefaultStyle="True"
-                                    HorizontalAlignment="Left"
+                                    HorizontalAlignment="Center"
                                     Width="15"
-                                    Margin="0,0,0,0"
+                                    Margin="5,0,0,0"
                                     />
                                 <ContentPresenter Grid.Column="0" Margin="4" RecognizesAccessKey="True" ContentSource="Header"/>
                             </Grid>
@@ -230,18 +233,19 @@
                         </Border>
                         
                         <Border
-                            Margin="5,0,0,0"
+                            Margin="0,0,0,0"
                             x:Name="ExpandSite"
                             Grid.Row="0"
                             Visibility="Collapsed"
                             BorderThickness="1,0,1,1"
                             CornerRadius="0,0,2,2"
                             Background="Transparent"
+                            HorizontalAlignment="Right"
                             >
                             <ContentPresenter
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                    Margin="{TemplateBinding Padding}"
+                                    Margin="10,0,0,0"
                                     Focusable="false"
                                 />
                         </Border>
