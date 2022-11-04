@@ -110,9 +110,9 @@
         </ItemsControl>
     </DataTemplate>
 
-    <!-- Button -->
+    <!--Left side Buttons -->
 
-    <!--<Style TargetType="Button">
+    <Style TargetType="Button">
         <Style.Resources>
             <Style TargetType="Border">
                 <Setter Property="CornerRadius" Value="5"/>
@@ -129,7 +129,7 @@
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontWeight" Value="Bold"/>
         
-    </Style>-->
+    </Style>
 
     <!-- Expander -->
     
