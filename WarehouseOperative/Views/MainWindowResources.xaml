@@ -522,10 +522,10 @@
     </Style>-->
 
     <SolidColorBrush x:Key="StandardBorderBrush" Color="#888" />
-    <SolidColorBrush x:Key="StandardBackgroundBrush" Color="#FFF" />
-    <SolidColorBrush x:Key="HoverBorderBrush" Color="#DDD" />
+    <SolidColorBrush x:Key="StandardBackgroundBrush" Color="#3f3f46" />
+    <SolidColorBrush x:Key="HoverBorderBrush" Color="#3f3f46" />
     <SolidColorBrush x:Key="SelectedBackgroundBrush" Color="Gray" />
-    <SolidColorBrush x:Key="SelectedForegroundBrush" Color="White" />
+    <SolidColorBrush x:Key="SelectedForegroundBrush" Color="#3f3f46" />
     <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#888" />
     <SolidColorBrush x:Key="NormalBrush" Color="#888" />
     <SolidColorBrush x:Key="NormalBorderBrush1" Color="#888" />
@@ -535,9 +535,9 @@
         StartPoint="0,0" EndPoint="1,0.001">
         <GradientBrush.GradientStops>
             <GradientStopCollection>
-                <GradientStop Color="White" Offset="0.0" />
-                <GradientStop Color="White" Offset="0.6" />
-                <GradientStop Color="#DDDDDD" Offset="1.2"/>
+                <GradientStop Color="#3f3f46" Offset="0.0" />
+                <GradientStop Color="#3f3f46" Offset="0.6" />
+                <GradientStop Color="#3f3f46" Offset="1.2"/>
             </GradientStopCollection>
         </GradientBrush.GradientStops>
     </LinearGradientBrush>
@@ -545,8 +545,8 @@
         StartPoint="0,0" EndPoint="0,1">
         <GradientBrush.GradientStops>
             <GradientStopCollection>
-            <GradientStop Color="#FFF" Offset="0.0"/>
-            <GradientStop Color="#CCC" Offset="1.0"/>
+                <GradientStop Color="#3f3f46" Offset="0.0"/>
+                <GradientStop Color="#3f3f46" Offset="1.0"/>
             </GradientStopCollection>
         </GradientBrush.GradientStops>
     </LinearGradientBrush>
@@ -643,7 +643,7 @@
             <Border
                 Grid.RowSpan="3"
                 CornerRadius="2"
-                Background="#F0F0F0" />
+                Background="#3f3f46" />
             <RepeatButton
                 Grid.Row="0"
                 Style="{StaticResource ScrollBarLineButton}"
@@ -663,7 +663,7 @@
                     <Thumb
                         Style="{StaticResource ScrollBarThumb}"
                         Margin="1,0,1,0"
-                        Background="{StaticResource HorizontalNormalBrush}"
+                        Background="#333333"
                         BorderBrush="{StaticResource HorizontalNormalBorderBrush}" />
                 </Track.Thumb>
                 <Track.IncreaseRepeatButton>
