@@ -27,6 +27,13 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(() => addBookmarkCreateNew(new NewInvoiceViewModel()));
             }
         }
+        public ICommand RestoreButtonCommand
+        {
+            get
+            {
+                return new BaseCommand(restoreBookmarks);
+            }
+        }
         public ICommand DeleteAllBookmarks
         {
             get
@@ -149,6 +156,23 @@ namespace WarehouseOperative.ViewModels
                 return _Workspaces;
             }
         }
+        private ObservableCollection<WorkspaceViewModel> _WorkspacesHistory;
+        public ObservableCollection<WorkspaceViewModel> WorkspacesHistory
+        {
+            get
+            {
+                if (_WorkspacesHistory == null)
+                {
+                    _WorkspacesHistory = new ObservableCollection<WorkspaceViewModel>();
+                    _WorkspacesHistory.CollectionChanged += this.onWorkspacesChanged;
+                }
+                return _WorkspacesHistory;
+            }
+            set
+            {
+                _WorkspacesHistory = value;
+            }
+        }
         // This methods are standards copied from Microsoft 
         private void onWorkspacesChanged(object sender, NotifyCollectionChangedEventArgs e) 
         { 
@@ -169,20 +193,45 @@ namespace WarehouseOperative.ViewModels
 
         #region HelpFunctions
         /// <summary>
-        /// Delete current bookmark.
+        /// Delete current bookmark and add bookmarks to history list.
         /// </summary>
         private void deleteBookmark()
         {
             if (Workspaces.Count>0)
             {
                 ICollectionView collectionView = CollectionViewSource.GetDefaultView(this.Workspaces);
+                WorkspacesHistory.Add(Workspaces[collectionView.CurrentPosition]);
                 Workspaces.RemoveAt(collectionView.CurrentPosition);
             }
         }
 
+        /// <summary>
+        /// Delete all bookmarks and add bookmarks to history list.
+        /// </summary>
         private void deleteAllBookmarks()
         {
+            if (WorkspacesHistory.Count > 0)
+            {
+                WorkspacesHistory.Clear();
+            }
+            foreach (var item in Workspaces)
+            {
+                WorkspacesHistory.Add(item);
+            }
             Workspaces.Clear();
+        }
+
+        /// <summary>
+        /// Restore bookmarks from history.
+        /// </summary>
+        private void restoreBookmarks()
+        {
+            foreach(WorkspaceViewModel workspace in WorkspacesHistory)
+            {
+                this._Workspaces.Add(workspace);
+                this.setActiveWorkspace(workspace);
+            }
+            WorkspacesHistory.Clear();
         }
 
         /// <summary>

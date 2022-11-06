@@ -202,7 +202,7 @@
                         <TextBlock Height="10" Text="Remove All" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}" Command="{Binding Path=RestoreButtonCommand}">
                     <StackPanel>
                         <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/restore2.png" Stretch="Fill"/>
                         <TextBlock Height="10" Text="Restore" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
