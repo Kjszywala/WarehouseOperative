@@ -8,22 +8,24 @@
 
   <ItemGroup>
     <None Remove="Models\Entities\Model1.edmx" />
-    <None Remove="Views\Content\Icons\addtodatabase.png" />
     <None Remove="Views\Content\Icons\boxes.png" />
     <None Remove="Views\Content\Icons\close2.png" />
     <None Remove="Views\Content\Icons\cubes.png" />
-    <None Remove="Views\Content\Icons\database.png" />
+    <None Remove="Views\Content\Icons\customer.png" />
+    <None Remove="Views\Content\Icons\customers.png" />
     <None Remove="Views\Content\Icons\delete.png" />
-    <None Remove="Views\Content\Icons\info.png" />
-    <None Remove="Views\Content\Icons\invoice.png" />
-    <None Remove="Views\Content\Icons\invoices.png" />
+    <None Remove="Views\Content\Icons\errorlog.png" />
+    <None Remove="Views\Content\Icons\info2.png" />
+    <None Remove="Views\Content\Icons\invoice3.png" />
+    <None Remove="Views\Content\Icons\invoices2.png" />
     <None Remove="Views\Content\Icons\maximize5.png" />
     <None Remove="Views\Content\Icons\minimalize3.png" />
     <None Remove="Views\Content\Icons\preview.png" />
     <None Remove="Views\Content\Icons\print.png" />
     <None Remove="Views\Content\Icons\product.png" />
     <None Remove="Views\Content\Icons\products.png" />
-    <None Remove="Views\Content\Icons\restore.png" />
+    <None Remove="Views\Content\Icons\removeall.png" />
+    <None Remove="Views\Content\Icons\restore2.png" />
     <None Remove="Views\Content\Icons\save.png" />
     <None Remove="Views\Content\Icons\substract2.png" />
   </ItemGroup>
@@ -44,9 +46,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Views\Content\Icons\addtodatabase.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Views\Content\Icons\boxes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -56,19 +55,25 @@
     <Resource Include="Views\Content\Icons\cubes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\database.png">
+    <Resource Include="Views\Content\Icons\customer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\customers.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\delete.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\info.png">
+    <Resource Include="Views\Content\Icons\errorlog.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\invoice.png">
+    <Resource Include="Views\Content\Icons\info2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\invoices.png">
+    <Resource Include="Views\Content\Icons\invoice3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\invoices2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\maximize5.png">
@@ -89,7 +94,10 @@
     <Resource Include="Views\Content\Icons\products.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Content\Icons\restore.png">
+    <Resource Include="Views\Content\Icons\removeall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\restore2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\save.png">

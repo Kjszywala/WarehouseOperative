@@ -35,8 +35,8 @@
             <Setter.Value>
                 <DataTemplate>
                     <Border 
-            Background="Green" 
-            BorderBrush="Gray" 
+            Background="#404040" 
+            BorderBrush="#404040" 
             BorderThickness="1" 
             CornerRadius="5" 
             Margin="4" 
@@ -101,9 +101,9 @@
                         Command="{Binding Path=Command}" 
                         HorizontalAlignment="Center" 
                         Content="{Binding Path=DisplayName}" 
-                        Background="DarkGray" 
-                        Foreground="White">
-                        
+                        Background="#3B3B3C" 
+                        Foreground="White"
+                        >
                     </Button>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
@@ -128,11 +128,7 @@
         <Setter Property="Margin" Value="10"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontWeight" Value="Bold"/>
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#3B3B3C"/>
-            </Trigger>
-        </Style.Triggers>
+        
     </Style>
 
     <!-- Expander -->
@@ -326,7 +322,7 @@
     <DataTemplate x:Key="WorkspacesTemplate">
         <TabControl 
           IsSynchronizedWithCurrentItem="True"
-          Background="Gray"
+          Background="#404040"
           ItemsSource="{Binding}" 
           ItemTemplate="{StaticResource ClosableTabItemTemplate}"
           Margin="4"
@@ -336,7 +332,7 @@
     <!--This is a status bar at the bottom.-->
     
     <Style x:Key="StatusBarStyle" TargetType="{x:Type StatusBar}">
-        <Setter Property="Background" Value="Gray"/>
+        <Setter Property="Background" Value="#404040"/>
         <Setter Property="Foreground" Value="White"/>
         <Style.Resources>
             <Style TargetType="Border">
@@ -414,7 +410,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsHighlighted" Value="True">
-                            <Setter Property="Background" Value="#1271C8"/>
+                            <Setter Property="Background" Value="#3B3B3C"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

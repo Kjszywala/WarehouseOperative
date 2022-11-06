@@ -9,7 +9,7 @@ namespace WarehouseOperative.ViewModels
     {
         #region Constructor
         public NewEmployeeViewModel()
-            :base("New Employee")
+            :base("Add Employee")
         {
             Item = new Employees();
         }

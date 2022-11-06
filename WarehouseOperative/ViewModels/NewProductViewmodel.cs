@@ -12,7 +12,7 @@ namespace WarehouseOperative.ViewModels
         public NewProductViewmodel()
         {
             //set the bookmark name here
-            base.DisplayName = "Product";
+            base.DisplayName = "Add Product";
         }
         #endregion
     }

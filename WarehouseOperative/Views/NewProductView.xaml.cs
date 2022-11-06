@@ -18,7 +18,7 @@ namespace WarehouseOperative.Views
     /// <summary>
     /// Logika interakcji dla klasy NowyTowarView.xaml
     /// </summary>
-    public partial class NewProductView : AllViewBase
+    public partial class NewProductView : AddRowViewBase
     {
         public NewProductView()
         {

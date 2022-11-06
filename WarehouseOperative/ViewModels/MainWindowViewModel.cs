@@ -27,6 +27,13 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(() => addBookmarkCreateNew(new NewInvoiceViewModel()));
             }
         }
+        public ICommand DeleteAllBookmarks
+        {
+            get
+            {
+                return new BaseCommand(deleteAllBookmarks);
+            }
+        }
         public ICommand AllInvoicesCommand
         {
             get
@@ -117,13 +124,12 @@ namespace WarehouseOperative.ViewModels
             return new List<CommandViewModel>
             {
                 // Creat buttons
-                new CommandViewModel("New Product", new BaseCommand(()=>addBookmarkCreateNew(new NewProductViewmodel()))),
+                new CommandViewModel("Add Product", new BaseCommand(()=>addBookmarkCreateNew(new NewProductViewmodel()))),
                 new CommandViewModel("All Products", new BaseCommand(showAllProducts)),
-                new CommandViewModel("New Invoice", new BaseCommand(()=>addBookmarkCreateNew(new NewInvoiceViewModel()))),
+                new CommandViewModel("Add Invoice", new BaseCommand(()=>addBookmarkCreateNew(new NewInvoiceViewModel()))),
                 new CommandViewModel("All Invoices", new BaseCommand(showAllInvoices)),
-                new CommandViewModel("New Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel()))),
-                new CommandViewModel("All Employees", new BaseCommand(getEmployees)),
-                new CommandViewModel("Error Log", new BaseCommand(getErrorLog))
+                new CommandViewModel("Add Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel()))),
+                new CommandViewModel("All Employees", new BaseCommand(getEmployees))
             };
         }
         #endregion
@@ -174,6 +180,11 @@ namespace WarehouseOperative.ViewModels
             }
         }
 
+        private void deleteAllBookmarks()
+        {
+            Workspaces.Clear();
+        }
+
         /// <summary>
         /// Get information about application.
         /// </summary>
@@ -202,38 +213,6 @@ namespace WarehouseOperative.ViewModels
             this._Workspaces.Add(workspace);
             this.setActiveWorkspace(workspace);
         }
-
-        /// <summary>
-        /// Show bookmark with adding new Employee.
-        /// </summary>
-        //private void addEmployees()
-        //{
-        //    NewEmployeeViewModel database = new NewEmployeeViewModel();
-        //    this._Workspaces.Add(database);
-        //    this.setActiveWorkspace(database);
-        //}
-
-        ///// <summary>
-        ///// Show bookmark with creating new invoice.
-        ///// </summary>
-        //private void createInvoice()
-        //{
-        //    NewInvoiceViewModel newInvoiceViewModel = new NewInvoiceViewModel();
-        //    this._Workspaces.Add(newInvoiceViewModel);
-        //    this.setActiveWorkspace(newInvoiceViewModel);
-        //}
-
-        ///// <summary>
-        ///// Show bookmark with adding new product.
-        ///// </summary>
-        //private void createProduct()
-        //{
-        //    // create new bookmark
-        //    NewProductViewmodel workspace = new NewProductViewmodel();
-        //    // add bookmark to active bookmark collection.
-        //    this._Workspaces.Add(workspace);
-        //    this.setActiveWorkspace(workspace);
-        //}
 
         // This is function to open bookmark with all bookmarks.
         // This method when is called checks if bookmark exist, if exist making 
