@@ -31,7 +31,6 @@
         <KeyBinding Gesture="Ctrl+x" Command="{Binding CloseBookmark}"/>
     </Window.InputBindings>-->
 
-
     <Border 
         CornerRadius="20,20,2,2" 
         BorderBrush="#303030" 
