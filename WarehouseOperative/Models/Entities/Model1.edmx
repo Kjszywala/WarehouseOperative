@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="KjsCompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="KjsCompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="Category_Id" />
@@ -84,6 +84,7 @@ warning 6002: The table/view 'KjsCompany.dbo.EmployeeAddress' does not have a pr
           <Property Name="ErrorLog_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="LineNumber" Type="int" />
+          <Property Name="DateTime" Type="date" />
         </EntityType>
         <EntityType Name="Invoices">
           <Key>
@@ -430,8 +431,7 @@ FROM [dbo].[EmployeeAddress] AS [EmployeeAddress]</DefiningQuery>
             <End Role="Suppliers" EntitySet="Suppliers" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KjsCompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -475,10 +475,10 @@ FROM [dbo].[EmployeeAddress] AS [EmployeeAddress]</DefiningQuery>
           </Key>
           <Property Name="AnnualLeave_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="EmployeeId" Type="Int32" Nullable="false" />
-          <Property Name="StartDate" Type="DateTime" />
-          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
           <Property Name="DaysLeft" Type="Int32" />
-          <Property Name="LastChangeDateTime" Type="DateTime" />
+          <Property Name="LastChangeDateTime" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Employees" Relationship="Self.FK_EmploeesAnnualLeave_Employees" FromRole="EmploeesAnnualLeave" ToRole="Employees" />
         </EntityType>
         <EntityType Name="Employees">
@@ -490,7 +490,7 @@ FROM [dbo].[EmployeeAddress] AS [EmployeeAddress]</DefiningQuery>
           <Property Name="Last_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Hire_Date" Type="DateTime" Nullable="false" />
+          <Property Name="Hire_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Job_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IsActive" Type="Boolean" />
           <NavigationProperty Name="EmploeesAnnualLeave" Relationship="Self.FK_EmploeesAnnualLeave_Employees" FromRole="Employees" ToRole="EmploeesAnnualLeave" />
@@ -504,6 +504,7 @@ FROM [dbo].[EmployeeAddress] AS [EmployeeAddress]</DefiningQuery>
           <Property Name="ErrorLog_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LineNumber" Type="Int32" />
+          <Property Name="DateTime" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Invoices">
           <Key>
@@ -511,13 +512,13 @@ FROM [dbo].[EmployeeAddress] AS [EmployeeAddress]</DefiningQuery>
           </Key>
           <Property Name="Invoice_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Invoicenumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="InvoiceDate" Type="DateTime" />
+          <Property Name="InvoiceDate" Type="DateTime" Precision="0" />
           <Property Name="OrderId" Type="Int32" Nullable="false" />
           <Property Name="PaymentMethodId" Type="Int32" Nullable="false" />
           <Property Name="IsConfirmed" Type="Boolean" />
           <Property Name="isActive" Type="Boolean" />
           <Property Name="ProductId" Type="Int32" />
-          <Property Name="LastChangedDataTime" Type="DateTime" />
+          <Property Name="LastChangedDataTime" Type="DateTime" Precision="0" />
           <NavigationProperty Name="PaymentMethod" Relationship="Self.FK_Invoices_PaymentMethod" FromRole="Invoices" ToRole="PaymentMethod" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Invoices_Products" FromRole="Invoices" ToRole="Products" />
         </EntityType>
@@ -528,13 +529,13 @@ FROM [dbo].[EmployeeAddress] AS [EmployeeAddress]</DefiningQuery>
           <Property Name="Order_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerId" Type="Int32" Nullable="false" />
           <Property Name="EmployeeId" Type="Int32" Nullable="false" />
-          <Property Name="OrderDate" Type="DateTime" Nullable="false" />
-          <Property Name="RequiredDate" Type="DateTime" />
-          <Property Name="ShippedDate" Type="DateTime" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="RequiredDate" Type="DateTime" Precision="0" />
+          <Property Name="ShippedDate" Type="DateTime" Precision="0" />
           <Property Name="OrderQuantity" Type="Int32" Nullable="false" />
           <Property Name="ShipperId" Type="Int32" Nullable="false" />
           <Property Name="ProductId" Type="Int32" Nullable="false" />
-          <Property Name="LastChangedDataTime" Type="DateTime" Nullable="false" />
+          <Property Name="LastChangedDataTime" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Orders_Customers" FromRole="Orders" ToRole="Customers" />
           <NavigationProperty Name="Employees" Relationship="Self.FK_Orders_Employees" FromRole="Orders" ToRole="Employees" />
@@ -564,7 +565,7 @@ FROM [dbo].[EmployeeAddress] AS [EmployeeAddress]</DefiningQuery>
           <Property Name="Quantity" Type="Int32" Nullable="false" />
           <Property Name="UnitsInStock" Type="Int32" Nullable="false" />
           <Property Name="Discounted" Type="Int32" />
-          <Property Name="LastChangedDateTime" Type="DateTime" />
+          <Property Name="LastChangedDateTime" Type="DateTime" Precision="0" />
           <Property Name="IsActive" Type="Boolean" />
           <NavigationProperty Name="Categories" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
           <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoices_Products" FromRole="Products" ToRole="Invoices" />
@@ -577,7 +578,7 @@ FROM [dbo].[EmployeeAddress] AS [EmployeeAddress]</DefiningQuery>
             <PropertyRef Name="ProductLog_Id" />
           </Key>
           <Property Name="ProductLog_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Date" Type="DateTime" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ProductId" Type="Int32" Nullable="false" />
           <Property Name="OldPrice" Type="Decimal" Precision="19" Scale="4" />
@@ -942,6 +943,7 @@ FROM [dbo].[EmployeeAddress] AS [EmployeeAddress]</DefiningQuery>
           <EntitySetMapping Name="ErrorLog">
             <EntityTypeMapping TypeName="KjsCompanyModel.ErrorLog">
               <MappingFragment StoreEntitySet="ErrorLog">
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
                 <ScalarProperty Name="ErrorLog_Id" ColumnName="ErrorLog_Id" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="LineNumber" ColumnName="LineNumber" />

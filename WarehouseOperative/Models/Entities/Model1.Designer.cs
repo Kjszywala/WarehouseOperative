@@ -1944,6 +1944,30 @@ namespace WarehouseOperative.Models.Entities
         private Nullable<global::System.Int32> _LineNumber;
         partial void OnLineNumberChanging(Nullable<global::System.Int32> value);
         partial void OnLineNumberChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> DateTime
+        {
+            get
+            {
+                return _DateTime;
+            }
+            set
+            {
+                OnDateTimeChanging(value);
+                ReportPropertyChanging("DateTime");
+                _DateTime = StructuralObject.SetValidValue(value, "DateTime");
+                ReportPropertyChanged("DateTime");
+                OnDateTimeChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _DateTime;
+        partial void OnDateTimeChanging(Nullable<global::System.DateTime> value);
+        partial void OnDateTimeChanged();
 
         #endregion
 

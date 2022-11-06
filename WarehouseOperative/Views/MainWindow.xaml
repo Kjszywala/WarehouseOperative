@@ -249,22 +249,13 @@
                 </Border>
 
                 <Border Grid.Column="1">
-                    <ScrollViewer 
-                        RenderTransformOrigin="0.5,0.5"
-                        HorizontalAlignment="Stretch"
-                        VerticalScrollBarVisibility="Auto"
-                        Margin="0,0,0,0"
-                        Width="Auto"
-                        Style="{StaticResource FavsScrollViewer}"
-                        >
-                        <HeaderedContentControl 
-                            Header="Workspace"
-                            Margin="3"
-                            Content="{Binding Path=Workspaces}"
-                            ContentTemplate="{StaticResource WorkspacesTemplate}"
-                            Style="{StaticResource MainHCCStyle}"
+                    <HeaderedContentControl 
+                        Header="Workspace"
+                        Margin="3"
+                        Content="{Binding Path=Workspaces}"
+                        ContentTemplate="{StaticResource WorkspacesTemplate}"
+                        Style="{StaticResource MainHCCStyle}"
                         />
-                    </ScrollViewer>
                 </Border>
             </Grid>
             <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">

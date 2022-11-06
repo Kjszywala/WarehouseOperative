@@ -1,8 +1,7 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:WarehouseOperative.Views">
-
+    xmlns:local="clr-namespace:WarehouseOperative.Views" >
 
     <Style TargetType="{x:Type local:AllViewBase}">
         <Setter Property="Template">
@@ -23,9 +22,18 @@
                         <StackPanel Grid.Row="1" Background="Azure">
                             <Label>Tu bedzie filtrowanie i sortowanie</Label>
                         </StackPanel>
-                        <ContentPresenter Grid.Row="2" Margin="0,5,0,5">
+                        <ScrollViewer  
+                            Grid.Row="2"
+                            RenderTransformOrigin="0.5,0.5"
+                            HorizontalAlignment="Stretch"
+                            VerticalScrollBarVisibility="Auto"
+                            Margin="0,0,0,0"
+                            Width="Auto"
+                            >
+                            <ContentPresenter Grid.Row="2" Margin="0,5,0,5">
 
-                        </ContentPresenter>
+                            </ContentPresenter>
+                        </ScrollViewer>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -45,9 +53,18 @@
                             <ToggleButton Content="Save and Quit" Width="100" Height="30" Command="{Binding SaveAndCloseCommand}"/>
                             <ToggleButton Content="Cancel" Width="100" Height="30"/>
                         </ToolBar>
-                        <ContentPresenter Grid.Row="1" Margin="0,5,0,5">
+                        <ScrollViewer 
+                            Grid.Row="1"
+                            RenderTransformOrigin="0.5,0.5"
+                            HorizontalAlignment="Stretch"
+                            VerticalScrollBarVisibility="Auto"
+                            Margin="0,0,0,0"
+                            Width="Auto"
+                            >
+                            <ContentPresenter Grid.Row="1" Margin="0,5,0,5">
 
-                        </ContentPresenter>
+                            </ContentPresenter>
+                        </ScrollViewer>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
