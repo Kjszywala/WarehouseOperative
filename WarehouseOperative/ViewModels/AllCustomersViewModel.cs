@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Documents;
 using System.Windows;
 using WarehouseOperative.ViewModels.Abstract;
 using WarehouseOperative.Models.Entities;
@@ -30,7 +26,7 @@ namespace WarehouseOperative.ViewModels
                         //dla kazdego towaru z tabeli towar wybierz ten towar.
                         //SELECT * FROM Towar
                         //WHERE CzyAktywny = true
-                        from customer in WarehouseEntities.Customers
+                        from customer in KjsCompanyEntities1.Customers
                         where customer.IsActive == true
                         select customer
                     );

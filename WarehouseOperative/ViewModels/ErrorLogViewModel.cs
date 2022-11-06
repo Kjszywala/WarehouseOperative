@@ -26,7 +26,7 @@ namespace WarehouseOperative.ViewModels
                 List = new ObservableCollection<ErrorLog>(
                         //dla kazdego towaru z tabeli towar wybierz ten towar.
                         //SELECT * FROM Towar
-                        from errorLog in WarehouseEntities.ErrorLog
+                        from errorLog in KjsCompanyEntities1.ErrorLog
                         select errorLog
                     );
             }

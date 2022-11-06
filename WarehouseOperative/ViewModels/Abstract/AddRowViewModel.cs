@@ -13,7 +13,7 @@ namespace WarehouseOperative.ViewModels.Abstract
     {
         #region Fields
         //tu jest cala baza danych.
-        public WarehouseEntities Db { get; set; }
+        public KjsCompanyEntities1 Db { get; set; }
         //tu jest nasz dodawany towar.
         public T Item { get; set; }
         #endregion
@@ -22,7 +22,7 @@ namespace WarehouseOperative.ViewModels.Abstract
         public AddRowViewModel(string displayName)
         {
             base.DisplayName = displayName;
-            Db = new WarehouseEntities();
+            Db = new KjsCompanyEntities1();
         }
         #endregion
 

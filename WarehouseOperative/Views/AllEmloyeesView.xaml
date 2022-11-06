@@ -13,13 +13,15 @@
 
         <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding List}" AutoGenerateColumns="False" Margin="10" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Employee Id" Width="60" Binding="{Binding Path=Employee_Id}"/>
-                <DataGridTextColumn Header="First Name" Width="90" Binding="{Binding Path=First_Name}"/>
-                <DataGridTextColumn Header="Last Name" Width="80" Binding="{Binding Path=Last_Name}"/>
+                <DataGridTextColumn Header="Employee Id" Width="75" Binding="{Binding Path=EmployeeID}"/>
+                <DataGridTextColumn Header="First Name" Width="90" Binding="{Binding Path=EmployeeFirstName}"/>
+                <DataGridTextColumn Header="Last Name" Width="80" Binding="{Binding Path=EmployeeLastName}"/>
                 <DataGridTextColumn Header="E-mail" Width="60" Binding="{Binding Path=Email}"/>
-                <DataGridTextColumn Header="Phone Number" Width="120" Binding="{Binding Path=Phone}"/>
-                <DataGridTextColumn Header="Hire Date" Width="80" Binding="{Binding Path=Hire_Date}"/>
-                <DataGridTextColumn Header="Job Title" Width="90" Binding="{Binding Path=Job_Title}"/>
+                <DataGridTextColumn Header="Phone Number" Width="110" Binding="{Binding Path=Phone}"/>
+                <DataGridTextColumn Header="Hire Date" Width="80" Binding="{Binding Path=HireDate}"/>
+                <DataGridTextColumn Header="Job Title" Width="70" Binding="{Binding Path=JobTitle}"/>
+                <DataGridTextColumn Header="Address" Width="90" Binding="{Binding Path=EmployeeAddress}"/>
+                <DataGridTextColumn Header="Anuall leave days left" Width="150" Binding="{Binding Path=EmployeeAnualLeaveDaysLeft}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
