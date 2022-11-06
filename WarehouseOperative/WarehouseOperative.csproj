@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Models\Entities\WarehouseEntities.edmx" />
+    <None Remove="Models\Entities\Entities.edmx" />
     <None Remove="Views\Content\Icons\boxes.png" />
     <None Remove="Views\Content\Icons\close2.png" />
     <None Remove="Views\Content\Icons\cubes.png" />
@@ -31,9 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EntityDeploy Include="Models\Entities\WarehouseEntities.edmx">
+    <EntityDeploy Include="Models\Entities\Entities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>WarehouseEntities.Designer.cs</LastGenOutput>
+      <LastGenOutput>Entities.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
 
@@ -109,10 +109,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Models\Entities\WarehouseEntities.Designer.cs">
+    <Compile Update="Models\Entities\Entities.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>WarehouseEntities.edmx</DependentUpon>
+      <DependentUpon>Entities.edmx</DependentUpon>
     </Compile>
   </ItemGroup>
 

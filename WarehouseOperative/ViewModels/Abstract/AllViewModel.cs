@@ -14,8 +14,8 @@ namespace WarehouseOperative.ViewModels.Abstract
     {
         #region Fields
         // To jest obiekt ktory bedzie sluzyl do operacji na bazie danych.
-        public readonly KjsCompanyEntities1 warehouseEntities;
-        public KjsCompanyEntities1 KjsCompanyEntities1
+        public readonly WareEntities warehouseEntities;
+        public WareEntities WarehouseEntities
         {
             get
             {
@@ -62,7 +62,7 @@ namespace WarehouseOperative.ViewModels.Abstract
         public AllViewModel(string displayName)
         {
             base.DisplayName = displayName;
-            this.warehouseEntities = new KjsCompanyEntities1();
+            this.warehouseEntities = new WareEntities();
         }
         #endregion
 

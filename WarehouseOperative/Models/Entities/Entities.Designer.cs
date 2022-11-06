@@ -19,19 +19,19 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Products_Categories", "Categories", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Categories), "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Products), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Customers_CustomerAddress", "CustomerAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.CustomerAddress), "Customers", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Customers), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Orders_Customers", "Customers", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Customers), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Orders), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.EmploeesAnnualLeave), "EmployeeTable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.EmployeeTable), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_EmployeeTable_EmployeeAddress", "EmployeeAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.EmployeeAddress), "EmployeeTable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.EmployeeTable), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Orders_EmployeeTable", "EmployeeTable", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.EmployeeTable), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Orders), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Invoices_PaymentMethod", "PaymentMethod", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.PaymentMethod), "Invoices", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Invoices), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Invoices_Products", "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WarehouseOperative.Models.Entities.Products), "Invoices", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Invoices), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Orders_Products", "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Products), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Orders), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Orders_Shippers", "Shippers", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Shippers), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Orders), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Products_Suppliers", "Suppliers", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Suppliers), "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Products), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_ProductsLog_Products", "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Products), "ProductsLog", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.ProductsLog), true)]
-[assembly: EdmRelationshipAttribute("WarehouseEntities", "FK_Suppliers_SupplierAddress", "SupplierAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WarehouseOperative.Models.Entities.SupplierAddress), "Suppliers", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Suppliers), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Products_Categories", "Categories", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Categories), "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Products), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Customers_CustomerAddress", "CustomerAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.CustomerAddress), "Customers", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Customers), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Orders_Customers", "Customers", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Customers), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Orders), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.EmploeesAnnualLeave), "EmployeeTable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.EmployeeTable), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_EmployeeTable_EmployeeAddress", "EmployeeAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.EmployeeAddress), "EmployeeTable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.EmployeeTable), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Orders_EmployeeTable", "EmployeeTable", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.EmployeeTable), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Orders), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Invoices_PaymentMethod", "PaymentMethod", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.PaymentMethod), "Invoices", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Invoices), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Invoices_Products", "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WarehouseOperative.Models.Entities.Products), "Invoices", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Invoices), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Orders_Products", "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Products), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Orders), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Orders_Shippers", "Shippers", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Shippers), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Orders), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Products_Suppliers", "Suppliers", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Suppliers), "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Products), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_ProductsLog_Products", "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WarehouseOperative.Models.Entities.Products), "ProductsLog", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.ProductsLog), true)]
+[assembly: EdmRelationshipAttribute("KjsCompanyModel", "FK_Suppliers_SupplierAddress", "SupplierAddress", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WarehouseOperative.Models.Entities.SupplierAddress), "Suppliers", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WarehouseOperative.Models.Entities.Suppliers), true)]
 
 #endregion
 
@@ -42,32 +42,32 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    public partial class KjsCompanyEntities1 : ObjectContext
+    public partial class WareEntities : ObjectContext
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new KjsCompanyEntities1 object using the connection string found in the 'KjsCompanyEntities1' section of the application configuration file.
+        /// Initializes a new WareEntities object using the connection string found in the 'WareEntities' section of the application configuration file.
         /// </summary>
-        public KjsCompanyEntities1() : base("name=KjsCompanyEntities1", "KjsCompanyEntities1")
+        public WareEntities() : base("name=WareEntities", "WareEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new KjsCompanyEntities1 object.
+        /// Initialize a new WareEntities object.
         /// </summary>
-        public KjsCompanyEntities1(string connectionString) : base(connectionString, "KjsCompanyEntities1")
+        public WareEntities(string connectionString) : base(connectionString, "WareEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new KjsCompanyEntities1 object.
+        /// Initialize a new WareEntities object.
         /// </summary>
-        public KjsCompanyEntities1(EntityConnection connection) : base(connection, "KjsCompanyEntities1")
+        public WareEntities(EntityConnection connection) : base(connection, "WareEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
@@ -506,7 +506,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="Categories")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="Categories")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Categories : EntityObject
@@ -637,18 +637,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Products_Categories", "Products")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Products_Categories", "Products")]
         public EntityCollection<Products> Products
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Products>("WarehouseEntities.FK_Products_Categories", "Products");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Products>("KjsCompanyModel.FK_Products_Categories", "Products");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Products>("WarehouseEntities.FK_Products_Categories", "Products", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Products>("KjsCompanyModel.FK_Products_Categories", "Products", value);
                 }
             }
         }
@@ -660,7 +660,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="CustomerAddress")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="CustomerAddress")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class CustomerAddress : EntityObject
@@ -839,18 +839,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Customers_CustomerAddress", "Customers")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Customers_CustomerAddress", "Customers")]
         public EntityCollection<Customers> Customers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Customers>("WarehouseEntities.FK_Customers_CustomerAddress", "Customers");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Customers>("KjsCompanyModel.FK_Customers_CustomerAddress", "Customers");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Customers>("WarehouseEntities.FK_Customers_CustomerAddress", "Customers", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Customers>("KjsCompanyModel.FK_Customers_CustomerAddress", "Customers", value);
                 }
             }
         }
@@ -862,7 +862,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="Customers")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="Customers")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Customers : EntityObject
@@ -1023,16 +1023,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Customers_CustomerAddress", "CustomerAddress")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Customers_CustomerAddress", "CustomerAddress")]
         public CustomerAddress CustomerAddress
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerAddress>("WarehouseEntities.FK_Customers_CustomerAddress", "CustomerAddress").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerAddress>("KjsCompanyModel.FK_Customers_CustomerAddress", "CustomerAddress").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerAddress>("WarehouseEntities.FK_Customers_CustomerAddress", "CustomerAddress").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerAddress>("KjsCompanyModel.FK_Customers_CustomerAddress", "CustomerAddress").Value = value;
             }
         }
         /// <summary>
@@ -1044,13 +1044,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerAddress>("WarehouseEntities.FK_Customers_CustomerAddress", "CustomerAddress");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerAddress>("KjsCompanyModel.FK_Customers_CustomerAddress", "CustomerAddress");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CustomerAddress>("WarehouseEntities.FK_Customers_CustomerAddress", "CustomerAddress", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CustomerAddress>("KjsCompanyModel.FK_Customers_CustomerAddress", "CustomerAddress", value);
                 }
             }
         }
@@ -1061,18 +1061,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Orders_Customers", "Orders")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Orders_Customers", "Orders")]
         public EntityCollection<Orders> Orders
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Orders>("WarehouseEntities.FK_Orders_Customers", "Orders");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Orders>("KjsCompanyModel.FK_Orders_Customers", "Orders");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Orders>("WarehouseEntities.FK_Orders_Customers", "Orders", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Orders>("KjsCompanyModel.FK_Orders_Customers", "Orders", value);
                 }
             }
         }
@@ -1084,7 +1084,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="EmploeesAnnualLeave")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="EmploeesAnnualLeave")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class EmploeesAnnualLeave : EntityObject
@@ -1239,18 +1239,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_EmployeeTable_EmploeesAnnualLeave", "EmployeeTable")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_EmployeeTable_EmploeesAnnualLeave", "EmployeeTable")]
         public EntityCollection<EmployeeTable> EmployeeTable
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmployeeTable>("WarehouseEntities.FK_EmployeeTable_EmploeesAnnualLeave", "EmployeeTable");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmployeeTable>("KjsCompanyModel.FK_EmployeeTable_EmploeesAnnualLeave", "EmployeeTable");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmployeeTable>("WarehouseEntities.FK_EmployeeTable_EmploeesAnnualLeave", "EmployeeTable", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmployeeTable>("KjsCompanyModel.FK_EmployeeTable_EmploeesAnnualLeave", "EmployeeTable", value);
                 }
             }
         }
@@ -1262,7 +1262,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="EmployeeAddress")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="EmployeeAddress")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class EmployeeAddress : EntityObject
@@ -1473,18 +1473,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_EmployeeTable_EmployeeAddress", "EmployeeTable")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_EmployeeTable_EmployeeAddress", "EmployeeTable")]
         public EntityCollection<EmployeeTable> EmployeeTable
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmployeeTable>("WarehouseEntities.FK_EmployeeTable_EmployeeAddress", "EmployeeTable");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmployeeTable>("KjsCompanyModel.FK_EmployeeTable_EmployeeAddress", "EmployeeTable");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmployeeTable>("WarehouseEntities.FK_EmployeeTable_EmployeeAddress", "EmployeeTable", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmployeeTable>("KjsCompanyModel.FK_EmployeeTable_EmployeeAddress", "EmployeeTable", value);
                 }
             }
         }
@@ -1496,7 +1496,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="Employees")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="Employees")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Employees : EntityObject
@@ -1732,7 +1732,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="EmployeeTable")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="EmployeeTable")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class EmployeeTable : EntityObject
@@ -2021,16 +2021,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave")]
         public EmploeesAnnualLeave EmploeesAnnualLeave
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmploeesAnnualLeave>("WarehouseEntities.FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmploeesAnnualLeave>("KjsCompanyModel.FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmploeesAnnualLeave>("WarehouseEntities.FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmploeesAnnualLeave>("KjsCompanyModel.FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave").Value = value;
             }
         }
         /// <summary>
@@ -2042,13 +2042,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmploeesAnnualLeave>("WarehouseEntities.FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmploeesAnnualLeave>("KjsCompanyModel.FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmploeesAnnualLeave>("WarehouseEntities.FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmploeesAnnualLeave>("KjsCompanyModel.FK_EmployeeTable_EmploeesAnnualLeave", "EmploeesAnnualLeave", value);
                 }
             }
         }
@@ -2059,16 +2059,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_EmployeeTable_EmployeeAddress", "EmployeeAddress")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_EmployeeTable_EmployeeAddress", "EmployeeAddress")]
         public EmployeeAddress EmployeeAddress
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeAddress>("WarehouseEntities.FK_EmployeeTable_EmployeeAddress", "EmployeeAddress").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeAddress>("KjsCompanyModel.FK_EmployeeTable_EmployeeAddress", "EmployeeAddress").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeAddress>("WarehouseEntities.FK_EmployeeTable_EmployeeAddress", "EmployeeAddress").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeAddress>("KjsCompanyModel.FK_EmployeeTable_EmployeeAddress", "EmployeeAddress").Value = value;
             }
         }
         /// <summary>
@@ -2080,13 +2080,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeAddress>("WarehouseEntities.FK_EmployeeTable_EmployeeAddress", "EmployeeAddress");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeAddress>("KjsCompanyModel.FK_EmployeeTable_EmployeeAddress", "EmployeeAddress");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmployeeAddress>("WarehouseEntities.FK_EmployeeTable_EmployeeAddress", "EmployeeAddress", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmployeeAddress>("KjsCompanyModel.FK_EmployeeTable_EmployeeAddress", "EmployeeAddress", value);
                 }
             }
         }
@@ -2097,18 +2097,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Orders_EmployeeTable", "Orders")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Orders_EmployeeTable", "Orders")]
         public EntityCollection<Orders> Orders
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Orders>("WarehouseEntities.FK_Orders_EmployeeTable", "Orders");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Orders>("KjsCompanyModel.FK_Orders_EmployeeTable", "Orders");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Orders>("WarehouseEntities.FK_Orders_EmployeeTable", "Orders", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Orders>("KjsCompanyModel.FK_Orders_EmployeeTable", "Orders", value);
                 }
             }
         }
@@ -2120,7 +2120,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="ErrorLog")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="ErrorLog")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ErrorLog : EntityObject
@@ -2248,7 +2248,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="Invoices")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="Invoices")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Invoices : EntityObject
@@ -2503,16 +2503,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Invoices_PaymentMethod", "PaymentMethod")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Invoices_PaymentMethod", "PaymentMethod")]
         public PaymentMethod PaymentMethod
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PaymentMethod>("WarehouseEntities.FK_Invoices_PaymentMethod", "PaymentMethod").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PaymentMethod>("KjsCompanyModel.FK_Invoices_PaymentMethod", "PaymentMethod").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PaymentMethod>("WarehouseEntities.FK_Invoices_PaymentMethod", "PaymentMethod").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PaymentMethod>("KjsCompanyModel.FK_Invoices_PaymentMethod", "PaymentMethod").Value = value;
             }
         }
         /// <summary>
@@ -2524,13 +2524,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PaymentMethod>("WarehouseEntities.FK_Invoices_PaymentMethod", "PaymentMethod");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PaymentMethod>("KjsCompanyModel.FK_Invoices_PaymentMethod", "PaymentMethod");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PaymentMethod>("WarehouseEntities.FK_Invoices_PaymentMethod", "PaymentMethod", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PaymentMethod>("KjsCompanyModel.FK_Invoices_PaymentMethod", "PaymentMethod", value);
                 }
             }
         }
@@ -2541,16 +2541,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Invoices_Products", "Products")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Invoices_Products", "Products")]
         public Products Products
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("WarehouseEntities.FK_Invoices_Products", "Products").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("KjsCompanyModel.FK_Invoices_Products", "Products").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("WarehouseEntities.FK_Invoices_Products", "Products").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("KjsCompanyModel.FK_Invoices_Products", "Products").Value = value;
             }
         }
         /// <summary>
@@ -2562,13 +2562,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("WarehouseEntities.FK_Invoices_Products", "Products");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("KjsCompanyModel.FK_Invoices_Products", "Products");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Products>("WarehouseEntities.FK_Invoices_Products", "Products", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Products>("KjsCompanyModel.FK_Invoices_Products", "Products", value);
                 }
             }
         }
@@ -2580,7 +2580,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="Orders")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="Orders")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Orders : EntityObject
@@ -2895,16 +2895,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Orders_Customers", "Customers")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Orders_Customers", "Customers")]
         public Customers Customers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customers>("WarehouseEntities.FK_Orders_Customers", "Customers").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customers>("KjsCompanyModel.FK_Orders_Customers", "Customers").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customers>("WarehouseEntities.FK_Orders_Customers", "Customers").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customers>("KjsCompanyModel.FK_Orders_Customers", "Customers").Value = value;
             }
         }
         /// <summary>
@@ -2916,13 +2916,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customers>("WarehouseEntities.FK_Orders_Customers", "Customers");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customers>("KjsCompanyModel.FK_Orders_Customers", "Customers");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customers>("WarehouseEntities.FK_Orders_Customers", "Customers", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customers>("KjsCompanyModel.FK_Orders_Customers", "Customers", value);
                 }
             }
         }
@@ -2933,16 +2933,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Orders_EmployeeTable", "EmployeeTable")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Orders_EmployeeTable", "EmployeeTable")]
         public EmployeeTable EmployeeTable
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeTable>("WarehouseEntities.FK_Orders_EmployeeTable", "EmployeeTable").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeTable>("KjsCompanyModel.FK_Orders_EmployeeTable", "EmployeeTable").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeTable>("WarehouseEntities.FK_Orders_EmployeeTable", "EmployeeTable").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeTable>("KjsCompanyModel.FK_Orders_EmployeeTable", "EmployeeTable").Value = value;
             }
         }
         /// <summary>
@@ -2954,13 +2954,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeTable>("WarehouseEntities.FK_Orders_EmployeeTable", "EmployeeTable");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmployeeTable>("KjsCompanyModel.FK_Orders_EmployeeTable", "EmployeeTable");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmployeeTable>("WarehouseEntities.FK_Orders_EmployeeTable", "EmployeeTable", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmployeeTable>("KjsCompanyModel.FK_Orders_EmployeeTable", "EmployeeTable", value);
                 }
             }
         }
@@ -2971,16 +2971,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Orders_Products", "Products")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Orders_Products", "Products")]
         public Products Products
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("WarehouseEntities.FK_Orders_Products", "Products").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("KjsCompanyModel.FK_Orders_Products", "Products").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("WarehouseEntities.FK_Orders_Products", "Products").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("KjsCompanyModel.FK_Orders_Products", "Products").Value = value;
             }
         }
         /// <summary>
@@ -2992,13 +2992,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("WarehouseEntities.FK_Orders_Products", "Products");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("KjsCompanyModel.FK_Orders_Products", "Products");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Products>("WarehouseEntities.FK_Orders_Products", "Products", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Products>("KjsCompanyModel.FK_Orders_Products", "Products", value);
                 }
             }
         }
@@ -3009,16 +3009,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Orders_Shippers", "Shippers")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Orders_Shippers", "Shippers")]
         public Shippers Shippers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Shippers>("WarehouseEntities.FK_Orders_Shippers", "Shippers").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Shippers>("KjsCompanyModel.FK_Orders_Shippers", "Shippers").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Shippers>("WarehouseEntities.FK_Orders_Shippers", "Shippers").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Shippers>("KjsCompanyModel.FK_Orders_Shippers", "Shippers").Value = value;
             }
         }
         /// <summary>
@@ -3030,13 +3030,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Shippers>("WarehouseEntities.FK_Orders_Shippers", "Shippers");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Shippers>("KjsCompanyModel.FK_Orders_Shippers", "Shippers");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Shippers>("WarehouseEntities.FK_Orders_Shippers", "Shippers", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Shippers>("KjsCompanyModel.FK_Orders_Shippers", "Shippers", value);
                 }
             }
         }
@@ -3048,7 +3048,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="PaymentMethod")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="PaymentMethod")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class PaymentMethod : EntityObject
@@ -3181,18 +3181,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Invoices_PaymentMethod", "Invoices")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Invoices_PaymentMethod", "Invoices")]
         public EntityCollection<Invoices> Invoices
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Invoices>("WarehouseEntities.FK_Invoices_PaymentMethod", "Invoices");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Invoices>("KjsCompanyModel.FK_Invoices_PaymentMethod", "Invoices");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Invoices>("WarehouseEntities.FK_Invoices_PaymentMethod", "Invoices", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Invoices>("KjsCompanyModel.FK_Invoices_PaymentMethod", "Invoices", value);
                 }
             }
         }
@@ -3204,7 +3204,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="Products")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="Products")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Products : EntityObject
@@ -3517,16 +3517,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Products_Categories", "Categories")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Products_Categories", "Categories")]
         public Categories Categories
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Categories>("WarehouseEntities.FK_Products_Categories", "Categories").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Categories>("KjsCompanyModel.FK_Products_Categories", "Categories").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Categories>("WarehouseEntities.FK_Products_Categories", "Categories").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Categories>("KjsCompanyModel.FK_Products_Categories", "Categories").Value = value;
             }
         }
         /// <summary>
@@ -3538,13 +3538,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Categories>("WarehouseEntities.FK_Products_Categories", "Categories");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Categories>("KjsCompanyModel.FK_Products_Categories", "Categories");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Categories>("WarehouseEntities.FK_Products_Categories", "Categories", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Categories>("KjsCompanyModel.FK_Products_Categories", "Categories", value);
                 }
             }
         }
@@ -3555,18 +3555,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Invoices_Products", "Invoices")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Invoices_Products", "Invoices")]
         public EntityCollection<Invoices> Invoices
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Invoices>("WarehouseEntities.FK_Invoices_Products", "Invoices");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Invoices>("KjsCompanyModel.FK_Invoices_Products", "Invoices");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Invoices>("WarehouseEntities.FK_Invoices_Products", "Invoices", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Invoices>("KjsCompanyModel.FK_Invoices_Products", "Invoices", value);
                 }
             }
         }
@@ -3577,18 +3577,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Orders_Products", "Orders")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Orders_Products", "Orders")]
         public EntityCollection<Orders> Orders
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Orders>("WarehouseEntities.FK_Orders_Products", "Orders");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Orders>("KjsCompanyModel.FK_Orders_Products", "Orders");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Orders>("WarehouseEntities.FK_Orders_Products", "Orders", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Orders>("KjsCompanyModel.FK_Orders_Products", "Orders", value);
                 }
             }
         }
@@ -3599,16 +3599,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Products_Suppliers", "Suppliers")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Products_Suppliers", "Suppliers")]
         public Suppliers Suppliers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Suppliers>("WarehouseEntities.FK_Products_Suppliers", "Suppliers").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Suppliers>("KjsCompanyModel.FK_Products_Suppliers", "Suppliers").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Suppliers>("WarehouseEntities.FK_Products_Suppliers", "Suppliers").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Suppliers>("KjsCompanyModel.FK_Products_Suppliers", "Suppliers").Value = value;
             }
         }
         /// <summary>
@@ -3620,13 +3620,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Suppliers>("WarehouseEntities.FK_Products_Suppliers", "Suppliers");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Suppliers>("KjsCompanyModel.FK_Products_Suppliers", "Suppliers");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Suppliers>("WarehouseEntities.FK_Products_Suppliers", "Suppliers", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Suppliers>("KjsCompanyModel.FK_Products_Suppliers", "Suppliers", value);
                 }
             }
         }
@@ -3637,18 +3637,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_ProductsLog_Products", "ProductsLog")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_ProductsLog_Products", "ProductsLog")]
         public EntityCollection<ProductsLog> ProductsLog
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductsLog>("WarehouseEntities.FK_ProductsLog_Products", "ProductsLog");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductsLog>("KjsCompanyModel.FK_ProductsLog_Products", "ProductsLog");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductsLog>("WarehouseEntities.FK_ProductsLog_Products", "ProductsLog", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductsLog>("KjsCompanyModel.FK_ProductsLog_Products", "ProductsLog", value);
                 }
             }
         }
@@ -3660,7 +3660,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="ProductsLog")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="ProductsLog")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ProductsLog : EntityObject
@@ -3841,16 +3841,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_ProductsLog_Products", "Products")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_ProductsLog_Products", "Products")]
         public Products Products
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("WarehouseEntities.FK_ProductsLog_Products", "Products").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("KjsCompanyModel.FK_ProductsLog_Products", "Products").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("WarehouseEntities.FK_ProductsLog_Products", "Products").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("KjsCompanyModel.FK_ProductsLog_Products", "Products").Value = value;
             }
         }
         /// <summary>
@@ -3862,13 +3862,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("WarehouseEntities.FK_ProductsLog_Products", "Products");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Products>("KjsCompanyModel.FK_ProductsLog_Products", "Products");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Products>("WarehouseEntities.FK_ProductsLog_Products", "Products", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Products>("KjsCompanyModel.FK_ProductsLog_Products", "Products", value);
                 }
             }
         }
@@ -3880,7 +3880,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="Shippers")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="Shippers")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Shippers : EntityObject
@@ -4015,18 +4015,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Orders_Shippers", "Orders")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Orders_Shippers", "Orders")]
         public EntityCollection<Orders> Orders
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Orders>("WarehouseEntities.FK_Orders_Shippers", "Orders");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Orders>("KjsCompanyModel.FK_Orders_Shippers", "Orders");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Orders>("WarehouseEntities.FK_Orders_Shippers", "Orders", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Orders>("KjsCompanyModel.FK_Orders_Shippers", "Orders", value);
                 }
             }
         }
@@ -4038,7 +4038,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="SupplierAddress")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="SupplierAddress")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class SupplierAddress : EntityObject
@@ -4265,18 +4265,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Suppliers_SupplierAddress", "Suppliers")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Suppliers_SupplierAddress", "Suppliers")]
         public EntityCollection<Suppliers> Suppliers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Suppliers>("WarehouseEntities.FK_Suppliers_SupplierAddress", "Suppliers");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Suppliers>("KjsCompanyModel.FK_Suppliers_SupplierAddress", "Suppliers");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Suppliers>("WarehouseEntities.FK_Suppliers_SupplierAddress", "Suppliers", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Suppliers>("KjsCompanyModel.FK_Suppliers_SupplierAddress", "Suppliers", value);
                 }
             }
         }
@@ -4288,7 +4288,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="Suppliers")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="Suppliers")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Suppliers : EntityObject
@@ -4467,18 +4467,18 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Products_Suppliers", "Products")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Products_Suppliers", "Products")]
         public EntityCollection<Products> Products
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Products>("WarehouseEntities.FK_Products_Suppliers", "Products");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Products>("KjsCompanyModel.FK_Products_Suppliers", "Products");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Products>("WarehouseEntities.FK_Products_Suppliers", "Products", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Products>("KjsCompanyModel.FK_Products_Suppliers", "Products", value);
                 }
             }
         }
@@ -4489,16 +4489,16 @@ namespace WarehouseOperative.Models.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("WarehouseEntities", "FK_Suppliers_SupplierAddress", "SupplierAddress")]
+        [EdmRelationshipNavigationPropertyAttribute("KjsCompanyModel", "FK_Suppliers_SupplierAddress", "SupplierAddress")]
         public SupplierAddress SupplierAddress
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SupplierAddress>("WarehouseEntities.FK_Suppliers_SupplierAddress", "SupplierAddress").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SupplierAddress>("KjsCompanyModel.FK_Suppliers_SupplierAddress", "SupplierAddress").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SupplierAddress>("WarehouseEntities.FK_Suppliers_SupplierAddress", "SupplierAddress").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SupplierAddress>("KjsCompanyModel.FK_Suppliers_SupplierAddress", "SupplierAddress").Value = value;
             }
         }
         /// <summary>
@@ -4510,13 +4510,13 @@ namespace WarehouseOperative.Models.Entities
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SupplierAddress>("WarehouseEntities.FK_Suppliers_SupplierAddress", "SupplierAddress");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SupplierAddress>("KjsCompanyModel.FK_Suppliers_SupplierAddress", "SupplierAddress");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SupplierAddress>("WarehouseEntities.FK_Suppliers_SupplierAddress", "SupplierAddress", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SupplierAddress>("KjsCompanyModel.FK_Suppliers_SupplierAddress", "SupplierAddress", value);
                 }
             }
         }
@@ -4528,7 +4528,7 @@ namespace WarehouseOperative.Models.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="WarehouseEntities", Name="sysdiagrams")]
+    [EdmEntityTypeAttribute(NamespaceName="KjsCompanyModel", Name="sysdiagrams")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class sysdiagrams : EntityObject

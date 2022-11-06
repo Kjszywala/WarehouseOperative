@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="WarehouseEntities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="KjsCompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="Category_Id" />
@@ -359,7 +359,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="WarehouseEntitiesStoreContainer">
+        <EntityContainer Name="KjsCompanyModelStoreContainer">
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerAddress" EntityType="Self.CustomerAddress" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
@@ -430,10 +430,11 @@
             <End Role="Suppliers" EntitySet="Suppliers" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="WarehouseEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="KjsCompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="Category_Id" />
@@ -473,10 +474,10 @@
             <PropertyRef Name="AnnualLeave_Id" />
           </Key>
           <Property Name="AnnualLeave_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="StartDate" Type="DateTime" Precision="0" />
-          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="StartDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
           <Property Name="DaysLeft" Type="Int32" />
-          <Property Name="LastChangeDateTime" Type="DateTime" Precision="0" />
+          <Property Name="LastChangeDateTime" Type="DateTime" />
           <NavigationProperty Name="EmployeeTable" Relationship="Self.FK_EmployeeTable_EmploeesAnnualLeave" FromRole="EmploeesAnnualLeave" ToRole="EmployeeTable" />
         </EntityType>
         <EntityType Name="EmployeeAddress">
@@ -501,7 +502,7 @@
           <Property Name="Last_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Hire_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Hire_Date" Type="DateTime" Nullable="false" />
           <Property Name="Job_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IsActive" Type="Boolean" />
         </EntityType>
@@ -514,7 +515,7 @@
           <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Hire_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Hire_Date" Type="DateTime" Nullable="false" />
           <Property Name="Job_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="EmployeeAnualLeave" Type="Int32" Nullable="false" />
           <Property Name="EmployeeAddressId" Type="Int32" Nullable="false" />
@@ -530,7 +531,7 @@
           <Property Name="ErrorLog_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LineNumber" Type="Int32" />
-          <Property Name="DateTime" Type="DateTime" Precision="0" />
+          <Property Name="DateTime" Type="DateTime" />
         </EntityType>
         <EntityType Name="Invoices">
           <Key>
@@ -538,13 +539,13 @@
           </Key>
           <Property Name="Invoice_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Invoicenumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="InvoiceDate" Type="DateTime" Precision="0" />
+          <Property Name="InvoiceDate" Type="DateTime" />
           <Property Name="OrderId" Type="Int32" Nullable="false" />
           <Property Name="PaymentMethodId" Type="Int32" Nullable="false" />
           <Property Name="IsConfirmed" Type="Boolean" />
           <Property Name="isActive" Type="Boolean" />
           <Property Name="ProductId" Type="Int32" />
-          <Property Name="LastChangedDataTime" Type="DateTime" Precision="0" />
+          <Property Name="LastChangedDataTime" Type="DateTime" />
           <NavigationProperty Name="PaymentMethod" Relationship="Self.FK_Invoices_PaymentMethod" FromRole="Invoices" ToRole="PaymentMethod" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Invoices_Products" FromRole="Invoices" ToRole="Products" />
         </EntityType>
@@ -555,13 +556,13 @@
           <Property Name="Order_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerId" Type="Int32" Nullable="false" />
           <Property Name="EmployeeId" Type="Int32" Nullable="false" />
-          <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="RequiredDate" Type="DateTime" Precision="0" />
-          <Property Name="ShippedDate" Type="DateTime" Precision="0" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="false" />
+          <Property Name="RequiredDate" Type="DateTime" />
+          <Property Name="ShippedDate" Type="DateTime" />
           <Property Name="OrderQuantity" Type="Int32" Nullable="false" />
           <Property Name="ShipperId" Type="Int32" Nullable="false" />
           <Property Name="ProductId" Type="Int32" Nullable="false" />
-          <Property Name="LastChangedDataTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LastChangedDataTime" Type="DateTime" Nullable="false" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Orders_Customers" FromRole="Orders" ToRole="Customers" />
           <NavigationProperty Name="EmployeeTable" Relationship="Self.FK_Orders_EmployeeTable" FromRole="Orders" ToRole="EmployeeTable" />
@@ -591,7 +592,7 @@
           <Property Name="Quantity" Type="Int32" Nullable="false" />
           <Property Name="UnitsInStock" Type="Int32" Nullable="false" />
           <Property Name="Discounted" Type="Int32" />
-          <Property Name="LastChangedDateTime" Type="DateTime" Precision="0" />
+          <Property Name="LastChangedDateTime" Type="DateTime" />
           <Property Name="IsActive" Type="Boolean" />
           <NavigationProperty Name="Categories" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
           <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoices_Products" FromRole="Products" ToRole="Invoices" />
@@ -604,7 +605,7 @@
             <PropertyRef Name="ProductLog_Id" />
           </Key>
           <Property Name="ProductLog_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Date" Type="DateTime" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ProductId" Type="Int32" Nullable="false" />
           <Property Name="OldPrice" Type="Decimal" Precision="19" Scale="4" />
@@ -814,7 +815,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="KjsCompanyEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="WareEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Categories" />
           <EntitySet Name="CustomerAddress" EntityType="Self.CustomerAddress" />
           <EntitySet Name="Customers" EntityType="Self.Customers" />
@@ -890,9 +891,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WarehouseEntitiesStoreContainer" CdmEntityContainer="KjsCompanyEntities1">
+        <EntityContainerMapping StorageEntityContainer="KjsCompanyModelStoreContainer" CdmEntityContainer="WareEntities">
           <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="WarehouseEntities.Categories">
+            <EntityTypeMapping TypeName="KjsCompanyModel.Categories">
               <MappingFragment StoreEntitySet="Categories">
                 <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -902,7 +903,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CustomerAddress">
-            <EntityTypeMapping TypeName="WarehouseEntities.CustomerAddress">
+            <EntityTypeMapping TypeName="KjsCompanyModel.CustomerAddress">
               <MappingFragment StoreEntitySet="CustomerAddress">
                 <ScalarProperty Name="CustomerAddress_Id" ColumnName="CustomerAddress_Id" />
                 <ScalarProperty Name="HouseNumber" ColumnName="HouseNumber" />
@@ -914,7 +915,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Customers">
-            <EntityTypeMapping TypeName="WarehouseEntities.Customers">
+            <EntityTypeMapping TypeName="KjsCompanyModel.Customers">
               <MappingFragment StoreEntitySet="Customers">
                 <ScalarProperty Name="Customer_Id" ColumnName="Customer_Id" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -925,7 +926,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EmploeesAnnualLeave">
-            <EntityTypeMapping TypeName="WarehouseEntities.EmploeesAnnualLeave">
+            <EntityTypeMapping TypeName="KjsCompanyModel.EmploeesAnnualLeave">
               <MappingFragment StoreEntitySet="EmploeesAnnualLeave">
                 <ScalarProperty Name="AnnualLeave_Id" ColumnName="AnnualLeave_Id" />
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />
@@ -936,7 +937,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EmployeeAddress">
-            <EntityTypeMapping TypeName="WarehouseEntities.EmployeeAddress">
+            <EntityTypeMapping TypeName="KjsCompanyModel.EmployeeAddress">
               <MappingFragment StoreEntitySet="EmployeeAddress">
                 <ScalarProperty Name="EmployeeAddress_Id" ColumnName="EmployeeAddress_Id" />
                 <ScalarProperty Name="FlatNumber" ColumnName="FlatNumber" />
@@ -949,7 +950,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Employees">
-            <EntityTypeMapping TypeName="WarehouseEntities.Employees">
+            <EntityTypeMapping TypeName="KjsCompanyModel.Employees">
               <MappingFragment StoreEntitySet="Employees">
                 <ScalarProperty Name="Employee_Id" ColumnName="Employee_Id" />
                 <ScalarProperty Name="First_Name" ColumnName="First_Name" />
@@ -963,7 +964,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EmployeeTable">
-            <EntityTypeMapping TypeName="WarehouseEntities.EmployeeTable">
+            <EntityTypeMapping TypeName="KjsCompanyModel.EmployeeTable">
               <MappingFragment StoreEntitySet="EmployeeTable">
                 <ScalarProperty Name="Employee_Id" ColumnName="Employee_Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -979,7 +980,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ErrorLog">
-            <EntityTypeMapping TypeName="WarehouseEntities.ErrorLog">
+            <EntityTypeMapping TypeName="KjsCompanyModel.ErrorLog">
               <MappingFragment StoreEntitySet="ErrorLog">
                 <ScalarProperty Name="ErrorLog_Id" ColumnName="ErrorLog_Id" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -989,7 +990,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Invoices">
-            <EntityTypeMapping TypeName="WarehouseEntities.Invoices">
+            <EntityTypeMapping TypeName="KjsCompanyModel.Invoices">
               <MappingFragment StoreEntitySet="Invoices">
                 <ScalarProperty Name="Invoice_Id" ColumnName="Invoice_Id" />
                 <ScalarProperty Name="Invoicenumber" ColumnName="Invoicenumber" />
@@ -1004,7 +1005,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="WarehouseEntities.Orders">
+            <EntityTypeMapping TypeName="KjsCompanyModel.Orders">
               <MappingFragment StoreEntitySet="Orders">
                 <ScalarProperty Name="Order_Id" ColumnName="Order_Id" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
@@ -1021,7 +1022,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PaymentMethod">
-            <EntityTypeMapping TypeName="WarehouseEntities.PaymentMethod">
+            <EntityTypeMapping TypeName="KjsCompanyModel.PaymentMethod">
               <MappingFragment StoreEntitySet="PaymentMethod">
                 <ScalarProperty Name="PaymentMethod_Id" ColumnName="PaymentMethod_Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1031,7 +1032,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="WarehouseEntities.Products">
+            <EntityTypeMapping TypeName="KjsCompanyModel.Products">
               <MappingFragment StoreEntitySet="Products">
                 <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
@@ -1048,7 +1049,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductsLog">
-            <EntityTypeMapping TypeName="WarehouseEntities.ProductsLog">
+            <EntityTypeMapping TypeName="KjsCompanyModel.ProductsLog">
               <MappingFragment StoreEntitySet="ProductsLog">
                 <ScalarProperty Name="ProductLog_Id" ColumnName="ProductLog_Id" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
@@ -1060,7 +1061,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shippers">
-            <EntityTypeMapping TypeName="WarehouseEntities.Shippers">
+            <EntityTypeMapping TypeName="KjsCompanyModel.Shippers">
               <MappingFragment StoreEntitySet="Shippers">
                 <ScalarProperty Name="Shipper_Id" ColumnName="Shipper_Id" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1070,7 +1071,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SupplierAddress">
-            <EntityTypeMapping TypeName="WarehouseEntities.SupplierAddress">
+            <EntityTypeMapping TypeName="KjsCompanyModel.SupplierAddress">
               <MappingFragment StoreEntitySet="SupplierAddress">
                 <ScalarProperty Name="SupplierAddress_Id" ColumnName="SupplierAddress_Id" />
                 <ScalarProperty Name="StreetName" ColumnName="StreetName" />
@@ -1084,7 +1085,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Suppliers">
-            <EntityTypeMapping TypeName="WarehouseEntities.Suppliers">
+            <EntityTypeMapping TypeName="KjsCompanyModel.Suppliers">
               <MappingFragment StoreEntitySet="Suppliers">
                 <ScalarProperty Name="Supplier_Id" ColumnName="Supplier_Id" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1096,7 +1097,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="WarehouseEntities.sysdiagrams">
+            <EntityTypeMapping TypeName="KjsCompanyModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />

@@ -26,7 +26,7 @@ namespace WarehouseOperative.ViewModels
                         //dla kazdego towaru z tabeli towar wybierz ten towar.
                         //SELECT * FROM Towar
                         //WHERE CzyAktywny = true
-                        from customer in KjsCompanyEntities1.Customers
+                        from customer in WarehouseEntities.Customers
                         where customer.IsActive == true
                         select customer
                     );
