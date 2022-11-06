@@ -76,7 +76,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        
     </Style>
     
     <!--
@@ -129,6 +128,7 @@
         <Setter Property="Margin" Value="10"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Cursor" Value="Hand"/>
     </Style>
 
     <!-- Expander -->
@@ -154,6 +154,7 @@
     </LinearGradientBrush>
 
     <ControlTemplate x:Key="newToggleButtonControlTemplate" TargetType="{x:Type ToggleButton}">
+        
         <Grid Background="{TemplateBinding Background}">
             <Rectangle
                 x:Name="Rectangle"
@@ -355,6 +356,7 @@
     </Style>
     <Style TargetType="{x:Type ToggleButton}" x:Key="NavigationButton">
         <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="BorderBrush" Value="{x:Null}" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Template">
@@ -382,12 +384,17 @@
         </Setter>
     </Style>
 
-     <!--MenuItem style-->
+
+    <!--<Style TargetType="{x:Type ToolBar}">
+        <Setter Property="Cursor" Value="Hand"/>
+    </Style>-->
+    
+    <!--MenuItem style-->
 
     <Style x:Key="TopLevelHeaderStyle" TargetType="{x:Type MenuItem}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="#d8d8d8"/>
-        
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type MenuItem}">
