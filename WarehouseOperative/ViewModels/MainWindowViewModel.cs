@@ -1,15 +1,14 @@
-﻿using WarehouseOperative.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
-using System.Windows;
-using System.Data.Entity;
+using WarehouseOperative.Helpers;
 
 namespace WarehouseOperative.ViewModels
 {

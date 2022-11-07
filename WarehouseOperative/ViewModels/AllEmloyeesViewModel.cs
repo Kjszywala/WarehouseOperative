@@ -1,11 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System;
-using WarehouseOperative.Models.Entities;
 using WarehouseOperative.Models.EntitiesForView;
 using WarehouseOperative.ViewModels.Abstract;
 using System.Linq;
-using System.Drawing;
 
 namespace WarehouseOperative.ViewModels
 {
