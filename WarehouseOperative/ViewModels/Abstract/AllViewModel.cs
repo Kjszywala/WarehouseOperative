@@ -13,7 +13,7 @@ namespace WarehouseOperative.ViewModels.Abstract
     public abstract class AllViewModel<T>: WorkspaceViewModel
     {
         #region Fields
-        // To jest obiekt ktory bedzie sluzyl do operacji na bazie danych.
+        // Database connection.
         public readonly WareEntities warehouseEntities;
         public WareEntities WarehouseEntities
         {
@@ -22,7 +22,7 @@ namespace WarehouseOperative.ViewModels.Abstract
                 return warehouseEntities;
             }
         }
-        //to jest komenda do zaladowania towarow.
+        //Load product command.
         private BaseCommand _loadCommand;
         public ICommand LoadCommand
         {
@@ -30,19 +30,19 @@ namespace WarehouseOperative.ViewModels.Abstract
             {
                 if (_loadCommand == null)
                 {
-                    // pusta wywoluje load.
+                    // if emty then load.
                     _loadCommand = new BaseCommand(() => Load());
                 }
                 return _loadCommand;
             }
         }
-        // w tym obiekcie beda wszystkie towary.
+        // All products here.
         private ObservableCollection<T> _List;
         public ObservableCollection<T> List
         {
             get
             {
-                // jak lista pusta wywolujemy load.
+                // if list is emty then load.
                 if (_List == null)
                 {
                     Load();
