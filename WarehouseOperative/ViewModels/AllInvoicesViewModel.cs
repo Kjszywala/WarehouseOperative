@@ -21,11 +21,7 @@ namespace WarehouseOperative.ViewModels
         {
             try
             {
-                //To jest zapytanie LINQ (obiektowa wersja SQL)
                 List = new ObservableCollection<Invoices>(
-                        //dla kazdego towaru z tabeli towar wybierz ten towar.
-                        //SELECT * FROM Towar
-                        //WHERE CzyAktywny = true
                         from invoices in WarehouseEntities.Invoices
                         where invoices.isActive == true
                         select invoices

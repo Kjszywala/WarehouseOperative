@@ -21,10 +21,7 @@ namespace WarehouseOperative.ViewModels
         {
             try
             {
-                //To jest zapytanie LINQ (obiektowa wersja SQL)
                 List = new ObservableCollection<ErrorLog>(
-                        //dla kazdego towaru z tabeli towar wybierz ten towar.
-                        //SELECT * FROM Towar
                         from errorLog in WarehouseEntities.ErrorLog
                         select errorLog
                     );

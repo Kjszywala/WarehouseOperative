@@ -24,6 +24,7 @@ namespace WarehouseOperative.ViewModels
             }
         }
         #endregion
+
         #region RequestClose [evant]
         public event EventHandler RequestClose;
         public void OnRequestClose()
