@@ -12,9 +12,9 @@ namespace WarehouseOperative.ViewModels.Abstract
     public abstract class AddRowViewModel<T> : WorkspaceViewModel
     {
         #region Fields
-        //tu jest cala baza danych.
+        //Database variable
         public WareEntities Db { get; set; }
-        //tu jest nasz dodawany towar.
+        //Adding bookmark with new (product,invoice etc.)
         public T Item { get; set; }
         #endregion
 
@@ -27,8 +27,9 @@ namespace WarehouseOperative.ViewModels.Abstract
         #endregion
 
         #region Commands
-        // to jest commenda ktoraa zostanie podpieta (zbindowana) z przyciskiem
-        // zapisz i zamknij. Komenda ta wywola funkcje saveAndClose.
+        /// <summary>
+        /// Command which will be connected to Save and close button.
+        /// </summary>
         private BaseCommand _SaveAndCloseCommand;
         public ICommand SaveAndCloseCommand
         {
@@ -48,9 +49,9 @@ namespace WarehouseOperative.ViewModels.Abstract
 
         private void saveAndClose()
         {
-            //Zapisuje towar.
+            //Save product.
             Save();
-            //zamyka zakladke.
+            //Close bookmark.
             base.OnRequestClose();
         }
         #endregion
