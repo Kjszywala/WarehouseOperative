@@ -37,7 +37,7 @@
         <TextBox Margin="150,10,107,10" Grid.Row="1" Text="{Binding Path=Last_Name, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=Email, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Margin="150,10,107,10" Grid.Row="3" Text="{Binding Path=Phone, UpdateSourceTrigger=PropertyChanged}"/>
-        <Calendar Margin="150,10,107,10" Grid.Row="4" />
+        <DatePicker Margin="150,10,107,10" Grid.Row="4" />
         <TextBox Margin="150,10,107,10" Grid.Row="5" Text="{Binding Path=Job_Title, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </local:AddRowViewBase>

@@ -19,7 +19,7 @@
                             <ToggleButton Content="Delete" Margin="0,2,0,2"/>
                             <ToggleButton Content="Refresh" Margin="0,2,0,2"/>
                         </ToolBar>
-                        <StackPanel Grid.Row="1" Background="Azure">
+                        <StackPanel Grid.Row="1" Background="#404040">
                             <Label>Tu bedzie filtrowanie i sortowanie</Label>
                         </StackPanel>
                         <ScrollViewer  

@@ -8,7 +8,10 @@
              d:DesignHeight="450" 
              d:DesignWidth="800"
              >
-    <Grid Background="Gray">
+    <UserControl.Resources>
+        <ResourceDictionary Source="BookmarksResources.xaml"/>
+    </UserControl.Resources>
+    <Grid Background="#404040">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
