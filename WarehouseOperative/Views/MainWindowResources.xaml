@@ -277,6 +277,7 @@
                 DockPanel.Dock="Right"
                 Focusable="False"
                 FontFamily="Courier" 
+                Foreground="White"
                 Background="#3B3B3C"
                 FontSize="9"
                 FontWeight="Bold"  
@@ -294,22 +295,24 @@
     </DataTemplate>
 
     <Style TargetType="{x:Type TabItem}">
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TabItem">
                     <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="#FFF5F5F5" CornerRadius="4,4,0,0" Margin="0,0">
-                        <ContentPresenter x:Name="ContentSite"
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"
-                                        ContentSource="Header"
-                                        Margin="10,2,0,0"/>
+                        <ContentPresenter 
+                            x:Name="ContentSite"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            ContentSource="Header"
+                            Margin="10,2,0,0"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter TargetName="Border" Property="Background" Value="#FFA2A4A5" />
+                            <Setter TargetName="Border" Property="Background" Value="#FF656565" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="False">
-                            <Setter TargetName="Border" Property="Background" Value="#FF656565" />
+                            <Setter TargetName="Border" Property="Background" Value="#404040" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

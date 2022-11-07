@@ -1,4 +1,4 @@
-﻿<local:AllViewBase x:Class="WarehouseOperative.Views.NewInvoiceView"
+﻿<local:AddRowViewBase x:Class="WarehouseOperative.Views.NewInvoiceView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -63,4 +63,4 @@
         
         <ToggleButton Content="Add" Grid.Column="8" Grid.Row="11" Grid.ColumnSpan="3" Margin="10"/>
     </Grid>
-</local:AllViewBase>
+</local:AddRowViewBase>
