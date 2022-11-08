@@ -185,46 +185,5 @@
         </Setter>
     </Style>
 
-    <!-- ToggleButton style-->
-    <SolidColorBrush Color="#3B3B3C" x:Key="NormalRed" />
-    <SolidColorBrush Color="Transparent" x:Key="DarkRed" />
-    <Style x:Key="ButtonSingleTrigger" TargetType="Border">
-        <Setter Property="Background" Value="{StaticResource NormalRed}" />
-    </Style>
-    <Style x:Key="ButtonMultiTrigger" TargetType="Border">
-        <Setter Property="BorderBrush" Value="{StaticResource DarkRed}" />
-    </Style>
-    <Style x:Key="ButtonDefaultState" TargetType="Border">
-        <Setter Property="BorderBrush" Value="Transparent" />
-    </Style>
-    <Style TargetType="{x:Type ToggleButton}" x:Key="NavigationButton">
-        <Setter Property="Background" Value="{x:Null}" />
-        <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="BorderBrush" Value="{x:Null}" />
-        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border Name="OuterBorder" BorderThickness="0,1,0,0">
-                        <Border Name="InnerBorder" BorderThickness="1">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Style" TargetName="InnerBorder" Value="{StaticResource ButtonSingleTrigger}" />
-                        </Trigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true" />
-                                <Condition Property="IsChecked" Value="true" />
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Style" TargetName="InnerBorder" Value="{StaticResource ButtonMultiTrigger}" />
-                        </MultiTrigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
     
 </ResourceDictionary>

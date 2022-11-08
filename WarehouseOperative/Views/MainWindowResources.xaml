@@ -93,6 +93,8 @@
   This template explains how to render the list of commands on the left
   side in the main window (the 'Control Panel' area).
   -->
+
+    <!--Left side Buttons -->
     <DataTemplate x:Key="CommandsTemplate">
         <ItemsControl IsTabStop="False" ItemsSource="{Binding}" Margin="6,2">
             <ItemsControl.ItemTemplate>
@@ -101,35 +103,49 @@
                         Command="{Binding Path=Command}" 
                         HorizontalAlignment="Center" 
                         Content="{Binding Path=DisplayName}" 
-                        Background="#3B3B3C" 
-                        Foreground="White"
                         >
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Style.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="3"/>
+                                    </Style>
+                                </Style.Resources>
+                                <Setter Property="Background" Value="#3B3B3C"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="Black" Opacity=".50" ShadowDepth="8"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Height" Value="30"/>
+                                <Setter Property="Width" Value="100"/>
+                                <Setter Property="Margin" Value="10"/>
+                                <Setter Property="FontSize" Value="12"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#3f3f46"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                            
+                        </Button.Style>
                     </Button>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
     </DataTemplate>
-
-    <!--Left side Buttons -->
-
-    <Style TargetType="Button">
-        <Style.Resources>
-            <Style TargetType="Border">
-                <Setter Property="CornerRadius" Value="5"/>
-            </Style>
-        </Style.Resources>
-        <Setter Property="Effect">
-            <Setter.Value>
-                <DropShadowEffect Color="Black" Opacity=".50" ShadowDepth="8"/>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Height" Value="30"/>
-        <Setter Property="Width" Value="100"/>
-        <Setter Property="Margin" Value="10"/>
-        <Setter Property="FontSize" Value="12"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="Cursor" Value="Hand"/>
-    </Style>
 
     <!-- Expander -->
     
@@ -386,11 +402,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-
-    <!--<Style TargetType="{x:Type ToolBar}">
-        <Setter Property="Cursor" Value="Hand"/>
-    </Style>-->
     
     <!--MenuItem style-->
 
