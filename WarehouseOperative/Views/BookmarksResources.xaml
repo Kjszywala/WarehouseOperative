@@ -329,7 +329,7 @@
                    Stretch="Uniform"
                    VerticalAlignment="Bottom">
                             <Polygon.Fill>
-                                <SolidColorBrush Color="{DynamicResource GlyphColor}" />
+                                <SolidColorBrush Color="#FFAAAAAA" />
                             </Polygon.Fill>
                         </Polygon>
                     </Grid>
@@ -342,7 +342,7 @@
     <Style TargetType="{x:Type DataGrid}">
         <Style.Resources>
             <Style TargetType="Border">
-                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="CornerRadius" Value="4"/>
             </Style>
         </Style.Resources>
         <Setter Property="Foreground"
