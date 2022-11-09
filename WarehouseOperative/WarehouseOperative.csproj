@@ -9,11 +9,14 @@
   <ItemGroup>
     <None Remove="Models\Entities\Entities.edmx" />
     <None Remove="Views\Content\Icons\boxes.png" />
+    <None Remove="Views\Content\Icons\calendar.png" />
     <None Remove="Views\Content\Icons\close2.png" />
+    <None Remove="Views\Content\Icons\closebookmark.png" />
     <None Remove="Views\Content\Icons\cubes.png" />
     <None Remove="Views\Content\Icons\customer.png" />
     <None Remove="Views\Content\Icons\customers.png" />
     <None Remove="Views\Content\Icons\delete.png" />
+    <None Remove="Views\Content\Icons\edit.png" />
     <None Remove="Views\Content\Icons\errorlog.png" />
     <None Remove="Views\Content\Icons\info2.png" />
     <None Remove="Views\Content\Icons\invoice3.png" />
@@ -24,9 +27,11 @@
     <None Remove="Views\Content\Icons\print.png" />
     <None Remove="Views\Content\Icons\product.png" />
     <None Remove="Views\Content\Icons\products.png" />
+    <None Remove="Views\Content\Icons\refreshbookmark.png" />
     <None Remove="Views\Content\Icons\removeall.png" />
     <None Remove="Views\Content\Icons\restore2.png" />
     <None Remove="Views\Content\Icons\save.png" />
+    <None Remove="Views\Content\Icons\saveandclose.png" />
     <None Remove="Views\Content\Icons\substract2.png" />
   </ItemGroup>
 
@@ -49,7 +54,13 @@
     <Resource Include="Views\Content\Icons\boxes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Views\Content\Icons\calendar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Views\Content\Icons\close2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\closebookmark.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\cubes.png">
@@ -62,6 +73,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\delete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\edit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\errorlog.png">
@@ -94,6 +108,9 @@
     <Resource Include="Views\Content\Icons\products.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Views\Content\Icons\refreshbookmark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Views\Content\Icons\removeall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -101,6 +118,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\save.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\saveandclose.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\substract2.png">

@@ -27,7 +27,7 @@
             <ColumnDefinition Width="600"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-        <ToggleButton Grid.Column="1" Grid.Row="0" Margin="10,10,30,10" Content="Add New Product"/>
+        <Button Grid.Column="1" Grid.Row="0" Margin="10,10,30,10" Content="Add New Product"/>
         <Label Content="Product ID: " Margin="10,10,10,10" Grid.Row="0"/>
         <Label Content="Product Name: " Margin="10,10,10,10" Grid.Row="1"/>
         <Label Content="Part Number: " Margin="10,10,10,10" Grid.Row="2"/>

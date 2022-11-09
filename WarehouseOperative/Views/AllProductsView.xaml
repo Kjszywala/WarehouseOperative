@@ -44,7 +44,7 @@
                 <ComboBox Grid.Row="0" Grid.Column="5" VerticalAlignment="Center"/>
                 <Label Content="Calculate Late Fee Up To:" Grid.Row="0" Grid.Column="7" Margin="0,1,0,0" Grid.ColumnSpan="2"/>
                 <DatePicker Grid.Row="0" Grid.Column="7" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-                <ToggleButton Grid.Column="7" Grid.Row="0" Margin="15,75,15,5" Content="Calculate Late Fee" Grid.ColumnSpan="2" IsManipulationEnabled="False"/>
+                <Button Grid.Column="7" Grid.Row="0" Margin="15,75,15,5" Content="Calculate Late Fee" Grid.ColumnSpan="2" IsManipulationEnabled="False"/>
                 <CheckBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,10,0"/>
                 <Label Content="Open" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 

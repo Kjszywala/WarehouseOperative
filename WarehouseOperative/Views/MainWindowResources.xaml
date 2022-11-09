@@ -209,6 +209,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <Style x:Key="newExpanderStyle" TargetType="{x:Type Expander}">
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Expander}">

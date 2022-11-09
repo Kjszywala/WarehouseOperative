@@ -61,6 +61,6 @@
         <ComboBox Grid.Row="7" Grid.Column="7" VerticalAlignment="Center" Grid.ColumnSpan="4" Margin="0,0,10,0"/>
         <TextBox Grid.Column="7" Grid.Row="8" Text="30" Grid.ColumnSpan="5" VerticalAlignment="Center" Margin="0,0,10,0"/>
         
-        <ToggleButton Content="Add" Grid.Column="8" Grid.Row="11" Grid.ColumnSpan="3" Margin="10"/>
+        <Button Content="Add" Grid.Column="8" Grid.Row="11" Grid.ColumnSpan="3" Margin="10"/>
     </Grid>
 </local:AddRowViewBase>

@@ -37,6 +37,15 @@ namespace WarehouseOperative.ViewModels.Abstract
                 return _SaveAndCloseCommand;
             }
         }
+
+        public ICommand CloseCommand
+        {
+            get
+            {
+                return new BaseCommand(base.OnRequestClose);
+            }
+        }
+
         #endregion
 
         #region Save

@@ -12,22 +12,39 @@
                 <ControlTemplate TargetType="{x:Type local:AllViewBase}">
                     <Grid Margin="0,10,0,0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="34"/>
+                            <RowDefinition Height="60"/>
                             <RowDefinition Height="60"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <ToolBar 
                             Grid.Row="0" 
-                            Height="30" 
+                            Height="60" 
                             Margin="0,2,0,2" 
                             Background="Transparent" 
                             Foreground="White"
                             Loaded="ToolBar_Loaded"
+                            Cursor="Hand"
                             >
-                            <ToggleButton Content="Add" Margin="0,2,0,2"/>
-                            <ToggleButton Content="Edit" Margin="0,2,0,2"/>
-                            <ToggleButton Content="Delete" Margin="0,2,0,2"/>
-                            <ToggleButton Content="Refresh" Margin="0,2,0,2"/>
+                            <ToggleButton Width="auto" Height="auto" Background="Transparent" Margin="2" Command="{Binding SaveAndCloseCommand}" Cursor="Hand">
+                                <StackPanel>
+                                    <Image Height="40" Width="auto" Source="pack://application:,,,/Views/Content/Icons/saveandclose.png" Stretch="Fill"/>
+                                </StackPanel>
+                            </ToggleButton>
+                            <ToggleButton Width="auto" Height="auto" Background="Transparent" Margin="2" Command="{Binding Path=NewProductCommand}" Cursor="Hand">
+                                <StackPanel>
+                                    <Image Height="40" Width="auto" Source="pack://application:,,,/Views/Content/Icons/edit.png" Stretch="Fill"/>
+                                </StackPanel>
+                            </ToggleButton>
+                            <ToggleButton Width="auto" Height="auto" Background="Transparent" Margin="2" Command="{Binding Path=NewProductCommand}" Cursor="Hand">
+                                <StackPanel>
+                                    <Image Height="40" Width="auto" Source="pack://application:,,,/Views/Content/Icons/refreshbookmark.png" Stretch="Fill"/>
+                                </StackPanel>
+                            </ToggleButton>
+                            <ToggleButton Width="auto" Height="auto" Background="Transparent" Margin="2" Command="{Binding CloseCommand}" Cursor="Hand">
+                                <StackPanel>
+                                    <Image Height="40" Width="auto" Source="pack://application:,,,/Views/Content/Icons/closebookmark.png" Stretch="Fill"/>
+                                </StackPanel>
+                            </ToggleButton>
                         </ToolBar>
                         <StackPanel Grid.Row="1" Background="#404040">
                             <Label>Tu bedzie filtrowanie i sortowanie</Label>
@@ -56,19 +73,26 @@
                 <ControlTemplate TargetType="{x:Type local:AddRowViewBase}">
                     <Grid Margin="0,10,0,0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="34"/>
+                            <RowDefinition Height="60"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <ToolBar 
                             Grid.Row="0" 
-                            Height="30" 
+                            Height="60" 
                             Margin="0,2,0,2" 
                             Background="Transparent" 
                             Foreground="White"
                             Loaded="ToolBar_Loaded"
                             >
-                            <ToggleButton Content="Save and Quit" Width="100" Height="30" Command="{Binding SaveAndCloseCommand}"/>
-                            <ToggleButton Content="Cancel" Width="100" Height="30">
+                            <ToggleButton Width="auto" Height="auto" Background="Transparent" Margin="2" Command="{Binding SaveAndCloseCommand}" Cursor="Hand">
+                                <StackPanel>
+                                    <Image Height="40" Width="auto" Source="pack://application:,,,/Views/Content/Icons/saveandclose.png" Stretch="Fill"/>
+                                </StackPanel>
+                            </ToggleButton>
+                            <ToggleButton Width="auto" Height="auto" Background="Transparent" Margin="2" Command="{Binding CloseCommand}" Cursor="Hand">
+                                <StackPanel>
+                                    <Image Height="40" Width="auto" Source="pack://application:,,,/Views/Content/Icons/closebookmark.png" Stretch="Fill"/>
+                                </StackPanel>
                             </ToggleButton>
                         </ToolBar>
                         <ScrollViewer 
@@ -103,6 +127,7 @@
     </Style>
     <Style TargetType="{x:Type ToggleButton}" x:Key="NavigationButton">
         <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="White" />
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="BorderBrush" Value="{x:Null}" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
