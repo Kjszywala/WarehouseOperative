@@ -136,7 +136,8 @@ namespace WarehouseOperative.ViewModels
                 new CommandViewModel("All Invoices", new BaseCommand(showAllInvoices)),
                 new CommandViewModel("Add Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel()))),
                 new CommandViewModel("All Employees", new BaseCommand(getEmployees)),
-                new CommandViewModel("All Customers", new BaseCommand(getCustomers))
+                new CommandViewModel("All Customers", new BaseCommand(getCustomers)),
+                new CommandViewModel("All Customers", new BaseCommand(getOrders))
             };
         }
         #endregion
@@ -319,6 +320,16 @@ namespace WarehouseOperative.ViewModels
             if (workspace == null)
             {
                 workspace = new AllCustomersViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
+        private void getOrders()
+        {
+            AllOrdersViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllOrdersViewModel) as AllOrdersViewModel;
+            if (workspace == null)
+            {
+                workspace = new AllOrdersViewModel();
                 this.Workspaces.Add(workspace);
             }
             this.setActiveWorkspace(workspace);
