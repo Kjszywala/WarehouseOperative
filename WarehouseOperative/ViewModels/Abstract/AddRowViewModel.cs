@@ -38,11 +38,11 @@ namespace WarehouseOperative.ViewModels.Abstract
             }
         }
 
-        public ICommand CloseCommand
+        public new ICommand CloseCommand
         {
             get
             {
-                return new BaseCommand(base.OnRequestClose);
+                return new BaseCommand(closeCommand);
             }
         }
 
@@ -56,6 +56,13 @@ namespace WarehouseOperative.ViewModels.Abstract
             //Save product.
             Save();
             //Close bookmark.
+            base.OnRequestClose();
+        }
+        #endregion
+
+        #region Helpers
+        private void closeCommand()
+        {
             base.OnRequestClose();
         }
         #endregion

@@ -27,6 +27,9 @@
     <DataTemplate DataType="{x:Type vm:ErrorLogViewModel}">
         <vw:ErrorLogView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:AllCustomersViewModel}">
+        <vw:AllCustomersView/>
+    </DataTemplate>
 
     <!--Here is the end of conecting View with ViewModel-->
 

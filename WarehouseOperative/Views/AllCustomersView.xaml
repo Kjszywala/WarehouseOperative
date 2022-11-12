@@ -17,12 +17,14 @@
         </Grid>
         <DataGrid Margin="10" Grid.Row="0" Name="DG3" ItemsSource="{Binding List}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="auto" Header="Customer Id" Binding="{Binding Path=Customer_Id}"/>
-                <DataGridTextColumn Width="auto" Header="Company Name" Binding="{Binding Path=CompanyName}"/>
-                <DataGridTextColumn Width="auto" Header="Price Paid" Binding="{Binding Path=PricePaid}"/>
-                <DataGridTextColumn Width="auto" Header="Customer Address Id" Binding="{Binding Path=CustomerAddressId}"/>
-                <DataGridTextColumn Width="auto" Header="Is Active" Binding="{Binding Path=IsActive}"/>
-            </DataGrid.Columns>            
+                <DataGridTextColumn Width="*" Header="Customer Id" Binding="{Binding Path=Customer_Id}"/>
+                <DataGridTextColumn Width="*" Header="Company Name" Binding="{Binding Path=CompanyName}"/>
+                <DataGridTextColumn Width="*" Header="Price Paid" Binding="{Binding Path=PricePaid}"/>
+                <DataGridTextColumn Width="*" Header="House Number" Binding="{Binding Path=HouseNumber}"/>
+                <DataGridTextColumn Width="*" Header="Street Name" Binding="{Binding Path=StreetName}"/>
+                <DataGridTextColumn Width="*" Header="City" Binding="{Binding Path=City}"/>
+                <DataGridTextColumn Width="*" Header="Country" Binding="{Binding Path=Country}"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </local:AllViewBase>

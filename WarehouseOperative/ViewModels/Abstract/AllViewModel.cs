@@ -63,6 +63,7 @@ namespace WarehouseOperative.ViewModels.Abstract
 
         #region Helpers
         public abstract void Load();
+
         #endregion
     }
 }
