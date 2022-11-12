@@ -1,4 +1,4 @@
-﻿namespace WarehouseOperative.Views
+﻿namespace WarehouseOperative.Views.NewView
 {
     /// <summary>
     /// Interaction logic for NewInvoiceView.xaml

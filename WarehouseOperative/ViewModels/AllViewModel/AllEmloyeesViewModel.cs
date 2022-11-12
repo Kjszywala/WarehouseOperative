@@ -5,7 +5,7 @@ using WarehouseOperative.Models.EntitiesForView;
 using WarehouseOperative.ViewModels.Abstract;
 using System.Linq;
 
-namespace WarehouseOperative.ViewModels
+namespace WarehouseOperative.ViewModels.AllViewModel
 {
     public class AllEmloyeesViewModel : AllViewModel<EmployeeForAllView>
     {

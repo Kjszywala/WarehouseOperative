@@ -5,7 +5,7 @@ using System.Windows;
 using WarehouseOperative.ViewModels.Abstract;
 using WarehouseOperative.Models.EntitiesForView;
 
-namespace WarehouseOperative.ViewModels
+namespace WarehouseOperative.ViewModels.AllViewModel
 {
     public class AllCustomersViewModel : AllViewModel<CustomersForAllView>
     {

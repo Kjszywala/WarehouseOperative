@@ -3,13 +3,13 @@ using System.Windows;
 using WarehouseOperative.Models.Entities;
 using WarehouseOperative.ViewModels.Abstract;
 
-namespace WarehouseOperative.ViewModels
+namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewEmployeeViewModel: AddRowViewModel<Employees>
+    public class NewEmployeeViewModel : AddRowViewModel<Employees>
     {
         #region Constructor
         public NewEmployeeViewModel()
-            :base("Add Employee")
+            : base("Add Employee")
         {
             Item = new Employees();
         }

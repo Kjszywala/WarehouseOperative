@@ -1,4 +1,4 @@
-﻿namespace WarehouseOperative.ViewModels
+﻿namespace WarehouseOperative.ViewModels.NewViewModel
 {
     public class NewProductViewmodel : WorkspaceViewModel
     {
@@ -6,7 +6,7 @@
         public NewProductViewmodel()
         {
             //set the bookmark name here
-            base.DisplayName = "Add Product";
+            DisplayName = "Add Product";
         }
         #endregion
     }

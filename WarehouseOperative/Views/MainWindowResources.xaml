@@ -1,37 +1,41 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:vm="clr-namespace:WarehouseOperative.ViewModels"
+                    xmlns:vm="clr-namespace:WarehouseOperative.ViewModels.AllViewModel"
+                    xmlns:vmm="clr-namespace:WarehouseOperative.ViewModels"
+                    xmlns:vmmm="clr-namespace:WarehouseOperative.ViewModels.NewViewModel"
                     xmlns:vw="clr-namespace:WarehouseOperative.Views"
+                    xmlns:vww="clr-namespace:WarehouseOperative.Views.AllView"
+                    xmlns:vwww="clr-namespace:WarehouseOperative.Views.NewView"
                     >
     
     <!--Here we connecting View with ViewModel-->
 
     <DataTemplate DataType="{x:Type vm:AllProductsViewModel}">
-        <vw:AllProductsView/>
+        <vww:AllProductsView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type vm:NewProductViewmodel}">
-        <vw:NewProductView/>
+    <DataTemplate DataType="{x:Type vmmm:NewProductViewmodel}">
+        <vwww:NewProductView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type vm:NewInvoiceViewModel}">
-        <vw:NewInvoiceView/>
+    <DataTemplate DataType="{x:Type vmmm:NewInvoiceViewModel}">
+        <vwww:NewInvoiceView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:AllInvoicesViewModel}">
-        <vw:AllInvoicesView/>
+        <vww:AllInvoicesView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type vm:NewEmployeeViewModel}">
-        <vw:NewEmployeeView/>
+    <DataTemplate DataType="{x:Type vmmm:NewEmployeeViewModel}">
+        <vwww:NewEmployeeView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:AllEmloyeesViewModel}">
-        <vw:AllEmloyeesView/>
+        <vww:AllEmloyeesView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:ErrorLogViewModel}">
-        <vw:ErrorLogView/>
+        <vww:ErrorLogView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:AllCustomersViewModel}">
-        <vw:AllCustomersView/>
+        <vww:AllCustomersView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:AllOrdersViewModel}">
-        <vw:AllOrdersView />
+        <vww:AllOrdersView />
     </DataTemplate>
 
     <!--Here is the end of conecting View with ViewModel-->

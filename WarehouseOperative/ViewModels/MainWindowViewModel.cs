@@ -9,6 +9,8 @@ using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
 using WarehouseOperative.Helpers;
+using WarehouseOperative.ViewModels.AllViewModel;
+using WarehouseOperative.ViewModels.NewViewModel;
 
 namespace WarehouseOperative.ViewModels
 {
@@ -137,7 +139,7 @@ namespace WarehouseOperative.ViewModels
                 new CommandViewModel("Add Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel()))),
                 new CommandViewModel("All Employees", new BaseCommand(getEmployees)),
                 new CommandViewModel("All Customers", new BaseCommand(getCustomers)),
-                new CommandViewModel("All Customers", new BaseCommand(getOrders))
+                new CommandViewModel("All Orders", new BaseCommand(getOrders))
             };
         }
         #endregion

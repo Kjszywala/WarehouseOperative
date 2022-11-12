@@ -1,11 +1,11 @@
-﻿namespace WarehouseOperative.ViewModels
+﻿namespace WarehouseOperative.ViewModels.NewViewModel
 {
     public class NewInvoiceViewModel : WorkspaceViewModel
     {
         #region Constructior
         public NewInvoiceViewModel()
         {
-            base.DisplayName = "Add Invoice";
+            DisplayName = "Add Invoice";
         }
         #endregion
     }

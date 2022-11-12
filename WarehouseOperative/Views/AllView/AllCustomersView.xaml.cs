@@ -1,4 +1,4 @@
-﻿namespace WarehouseOperative.Views
+﻿namespace WarehouseOperative.Views.AllView
 {
     /// <summary>
     /// Interaction logic for DatabaseViewModel.xaml

@@ -5,7 +5,7 @@ using System.Windows;
 using WarehouseOperative.Models.Entities;
 using WarehouseOperative.ViewModels.Abstract;
 
-namespace WarehouseOperative.ViewModels
+namespace WarehouseOperative.ViewModels.AllViewModel
 {
     public class ErrorLogViewModel : AllViewModel<ErrorLog>
     {
