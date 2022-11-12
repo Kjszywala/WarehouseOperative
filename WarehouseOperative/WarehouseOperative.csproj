@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <None Remove="Models\Entities\Entities.edmx" />
+    <None Remove="Views\Content\Icons\addshipper.png" />
+    <None Remove="Views\Content\Icons\addsupplier.png" />
     <None Remove="Views\Content\Icons\boxes.png" />
     <None Remove="Views\Content\Icons\calendar.png" />
     <None Remove="Views\Content\Icons\close2.png" />
@@ -32,7 +34,9 @@
     <None Remove="Views\Content\Icons\restore2.png" />
     <None Remove="Views\Content\Icons\save.png" />
     <None Remove="Views\Content\Icons\saveandclose.png" />
+    <None Remove="Views\Content\Icons\shippers.png" />
     <None Remove="Views\Content\Icons\substract2.png" />
+    <None Remove="Views\Content\Icons\suppliers2.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +55,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Views\Content\Icons\addshipper.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\addsupplier.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Views\Content\Icons\boxes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -123,7 +133,13 @@
     <Resource Include="Views\Content\Icons\saveandclose.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Views\Content\Icons\shippers.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Views\Content\Icons\substract2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\suppliers2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

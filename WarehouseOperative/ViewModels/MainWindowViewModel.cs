@@ -77,6 +77,13 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(() => addBookmarkCreateNew(new NewEmployeeViewModel()));
             }
         }
+        public ICommand GetSuppliers
+        {
+            get
+            {
+                return new BaseCommand(getSuppliers);
+            }
+        }
         public ICommand GetEmployees
         {
             get
@@ -332,6 +339,16 @@ namespace WarehouseOperative.ViewModels
             if (workspace == null)
             {
                 workspace = new AllOrdersViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
+        private void getSuppliers()
+        {
+            AllSuppliersViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllSuppliersViewModel) as AllSuppliersViewModel;
+            if (workspace == null)
+            {
+                workspace = new AllSuppliersViewModel();
                 this.Workspaces.Add(workspace);
             }
             this.setActiveWorkspace(workspace);

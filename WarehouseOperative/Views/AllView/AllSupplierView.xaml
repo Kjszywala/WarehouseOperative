@@ -1,0 +1,30 @@
+﻿<local:AllViewBase x:Class="WarehouseOperative.Views.AllView.AllSupplierView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WarehouseOperative.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Views/BookmarksResources.xaml"/>
+    </UserControl.Resources>
+    <Grid Background="#404040">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="SupplierId" Binding="{Binding Path=SupplierId}"/>
+                <DataGridTextColumn Width="*" Header="CompanyName" Binding="{Binding Path=CompanyName}"/>
+                <DataGridTextColumn Width="*" Header="ContactName" Binding="{Binding Path=ContactName}"/>
+                <DataGridTextColumn Width="*" Header="SuplierAddressStreetName" Binding="{Binding Path=SuplierAddressStreetName}"/>
+                <DataGridTextColumn Width="*" Header="SuplierAddressPostcode" Binding="{Binding Path=SuplierAddressPostcode}"/>
+                <DataGridTextColumn Width="*" Header="SuplierAddressCity" Binding="{Binding Path=SuplierAddressCity}"/>
+                <DataGridTextColumn Width="*" Header="SuplierAddressCountry" Binding="{Binding Path=SuplierAddressCountry}"/>
+                <DataGridTextColumn Width="*" Header="SuplierAddressPhone" Binding="{Binding Path=SuplierAddressPhone}"/>
+                <DataGridTextColumn Width="*" Header="SuplierAddressFax" Binding="{Binding Path=SuplierAddressFax}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</local:AllViewBase>
