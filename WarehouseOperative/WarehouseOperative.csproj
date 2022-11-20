@@ -23,6 +23,14 @@
     <None Remove="Views\Content\Icons\info2.png" />
     <None Remove="Views\Content\Icons\invoice3.png" />
     <None Remove="Views\Content\Icons\invoices2.png" />
+    <None Remove="Views\Content\Icons\leftaddemployee.png" />
+    <None Remove="Views\Content\Icons\leftaddemployees.png" />
+    <None Remove="Views\Content\Icons\leftaddinvoice.png" />
+    <None Remove="Views\Content\Icons\leftaddproduct.png" />
+    <None Remove="Views\Content\Icons\leftallcustomers.png" />
+    <None Remove="Views\Content\Icons\leftallinvoices.png" />
+    <None Remove="Views\Content\Icons\leftallorders.png" />
+    <None Remove="Views\Content\Icons\leftproducts.png" />
     <None Remove="Views\Content\Icons\maximize5.png" />
     <None Remove="Views\Content\Icons\minimalize3.png" />
     <None Remove="Views\Content\Icons\preview.png" />
@@ -98,6 +106,30 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\invoices2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\leftaddemployee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\leftaddemployees.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\leftaddinvoice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\leftaddproduct.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\leftallcustomers.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\leftallinvoices.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\leftallorders.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\leftproducts.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\maximize5.png">

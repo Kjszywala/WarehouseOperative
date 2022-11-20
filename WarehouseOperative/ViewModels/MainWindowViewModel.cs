@@ -139,14 +139,14 @@ namespace WarehouseOperative.ViewModels
             return new List<CommandViewModel>
             {
                 // Creat buttons
-                new CommandViewModel("Add Product", new BaseCommand(()=>addBookmarkCreateNew(new NewProductViewmodel()))),
-                new CommandViewModel("All Products", new BaseCommand(showAllProducts)),
-                new CommandViewModel("Add Invoice", new BaseCommand(()=>addBookmarkCreateNew(new NewInvoiceViewModel()))),
-                new CommandViewModel("All Invoices", new BaseCommand(showAllInvoices)),
-                new CommandViewModel("Add Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel()))),
-                new CommandViewModel("All Employees", new BaseCommand(getEmployees)),
-                new CommandViewModel("All Customers", new BaseCommand(getCustomers)),
-                new CommandViewModel("All Orders", new BaseCommand(getOrders))
+                new CommandViewModel("Add Product", new BaseCommand(()=>addBookmarkCreateNew(new NewProductViewmodel())),"pack://application:,,,/Views/Content/Icons/leftaddproduct.png"),
+                new CommandViewModel("All Products", new BaseCommand(showAllProducts),"pack://application:,,,/Views/Content/Icons/leftproducts.png"),
+                new CommandViewModel("Add Invoice", new BaseCommand(()=>addBookmarkCreateNew(new NewInvoiceViewModel())),"pack://application:,,,/Views/Content/Icons/leftaddinvoice.png"),
+                new CommandViewModel("All Invoices", new BaseCommand(showAllInvoices),"pack://application:,,,/Views/Content/Icons/leftallinvoices.png"),
+                new CommandViewModel("Add Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel())),"pack://application:,,,/Views/Content/Icons/leftaddemployee.png"),
+                new CommandViewModel("All Employees", new BaseCommand(getEmployees),"pack://application:,,,/Views/Content/Icons/leftaddemployees.png"),
+                new CommandViewModel("All Customers", new BaseCommand(getCustomers),"pack://application:,,,/Views/Content/Icons/leftallcustomers.png"),
+                new CommandViewModel("All Orders", new BaseCommand(getOrders),"pack://application:,,,/Views/Content/Icons/leftallorders.png")
             };
         }
         #endregion

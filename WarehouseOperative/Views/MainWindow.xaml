@@ -21,7 +21,7 @@
         <ResourceDictionary Source="MainWindowResources.xaml"/>
     </Window.Resources>
 
-    <!--<Window.InputBindings>
+    <Window.InputBindings>
         <KeyBinding Gesture="Ctrl+q" Command="{Binding AddEmployee}"/>
         <KeyBinding Gesture="Ctrl+w" Command="{Binding AllInvoicesCommand}"/>
         <KeyBinding Gesture="Ctrl+e" Command="{Binding AllProductsCommand}"/>
@@ -29,7 +29,7 @@
         <KeyBinding Gesture="Ctrl+t" Command="{Binding NewInvoiceCommand}"/>
         <KeyBinding Gesture="Ctrl+a" Command="{Binding NewProductCommand}"/>
         <KeyBinding Gesture="Ctrl+x" Command="{Binding CloseBookmark}"/>
-    </Window.InputBindings>-->
+    </Window.InputBindings>
 
     <Border 
         CornerRadius="20,20,2,2" 
