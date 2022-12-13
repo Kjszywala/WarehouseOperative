@@ -46,14 +46,14 @@ namespace WarehouseOperative.ViewModels
         {
             get
             {
-                return new BaseCommand(showAllInvoices);
+                return new BaseCommand(() => showAll<AllInvoicesViewModel>());
             }
         }
         public ICommand ErrorLog
         {
             get
             {
-                return new BaseCommand(getErrorLog);
+                return new BaseCommand(() => showAll<ErrorLogViewModel>());
             }
         }
         public ICommand NewProductCommand
@@ -67,7 +67,7 @@ namespace WarehouseOperative.ViewModels
         {
             get
             {
-                return new BaseCommand(showAllProducts);
+                return new BaseCommand(() => showAll<AllProductsViewModel>());
             }
         }
         public ICommand AddEmployee
@@ -81,14 +81,14 @@ namespace WarehouseOperative.ViewModels
         {
             get
             {
-                return new BaseCommand(getSuppliers);
+                return new BaseCommand(() => showAll<AllSuppliersViewModel>());
             }
         }
         public ICommand GetEmployees
         {
             get
             {
-                return new BaseCommand(getEmployees);
+                return new BaseCommand(() => showAll<NewEmployeeViewModel>());
             }
         }
         public ICommand getCloseCommand
@@ -140,13 +140,13 @@ namespace WarehouseOperative.ViewModels
             {
                 // Creat buttons
                 new CommandViewModel("Add Product", new BaseCommand(()=>addBookmarkCreateNew(new NewProductViewmodel())),"pack://application:,,,/Views/Content/Icons/leftaddproduct.png"),
-                new CommandViewModel("All Products", new BaseCommand(showAllProducts),"pack://application:,,,/Views/Content/Icons/leftproducts.png"),
+                new CommandViewModel("All Products", new BaseCommand(()=>showAll<AllProductsViewModel>()),"pack://application:,,,/Views/Content/Icons/leftproducts.png"),
                 new CommandViewModel("Add Invoice", new BaseCommand(()=>addBookmarkCreateNew(new NewInvoiceViewModel())),"pack://application:,,,/Views/Content/Icons/leftaddinvoice.png"),
-                new CommandViewModel("All Invoices", new BaseCommand(showAllInvoices),"pack://application:,,,/Views/Content/Icons/leftallinvoices.png"),
+                new CommandViewModel("All Invoices", new BaseCommand(()=>showAll<AllInvoicesViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallinvoices.png"),
                 new CommandViewModel("Add Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel())),"pack://application:,,,/Views/Content/Icons/leftaddemployee.png"),
-                new CommandViewModel("All Employees", new BaseCommand(getEmployees),"pack://application:,,,/Views/Content/Icons/leftaddemployees.png"),
-                new CommandViewModel("All Customers", new BaseCommand(getCustomers),"pack://application:,,,/Views/Content/Icons/leftallcustomers.png"),
-                new CommandViewModel("All Orders", new BaseCommand(getOrders),"pack://application:,,,/Views/Content/Icons/leftallorders.png")
+                new CommandViewModel("All Employees", new BaseCommand(()=>showAll<AllEmloyeesViewModel>()),"pack://application:,,,/Views/Content/Icons/leftaddemployees.png"),
+                new CommandViewModel("All Customers", new BaseCommand(()=>showAll<AllCustomersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallcustomers.png"),
+                new CommandViewModel("All Orders", new BaseCommand(()=>showAll<AllOrdersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png")
             };
         }
         #endregion
@@ -276,84 +276,17 @@ namespace WarehouseOperative.ViewModels
         // This is function to open bookmark with all bookmarks.
         // This method when is called checks if bookmark exist, if exist making 
         // this bookmark active, if not creating a new one.
-        private void showAllProducts()
+        private void showAll<T>() where T : WorkspaceViewModel, new()
         {
-            // First we looking for in bookmark collection a bookmark which is all bookmarks.
-            AllProductsViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllProductsViewModel) as AllProductsViewModel;
-            // If there is no bookmarks like this, then we creating a new one.
-            if(workspace == null)
-            {
-                workspace = new AllProductsViewModel();
-                this.Workspaces.Add(workspace);
-            }
-            // Bookmark activation.
-            this.setActiveWorkspace(workspace);
-        }
-
-        private void showAllInvoices()
-        {
-            AllInvoicesViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllInvoicesViewModel) as AllInvoicesViewModel;
-            if(workspace == null)
-            {
-                workspace = new AllInvoicesViewModel();
-                this.Workspaces.Add(workspace);
-            }
-            this.setActiveWorkspace(workspace);
-        }
-
-        private void getErrorLog()
-        {
-            ErrorLogViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is ErrorLogViewModel) as ErrorLogViewModel;
+            T workspace = this.Workspaces.FirstOrDefault(vw => vw is T) as T;
             if (workspace == null)
             {
-                workspace = new ErrorLogViewModel();
+                workspace = new T();
                 this.Workspaces.Add(workspace);
             }
             this.setActiveWorkspace(workspace);
         }
-
-        private void getEmployees()
-        {
-            AllEmloyeesViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllEmloyeesViewModel) as AllEmloyeesViewModel;
-            if (workspace == null)
-            {
-                workspace = new AllEmloyeesViewModel();
-                this.Workspaces.Add(workspace);
-            }
-            this.setActiveWorkspace(workspace);
-        }
-
-        private void getCustomers()
-        {
-            AllCustomersViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllCustomersViewModel) as AllCustomersViewModel;
-            if (workspace == null)
-            {
-                workspace = new AllCustomersViewModel();
-                this.Workspaces.Add(workspace);
-            }
-            this.setActiveWorkspace(workspace);
-        }
-        private void getOrders()
-        {
-            AllOrdersViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllOrdersViewModel) as AllOrdersViewModel;
-            if (workspace == null)
-            {
-                workspace = new AllOrdersViewModel();
-                this.Workspaces.Add(workspace);
-            }
-            this.setActiveWorkspace(workspace);
-        }
-        private void getSuppliers()
-        {
-            AllSuppliersViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is AllSuppliersViewModel) as AllSuppliersViewModel;
-            if (workspace == null)
-            {
-                workspace = new AllSuppliersViewModel();
-                this.Workspaces.Add(workspace);
-            }
-            this.setActiveWorkspace(workspace);
-        }
-
+        
         public event EventHandler RequestClose;
         public void OnRequestClose()
         {
