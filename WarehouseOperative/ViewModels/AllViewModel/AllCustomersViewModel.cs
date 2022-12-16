@@ -26,13 +26,15 @@ namespace WarehouseOperative.ViewModels.AllViewModel
                     where customer.IsActive == true
                     select new CustomersForAllView
                     {
-                        CustomerId = customer.Customer_Id,
+                        CustomerId = customer.Id,
                         CompanyName = customer.CompanyName,
-                        PricePaid = customer.PricePaid,
-                        HouseNumber = customer.CustomerAddress.HouseNumber,
-                        StreetName = customer.CustomerAddress.StreetName,
-                        City = customer.CustomerAddress.City,
-                        Country = customer.CustomerAddress.Country
+                        FirstName = customer.FirstName,
+                        SecondName = customer.SecondName,
+                        HouseNumber = customer.CustomerAddresses.HouseNumber,
+                        StreetName = customer.CustomerAddresses.StreetName,
+                        PostCode = customer.CustomerAddresses.PostCode,
+                        City = customer.CustomerAddresses.City,
+                        Country = customer.CustomerAddresses.Country
                     }
                 );
             }

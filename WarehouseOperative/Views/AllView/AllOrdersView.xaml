@@ -21,15 +21,10 @@
                 <DataGridTextColumn Width="*" Header="Customer Name" Binding="{Binding Path=CustomersCustomerName}"/>
                 <DataGridTextColumn Width="*" Header="Product Name" Binding="{Binding Path=ProductsProductName}"/>
                 <DataGridTextColumn Width="*" Header="Order Quantity" Binding="{Binding Path=OrderQuantity}"/>
-                <DataGridTextColumn Width="*" Header="Unit Price" Binding="{Binding Path=ProductsUnitPrice}"/>
-                <DataGridTextColumn Width="*" Header="Price Paid" Binding="{Binding Path=CustomersPricePaid}"/>
-                <DataGridTextColumn Width="*" Header="Order Date" Binding="{Binding Path=OrderDate}"/>
-                <DataGridTextColumn Width="*" Header="Required Date" Binding="{Binding Path=RequiredDate}"/>
-                <DataGridTextColumn Width="*" Header="Shipped Date" Binding="{Binding Path=ShippedDate}"/>
-                <DataGridTextColumn Width="*" Header="Shipper Company Name" Binding="{Binding Path=ShippersShipperCompanyName}"/>
-                <DataGridTextColumn Width="*" Header="Supplier Company Name" Binding="{Binding Path=SuppliersCompanyName}"/>
-                <DataGridTextColumn Width="*" Header="Description" Binding="{Binding Path=CategoriesDescription}"/>
-                <DataGridTextColumn Width="*" Header="LastChangedDateTime" Binding="{Binding Path=LastChangedDateTime}"/>
+                <DataGridTextColumn Width="*" Header="Order Date" Binding="{Binding Path=CreationDate}"/>
+                <DataGridTextColumn Width="*" Header="Shipper Company Name" Binding="{Binding Path=ShipperName}"/>
+                <DataGridTextColumn Width="*" Header="Employee Name" Binding="{Binding Path=EmployeeName}"/>
+                <DataGridTextColumn Width="*" Header="Price Paid" Binding="{Binding Path=PricePaid}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

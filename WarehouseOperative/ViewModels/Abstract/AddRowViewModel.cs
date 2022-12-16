@@ -1,7 +1,6 @@
-﻿using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using WarehouseOperative.Helpers;
-using WarehouseOperative.Models.Entities;
+using WarehouseOperative.Models.DatabaseEntities;
 
 namespace WarehouseOperative.ViewModels.Abstract
 {
@@ -9,7 +8,7 @@ namespace WarehouseOperative.ViewModels.Abstract
     {
         #region Fields
         //Database variable
-        public WareEntities Db { get; set; }
+        public KjsCompany2Entities2 Db { get; set; }
         //Adding bookmark with new (product,invoice etc.)
         public T Item { get; set; }
         #endregion
@@ -18,7 +17,7 @@ namespace WarehouseOperative.ViewModels.Abstract
         public AddRowViewModel(string displayName)
         {
             base.DisplayName = displayName;
-            Db = new WareEntities();
+            Db = new KjsCompany2Entities2();
         }
         #endregion
 
@@ -26,7 +25,7 @@ namespace WarehouseOperative.ViewModels.Abstract
         /// <summary>
         /// Command which will be connected to Save and close button.
         /// </summary>
-        private BaseCommand _SaveAndCloseCommand;
+        private ICommand _SaveAndCloseCommand;
         public ICommand SaveAndCloseCommand
         {
             get
@@ -50,6 +49,7 @@ namespace WarehouseOperative.ViewModels.Abstract
         #endregion
 
         #region Save
+
         public abstract void Save();
 
         private void saveAndClose()
@@ -66,6 +66,7 @@ namespace WarehouseOperative.ViewModels.Abstract
         {
             base.OnRequestClose();
         }
+
         #endregion
     }
 }

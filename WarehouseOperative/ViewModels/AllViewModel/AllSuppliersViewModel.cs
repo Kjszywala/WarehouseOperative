@@ -2,7 +2,6 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
-using WarehouseOperative.Models.Entities;
 using WarehouseOperative.Models.EntitiesForView;
 using WarehouseOperative.ViewModels.Abstract;
 
@@ -26,15 +25,14 @@ namespace WarehouseOperative.ViewModels.AllViewModel
                     from supliers in WarehouseEntities.Suppliers
                     select new SuppliersForAllView
                     {
-                        SupplierId = supliers.Supplier_Id,
+                        SupplierId = supliers.Id,
                         CompanyName = supliers.CompanyName,
                         ContactName = supliers.ContactName,
-                        SuplierAddressStreetName = supliers.SupplierAddress.StreetName,
-                        SuplierAddressPostcode = supliers.SupplierAddress.PostCode,
-                        SuplierAddressCity = supliers.SupplierAddress.City,
-                        SuplierAddressCountry = supliers.SupplierAddress.Country,
-                        SuplierAddressPhone = supliers.SupplierAddress.Phone,
-                        SuplierAddressFax = supliers.SupplierAddress.Fax
+                        SuplierAddressPostcode = supliers.SupplierAddresses.PostCode,
+                        SuplierAddressCity = supliers.SupplierAddresses.City,
+                        SuplierAddressCountry = supliers.SupplierAddresses.Country,
+                        SuplierAddressPhone = supliers.SupplierAddresses.Phone,
+                        SuplierAddressFax = supliers.SupplierAddresses.Fax
                     }
                 );
             }

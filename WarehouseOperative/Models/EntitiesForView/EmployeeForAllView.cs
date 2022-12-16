@@ -12,8 +12,12 @@ namespace WarehouseOperative.Models.EntitiesForView
         public string Phone { get; set; }
         public DateTime HireDate { get; set; }
         public string JobTitle { get; set; }
-        public string EmployeeAddress { get; set; }
-        public int? EmployeeAnualLeaveDaysLeft { get; set; }
+        public string FlatNumber { get; set; }
+        public string StreetName { get; set; }
+        public string PostCode { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+        
         #endregion
     }
 }

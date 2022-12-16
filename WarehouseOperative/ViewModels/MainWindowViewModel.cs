@@ -287,6 +287,9 @@ namespace WarehouseOperative.ViewModels
             this.setActiveWorkspace(workspace);
         }
         
+        /// <summary>
+        /// Closing the bookmarks.
+        /// </summary>
         public event EventHandler RequestClose;
         public void OnRequestClose()
         {

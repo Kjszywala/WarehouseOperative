@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Models\Entities\Entities.edmx" />
+    <None Remove="Models\DatabaseEntities\DatabaseEntities.edmx" />
     <None Remove="Views\Content\Icons\addshipper.png" />
     <None Remove="Views\Content\Icons\addsupplier.png" />
     <None Remove="Views\Content\Icons\boxes.png" />
@@ -48,9 +48,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EntityDeploy Include="Models\Entities\Entities.edmx">
+    <EntityDeploy Include="Models\DatabaseEntities\DatabaseEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Entities.Designer.cs</LastGenOutput>
+      <LastGenOutput>DatabaseEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
 
@@ -177,10 +177,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Models\Entities\Entities.Designer.cs">
+    <Compile Update="Models\DatabaseEntities\DatabaseEntities.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Entities.edmx</DependentUpon>
+      <DependentUpon>DatabaseEntities.edmx</DependentUpon>
     </Compile>
   </ItemGroup>
 

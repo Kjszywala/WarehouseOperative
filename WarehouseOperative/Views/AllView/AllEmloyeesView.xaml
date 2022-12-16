@@ -23,8 +23,11 @@
                 <DataGridTextColumn Header="Phone Number" Width="110" Binding="{Binding Path=Phone}"/>
                 <DataGridTextColumn Header="Hire Date" Width="80" Binding="{Binding Path=HireDate}"/>
                 <DataGridTextColumn Header="Job Title" Width="70" Binding="{Binding Path=JobTitle}"/>
-                <DataGridTextColumn Header="Address" Width="90" Binding="{Binding Path=EmployeeAddress}"/>
-                <DataGridTextColumn Header="Anuall leave days left" Width="150" Binding="{Binding Path=EmployeeAnualLeaveDaysLeft}"/>
+                <DataGridTextColumn Header="House Number" Width="90" Binding="{Binding Path=FlatNumber}"/>
+                <DataGridTextColumn Header="Street Name" Width="150" Binding="{Binding Path=StreetName}"/>
+                <DataGridTextColumn Header="Post Code" Width="150" Binding="{Binding Path=PostCode}"/>
+                <DataGridTextColumn Header="City" Width="150" Binding="{Binding Path=City}"/>
+                <DataGridTextColumn Header="Country" Width="150" Binding="{Binding Path=Country}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

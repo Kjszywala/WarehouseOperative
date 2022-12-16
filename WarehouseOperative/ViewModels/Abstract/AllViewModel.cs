@@ -1,8 +1,7 @@
 ﻿using System.Collections.ObjectModel;
-using System.Windows;
 using System.Windows.Input;
 using WarehouseOperative.Helpers;
-using WarehouseOperative.Models.Entities;
+using WarehouseOperative.Models.DatabaseEntities;
 
 namespace WarehouseOperative.ViewModels.Abstract
 {
@@ -10,8 +9,8 @@ namespace WarehouseOperative.ViewModels.Abstract
     {
         #region Fields
         // Database connection.
-        public readonly WareEntities warehouseEntities;
-        public WareEntities WarehouseEntities
+        public readonly KjsCompany2Entities2 warehouseEntities;
+        public KjsCompany2Entities2 WarehouseEntities
         {
             get
             {
@@ -58,7 +57,7 @@ namespace WarehouseOperative.ViewModels.Abstract
         public AllViewModel(string displayName)
         {
             base.DisplayName = displayName;
-            this.warehouseEntities = new WareEntities();
+            this.warehouseEntities = new KjsCompany2Entities2();
         }
         #endregion
 

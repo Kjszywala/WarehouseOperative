@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows;
-using WarehouseOperative.Models.Entities;
+using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
@@ -16,33 +16,33 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Properties
-        public string First_Name
+        public string FirstName
         {
             get
             {
-                return Item.First_Name;
+                return Item.FirstName;
             }
             set
             {
-                if (value != Item.First_Name)
+                if (value != Item.FirstName)
                 {
-                    Item.First_Name = value;
-                    OnPropertyChanged(() => First_Name);
+                    Item.FirstName = value;
+                    OnPropertyChanged(() => FirstName);
                 }
             }
         }
-        public string Last_Name
+        public string LastName
         {
             get
             {
-                return Item.Last_Name;
+                return Item.LastName;
             }
             set
             {
-                if (value != Item.Last_Name)
+                if (value != Item.LastName)
                 {
-                    Item.Last_Name = value;
-                    OnPropertyChanged(() => Last_Name);
+                    Item.LastName = value;
+                    OnPropertyChanged(() => LastName);
                 }
             }
         }
@@ -76,33 +76,33 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 }
             }
         }
-        public DateTime Hire_Date
+        public DateTime HireDate
         {
             get
             {
-                return Item.Hire_Date;
+                return Item.HireDate;
             }
             set
             {
-                if (value != Item.Hire_Date)
+                if (value != Item.HireDate)
                 {
-                    Item.Hire_Date = value;
-                    OnPropertyChanged(() => Hire_Date);
+                    Item.HireDate = value;
+                    OnPropertyChanged(() => HireDate);
                 }
             }
         }
-        public string Job_Title
+        public string JobTitle
         {
             get
             {
-                return Item.Job_Title;
+                return Item.JobTitle;
             }
             set
             {
-                if (value != Item.Job_Title)
+                if (value != Item.JobTitle)
                 {
-                    Item.Job_Title = value;
-                    OnPropertyChanged(() => Job_Title);
+                    Item.JobTitle = value;
+                    OnPropertyChanged(() => JobTitle);
                 }
             }
         }
@@ -112,7 +112,7 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         public override void Save()
         {
             Item.IsActive = true;
-            if (string.IsNullOrEmpty(Job_Title))
+            if (string.IsNullOrEmpty(JobTitle))
             {
                 MessageBox.Show("Item is empty.");
                 return;

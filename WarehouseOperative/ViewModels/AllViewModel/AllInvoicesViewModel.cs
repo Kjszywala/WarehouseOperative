@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
-using WarehouseOperative.Models.Entities;
+using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.AllViewModel
@@ -23,7 +23,7 @@ namespace WarehouseOperative.ViewModels.AllViewModel
             {
                 List = new ObservableCollection<Invoices>(
                         from invoices in WarehouseEntities.Invoices
-                        where invoices.isActive == true
+                        where invoices.IsActive == true
                         select invoices
                     );
             }

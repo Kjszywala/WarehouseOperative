@@ -22,22 +22,23 @@ namespace WarehouseOperative.ViewModels.AllViewModel
             try
             {
                 List = new ObservableCollection<EmployeeForAllView>(
-                        from employee in WarehouseEntities.EmployeeTable
+                        from employee in WarehouseEntities.Employees
                         where employee.IsActive == true
                         select new EmployeeForAllView
                         {
-                            EmployeeID = employee.Employee_Id,
+                            EmployeeID = employee.Id,
                             EmployeeFirstName = employee.FirstName,
                             EmployeeLastName = employee.LastName,
                             Email = employee.Email,
                             Phone = employee.Phone,
-                            HireDate = employee.Hire_Date,
-                            JobTitle = employee.Job_Title,
-                            EmployeeAddress =
-                                employee.EmployeeAddress.StreetName + ", " +
-                                employee.EmployeeAddress.PostCode,
-                            EmployeeAnualLeaveDaysLeft =
-                                employee.EmploeesAnnualLeave.DaysLeft
+                            HireDate = employee.HireDate,
+                            JobTitle = employee.JobTitle,
+                            FlatNumber = employee.EmployeeAddresses.Flatnumber,
+                            StreetName = employee.EmployeeAddresses.StreetName,
+                            PostCode = employee.EmployeeAddresses.PostCode,
+                            City = employee.EmployeeAddresses.City,
+                            Country = employee.EmployeeAddresses.Country
+
                         }
                     );
             }

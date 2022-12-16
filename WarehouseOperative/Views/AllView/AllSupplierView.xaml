@@ -18,7 +18,6 @@
                 <DataGridTextColumn Width="*" Header="SupplierId" Binding="{Binding Path=SupplierId}"/>
                 <DataGridTextColumn Width="*" Header="CompanyName" Binding="{Binding Path=CompanyName}"/>
                 <DataGridTextColumn Width="*" Header="ContactName" Binding="{Binding Path=ContactName}"/>
-                <DataGridTextColumn Width="*" Header="SuplierAddressStreetName" Binding="{Binding Path=SuplierAddressStreetName}"/>
                 <DataGridTextColumn Width="*" Header="SuplierAddressPostcode" Binding="{Binding Path=SuplierAddressPostcode}"/>
                 <DataGridTextColumn Width="*" Header="SuplierAddressCity" Binding="{Binding Path=SuplierAddressCity}"/>
                 <DataGridTextColumn Width="*" Header="SuplierAddressCountry" Binding="{Binding Path=SuplierAddressCountry}"/>

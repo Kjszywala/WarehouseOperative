@@ -22,23 +22,19 @@ namespace WarehouseOperative.ViewModels.AllViewModel
             try
             {
                 List = new ObservableCollection<OrdersForAllView>(
-                    from orders in WarehouseEntities.Orders
+                    from orders in WarehouseEntities.OrdersPositions
                     where orders.IsActive == true
                     select new OrdersForAllView
                     {
-                        OrderId = orders.Order_Id,
-                        CustomersCustomerName = orders.Customers.CompanyName,
+                        OrderId = orders.Id,
+                        CustomersCustomerName = orders.Orders.Customers.CompanyName,
                         ProductsProductName = orders.Products.ProductName,
-                        OrderQuantity = orders.OrderQuantity,
-                        ProductsUnitPrice = orders.Products.UnitPrice,
-                        CustomersPricePaid = orders.Customers.PricePaid,
-                        OrderDate = orders.OrderDate,
-                        RequiredDate = orders.RequiredDate,
-                        ShippedDate = orders.ShippedDate,
-                        ShippersShipperCompanyName = orders.Shippers.CompanyName,
-                        SuppliersCompanyName = orders.Products.Suppliers.CompanyName,
-                        CategoriesDescription = orders.Products.Categories.Description,
-                        LastChangedDateTime = orders.LastChangedDataTime
+                        OrderQuantity = orders.Quantity,
+                        ProductsUnitPrice = orders.Price,
+                        CreationDate = orders.Orders.CreationDate,
+                        ShipperName = orders.Orders.Shippers.CompanyName,
+                        EmployeeName = orders.Orders.Employees.LastName ,
+                        PricePaid = orders.Orders.PricePaid
                     }
                 );
             }
