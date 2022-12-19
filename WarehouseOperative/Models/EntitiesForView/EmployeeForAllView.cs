@@ -5,6 +5,7 @@ namespace WarehouseOperative.Models.EntitiesForView
     public class EmployeeForAllView
     {
         #region Properties
+
         public int EmployeeID { get; set; }
         public string EmployeeFirstName { get; set; }
         public string EmployeeLastName { get; set; }

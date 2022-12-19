@@ -4,6 +4,40 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+      <Diagram DiagramId="74c1e74ecb4a4c2d9c96e96c5feb381c" Name="Diagram1">
+        <EntityTypeShape EntityType="KjsCompany2Model.Categories" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.CustomerAddresses" Width="1.5" PointX="0.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.Customers" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.EmployeeAddresses" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.EmployeeAnnualLeaves" Width="1.5" PointX="0.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.Employees" Width="1.5" PointX="3" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.ErrorLogs" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.Invoices" Width="1.5" PointX="7.5" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.Orders" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.OrdersPositions" Width="1.5" PointX="7.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.PaymentMethods" Width="1.5" PointX="5.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.ProductLogs" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.Products" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.QuantityTypes" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.Shippers" Width="1.5" PointX="3" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.SupplierAddresses" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.Suppliers" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Products__Catego__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Customers__Custo__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Orders__CustmerI__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Employees__Emplo__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Employees__Emplo__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Orders__Employee__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Invoices__OrderI__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Invoices__Paymen__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Orders__ShipperI__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__OrdersPos__Order__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__OrdersPos__Produ__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Products__Produc__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Products__Quanti__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Products__Suppli__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="KjsCompany2Model.FK__Suppliers__Suppl__4316F928" ManuallyRouted="false" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
