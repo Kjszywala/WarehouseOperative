@@ -21,6 +21,13 @@ namespace WarehouseOperative.ViewModels
         /// collection of bookmarks.
         /// </summary>
         #region Commands
+        public ICommand AddSupplierCommand
+        {
+            get
+            {
+                return new BaseCommand(() => addBookmarkCreateNew(new NewSupplierViewModel()));
+            }
+        }
         public ICommand NewInvoiceCommand
         {
             get

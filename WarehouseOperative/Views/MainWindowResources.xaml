@@ -38,6 +38,9 @@
     <DataTemplate DataType="{x:Type vmm:AllSuppliersViewModel}">
         <vww:AllSupplierView />
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vmmm:NewSupplierViewModel}">
+        <vwww:NewSupplierView />
+    </DataTemplate>
 
     <!--Here is the end of conecting View with ViewModel-->
 

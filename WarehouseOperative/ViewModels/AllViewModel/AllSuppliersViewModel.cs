@@ -25,7 +25,7 @@ namespace WarehouseOperative.ViewModels.AllViewModel
                     from supliers in WarehouseEntities.Suppliers
                     select new SuppliersForAllView
                     {
-                        SupplierId = supliers.Id,
+                        Id = supliers.Id,
                         CompanyName = supliers.CompanyName,
                         ContactName = supliers.ContactName,
                         SuplierAddressPostcode = supliers.SupplierAddresses.PostCode,

@@ -171,7 +171,7 @@
                 <Separator Background="Black"/>
                 <Separator Background="Black"/>
                 <StackPanel Orientation="Vertical" FlowDirection="LeftToRight">
-                    <ToggleButton Width="54" Height="37" Background="Transparent" Style="{StaticResource NavigationButton}" Command="{Binding Path=GetSuppliers}">
+                    <ToggleButton Width="54" Height="37" Background="Transparent" Style="{StaticResource NavigationButton}" Command="{Binding Path=AddSupplierCommand}">
                         <StackPanel>
                             <Image Height="18" Width="20" Margin="3,0,0,0" Source="pack://application:,,,/Views/Content/Icons/addsupplier.png" Stretch="Fill"/>
                             <TextBlock Height="12" Text="Add Supplier" Foreground="White" FontSize="8" VerticalAlignment="Top" HorizontalAlignment="Center"/>

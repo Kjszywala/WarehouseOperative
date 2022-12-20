@@ -2,7 +2,7 @@
 {
     public class SuppliersForAllView
     {
-        public int SupplierId { get; set; }
+        public int Id { get; set; }
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
         public string ContactTitle { get; set; }
@@ -12,5 +12,6 @@
         public string SuplierAddressCountry { get; set; }
         public string SuplierAddressPhone { get; set; }
         public string SuplierAddressFax { get; set; }
+        public bool IsActive { get; set; }
     }
 }
