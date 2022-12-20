@@ -21,12 +21,6 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="600"/>
@@ -35,26 +29,9 @@
         <Label Content="Company Name: " Margin="10,10,10,10" Grid.Row="0"/>
         <Label Content="Contact Name: " Margin="10,10,10,10" Grid.Row="1"/>
         <Label Content="Contact Title: " Margin="10,10,10,10" Grid.Row="2"/>
-        <Label Content="Street Name: " Margin="10,10,10,10" Grid.Row="3"/>
-        <Label Content="Post Code: " Margin="10,10,10,10" Grid.Row="4"/>
-        <Label Content="City: " Margin="10,10,10,10" Grid.Row="5"/>
-        <Label Content="Country: " Margin="10,10,10,10" Grid.Row="6"/>
-        <Label Content="Phone: " Margin="10,10,10,10" Grid.Row="7"/>
-        <Label Content="Fax: " Margin="10,10,10,10" Grid.Row="8"/>
         <TextBox Margin="150,10,107,10" Grid.Row="0" Text="{Binding Path=CompanyName, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Margin="150,10,107,10" Grid.Row="1" Text="{Binding Path=ContactName, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=ContactTitle, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="3" Text="{Binding Path=SuplierAddressStreetName, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="4" Text="{Binding Path=SuplierAddressPostcode, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="5" Text="{Binding Path=SuplierAddressCity, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="6" Text="{Binding Path=SuplierAddressCountry, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="7" Text="{Binding Path=SuplierAddressPhone, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="8" Text="{Binding Path=SuplierAddressFax, UpdateSourceTrigger=PropertyChanged}"/>
-        <!--<TextBox Margin="150,10,107,10" Grid.Row="6" Text="{Binding Path=FlatNumber, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="7" Text="{Binding Path=StreetName, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="8" Text="{Binding Path=PostCode, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="9" Text="{Binding Path=City, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="10" Text="{Binding Path=Country, UpdateSourceTrigger=PropertyChanged}"/>-->
     </Grid>
 </local:AddRowViewBase>
 
