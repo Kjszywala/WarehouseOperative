@@ -12,6 +12,7 @@
         public string SuplierAddressCountry { get; set; }
         public string SuplierAddressPhone { get; set; }
         public string SuplierAddressFax { get; set; }
+        public string SupplierAddressHomePage { get; set; }
         public bool IsActive { get; set; }
     }
 }

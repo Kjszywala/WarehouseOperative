@@ -13,16 +13,18 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="10">
+        <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding List}" AutoGenerateColumns="False" Margin="10">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="*" Header="SupplierId" Binding="{Binding Path=SupplierId}"/>
-                <DataGridTextColumn Width="*" Header="CompanyName" Binding="{Binding Path=CompanyName}"/>
-                <DataGridTextColumn Width="*" Header="ContactName" Binding="{Binding Path=ContactName}"/>
-                <DataGridTextColumn Width="*" Header="SuplierAddressPostcode" Binding="{Binding Path=SuplierAddressPostcode}"/>
-                <DataGridTextColumn Width="*" Header="SuplierAddressCity" Binding="{Binding Path=SuplierAddressCity}"/>
-                <DataGridTextColumn Width="*" Header="SuplierAddressCountry" Binding="{Binding Path=SuplierAddressCountry}"/>
-                <DataGridTextColumn Width="*" Header="SuplierAddressPhone" Binding="{Binding Path=SuplierAddressPhone}"/>
-                <DataGridTextColumn Width="*" Header="SuplierAddressFax" Binding="{Binding Path=SuplierAddressFax}"/>
+                <DataGridTextColumn Width="20" Header="Id" Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn Width="*" Header="Company Name" Binding="{Binding Path=CompanyName}"/>
+                <DataGridTextColumn Width="*" Header="Contact Name" Binding="{Binding Path=ContactName}"/>
+                <DataGridTextColumn Width="*" Header="Street Name" Binding="{Binding Path=SuplierAddressStreetName}"/>
+                <DataGridTextColumn Width="*" Header="SPost code" Binding="{Binding Path=SuplierAddressPostcode}"/>
+                <DataGridTextColumn Width="*" Header="City" Binding="{Binding Path=SuplierAddressCity}"/>
+                <DataGridTextColumn Width="*" Header="Country" Binding="{Binding Path=SuplierAddressCountry}"/>
+                <DataGridTextColumn Width="*" Header="Phone" Binding="{Binding Path=SuplierAddressPhone}"/>
+                <DataGridTextColumn Width="*" Header="Fax" Binding="{Binding Path=SuplierAddressFax}"/>
+                <DataGridTextColumn Width="*" Header="Home Page" Binding="{Binding Path=SupplierAddressHomePage}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

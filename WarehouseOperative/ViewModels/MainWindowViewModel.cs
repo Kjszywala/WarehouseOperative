@@ -258,7 +258,9 @@ namespace WarehouseOperative.ViewModels
         /// </summary>
         private void getInfo()
         {
-            MessageBox.Show("Author: Kamil Szywala.\nThis program was made for\nWyzsza Szkola Biznesu - National Luis University\nin a purpose of end-semester project from\nC# Interfaces.");
+            MessageBox.Show(
+                @"Author: Kamil Szywala.\nThis program was created for\nWyzsza Szkola Biznesu - 
+                National Luis University\nin a purpose of end-semester project from\nC# applications.");
         }
 
         /// <summary>

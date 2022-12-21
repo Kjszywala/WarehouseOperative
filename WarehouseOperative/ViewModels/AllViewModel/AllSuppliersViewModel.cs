@@ -28,11 +28,13 @@ namespace WarehouseOperative.ViewModels.AllViewModel
                         Id = supliers.Id,
                         CompanyName = supliers.CompanyName,
                         ContactName = supliers.ContactName,
+                        SuplierAddressStreetName = supliers.SupplierAddresses.StreetName,
                         SuplierAddressPostcode = supliers.SupplierAddresses.PostCode,
                         SuplierAddressCity = supliers.SupplierAddresses.City,
                         SuplierAddressCountry = supliers.SupplierAddresses.Country,
                         SuplierAddressPhone = supliers.SupplierAddresses.Phone,
-                        SuplierAddressFax = supliers.SupplierAddresses.Fax
+                        SuplierAddressFax = supliers.SupplierAddresses.Fax,
+                        SupplierAddressHomePage = supliers.SupplierAddresses.HomePage
                     }
                 );
             }
