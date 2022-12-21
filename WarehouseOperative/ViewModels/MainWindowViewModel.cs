@@ -22,6 +22,13 @@ namespace WarehouseOperative.ViewModels
         /// collection of bookmarks.
         /// </summary>
         #region Commands
+        public ICommand AddShipperCommand
+        {
+            get
+            {
+                return new BaseCommand(() => addBookmarkCreateNew(new NewShipperViewModel()));
+            }
+        }
         public ICommand AddSupplierCommand
         {
             get
@@ -34,6 +41,20 @@ namespace WarehouseOperative.ViewModels
             get
             {
                 return new BaseCommand(() => addBookmarkCreateNew(new NewInvoiceViewModel()));
+            }
+        }
+        public ICommand AddEmployee
+        {
+            get
+            {
+                return new BaseCommand(() => addBookmarkCreateNew(new NewEmployeeViewModel()));
+            }
+        }
+        public ICommand NewProductCommand
+        {
+            get
+            {
+                return new BaseCommand(() => addBookmarkCreateNew(new NewProductViewmodel()));
             }
         }
         public ICommand RestoreButtonCommand
@@ -57,6 +78,13 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(() => showAll<AllInvoicesViewModel>());
             }
         }
+        public ICommand AllShippersCommand
+        {
+            get
+            {
+                return new BaseCommand(() => showAll<AllShippersViewModel>());
+            }
+        }
         public ICommand ErrorLog
         {
             get
@@ -64,13 +92,7 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(() => showAll<ErrorLogViewModel>());
             }
         }
-        public ICommand NewProductCommand
-        {
-            get
-            {
-                return new BaseCommand(() => addBookmarkCreateNew(new NewProductViewmodel()));
-            }
-        }
+        
         public ICommand AllProductsCommand
         {
             get
@@ -78,13 +100,7 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(() => showAll<AllProductsViewModel>());
             }
         }
-        public ICommand AddEmployee
-        {
-            get
-            {
-                return new BaseCommand(() => addBookmarkCreateNew(new NewEmployeeViewModel()));
-            }
-        }
+      
         public ICommand GetSuppliers
         {
             get

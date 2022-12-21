@@ -11,18 +11,13 @@
     <DataTemplate DataType="{x:Type vmm:AllProductsViewModel}">
         <vww:AllProductsView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type vmmm:NewProductViewmodel}">
-        <vwww:NewProductView/>
-    </DataTemplate>
-    <DataTemplate DataType="{x:Type vmmm:NewInvoiceViewModel}">
-        <vwww:NewInvoiceView/>
+    <DataTemplate DataType="{x:Type vmm:AllShippersViewModel}">
+        <vww:AllShippersView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vmm:AllInvoicesViewModel}">
         <vww:AllInvoicesView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type vmmm:NewEmployeeViewModel}">
-        <vwww:NewEmployeeView/>
-    </DataTemplate>
+ 
     <DataTemplate DataType="{x:Type vmm:AllEmloyeesViewModel}">
         <vww:AllEmloyeesView/>
     </DataTemplate>
@@ -44,7 +39,18 @@
     <DataTemplate DataType="{x:Type vmmm:NewSupplierAddressesViewModel}">
         <vwww:NewSupplierAddressesView />
     </DataTemplate>
-
+    <DataTemplate DataType="{x:Type vmmm:NewShipperViewModel}">
+        <vwww:NewShipperView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmmm:NewEmployeeViewModel}">
+        <vwww:NewEmployeeView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmmm:NewProductViewmodel}">
+        <vwww:NewProductView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmmm:NewInvoiceViewModel}">
+        <vwww:NewInvoiceView/>
+    </DataTemplate>
     <!--Here is the end of conecting View with ViewModel-->
 
     <Style x:Key="MainHCCStyle" TargetType="{x:Type HeaderedContentControl}">

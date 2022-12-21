@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
+using System.Windows;
 using System.Windows.Input;
 using WarehouseOperative.Helpers;
 using WarehouseOperative.Models.DatabaseEntities;
@@ -81,6 +82,7 @@ namespace WarehouseOperative.ViewModels.Abstract
             Save();
             //Close bookmark.
             base.OnRequestClose();
+            MessageBox.Show("Successfully saved to database.", "Confirmation");
         }
         #endregion
 

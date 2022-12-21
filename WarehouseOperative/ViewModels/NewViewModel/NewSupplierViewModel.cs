@@ -104,7 +104,7 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #region Methods
         private void GetSupplierAddress(SupplierAddresses address)
         {
-            SupplierAddress = $"{address.StreetName} {address.PostCode} {address.City}";
+            SupplierAddress = $"Choosen addrees: {address.StreetName}, {address.PostCode}, {address.City}";
             SuplierAddressId = address.Id;
         }
         public override void Save()
