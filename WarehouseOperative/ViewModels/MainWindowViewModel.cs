@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -143,6 +144,7 @@ namespace WarehouseOperative.ViewModels
         //Here we decide which buttons are in left side menu
         private List<CommandViewModel> CreateCommands()
         {
+            Messenger.Default.Register<string>(this, Open);
             return new List<CommandViewModel>
             {
                 // Creat buttons
@@ -305,6 +307,17 @@ namespace WarehouseOperative.ViewModels
                 handler(this, EventArgs.Empty);
         }
 
+        private void Open(string name)
+        {
+            if (name == "Add Supplier")
+            {
+                addBookmarkCreateNew(new NewSupplierAddressesViewModel());
+            }
+            else if (name == "Faktury Add")
+            {
+                addBookmarkCreateNew(new NewSupplierAddressesViewModel());
+            }
+        }
 
         // this is the standard method for adding setting bookmark active
         private void setActiveWorkspace(WorkspaceViewModel workspace) 

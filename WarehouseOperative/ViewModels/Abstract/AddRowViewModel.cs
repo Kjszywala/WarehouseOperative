@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System.Windows.Input;
 using WarehouseOperative.Helpers;
 using WarehouseOperative.Models.DatabaseEntities;
 
@@ -11,6 +12,22 @@ namespace WarehouseOperative.ViewModels.Abstract
         public KjsCompany2Entities2 Db { get; set; }
         //Adding bookmark with new (product,invoice etc.)
         public T Item { get; set; }
+        /// <summary>
+        /// Command for sending messages.
+        /// </summary>
+        private BaseCommand _AddCommand;
+        public ICommand AddCommand
+        {
+            get
+            {
+                if (_AddCommand == null)
+                {
+                    // pusta wywoluje load.
+                    _AddCommand = new BaseCommand(() => Add());
+                }
+                return _AddCommand;
+            }
+        }
         #endregion
 
         #region Konstruktor
@@ -50,8 +67,14 @@ namespace WarehouseOperative.ViewModels.Abstract
 
         #region Save
 
+        /// <summary>
+        /// Abstract method for all bookmarks to add row to db.
+        /// </summary>
         public abstract void Save();
 
+        /// <summary>
+        /// Saving to db and closing the bookmark
+        /// </summary>
         private void saveAndClose()
         {
             //Save product.
@@ -62,6 +85,16 @@ namespace WarehouseOperative.ViewModels.Abstract
         #endregion
 
         #region Helpers
+        /// <summary>
+        /// Sending the message to CreateView method in MainWindowViewModel.
+        /// </summary>
+        public void Add()
+        {
+            Messenger.Default.Send("Add " + DisplayName);
+        }
+        /// <summary>
+        /// Closing the bookmark.
+        /// </summary>
         private void closeCommand()
         {
             base.OnRequestClose();

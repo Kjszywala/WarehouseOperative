@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Windows;
 using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.ViewModels.Abstract;
@@ -10,12 +11,13 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #region Constructor
 
         public NewSupplierViewModel()
-            : base("Add Employee")
+            : base("Supplier")
         {
             Item = new Suppliers()
             {
                 IsActive = true
             };
+            Messenger.Default.Register<SupplierAddresses>(this, GetSupplierAddress);
         }
         #endregion
 
@@ -81,9 +83,30 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 }
             }
         }
+        private string _SupplierAddress;
+        public string SupplierAddress
+        {
+            get
+            {
+                return _SupplierAddress;
+            }
+            set
+            {
+                if (value != _SupplierAddress)
+                {
+                    _SupplierAddress = value;
+                    OnPropertyChanged(() => SupplierAddress);
+                }
+            }
+        }
         #endregion
 
-        #region Save
+        #region Methods
+        private void GetSupplierAddress(SupplierAddresses address)
+        {
+            SupplierAddress = $"{address.StreetName} {address.PostCode} {address.City}";
+            SuplierAddressId = address.Id;
+        }
         public override void Save()
         {
             try
