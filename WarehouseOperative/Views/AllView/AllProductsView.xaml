@@ -16,14 +16,14 @@
         </Grid.RowDefinitions>
         <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="10">
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn Width="30"/>
-                <DataGridTextColumn Header="Product #" Width="*"/>
-                <DataGridTextColumn Header="Date" Width="*"/>
-                <DataGridTextColumn Header="Product ID" Width="*"/>
-                <DataGridTextColumn Header="Net Amount" Width="*"/>
-                <DataGridTextColumn Header="Net Price" Width="*"/>
-                <DataGridTextColumn Header="Balance" Width="*"/>
-                <DataGridTextColumn Header="Amount" Width="*"/>
+                <DataGridTextColumn Width="20" Header="Product Name" Binding="{Binding Path=ProductName}"/>
+                <DataGridTextColumn Width="*" Header="Product Code" Binding="{Binding Path=ProductCode}"/>
+                <DataGridTextColumn Width="*" Header="Description" Binding="{Binding Path=CategoryCategoryDescription}"/>
+                <DataGridTextColumn Width="*" Header="Supplier Company Name" Binding="{Binding Path=SupplierCompanyName}"/>
+                <DataGridTextColumn Width="*" Header="Product Log Description" Binding="{Binding Path=ProductLogsDescription}"/>
+                <DataGridTextColumn Width="*" Header="Actual Quantity" Binding="{Binding Path=ActualQuantity}"/>
+                <DataGridTextColumn Width="*" Header="Actual Price" Binding="{Binding Path=ActualPrice}"/>
+                <DataGridTextColumn Width="*" Header="Quantity Type" Binding="{Binding Path=QuantityTypesQuantityType}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

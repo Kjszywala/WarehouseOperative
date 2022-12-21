@@ -17,7 +17,6 @@
     <DataTemplate DataType="{x:Type vmm:AllInvoicesViewModel}">
         <vww:AllInvoicesView/>
     </DataTemplate>
- 
     <DataTemplate DataType="{x:Type vmm:AllEmloyeesViewModel}">
         <vww:AllEmloyeesView/>
     </DataTemplate>
