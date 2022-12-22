@@ -331,9 +331,9 @@ namespace WarehouseOperative.ViewModels
             {
                 addBookmarkCreateNew(new NewSupplierAddressesViewModel());
             }
-            else if (name == "Faktury Add")
+            else if (name == "Add Product")
             {
-                addBookmarkCreateNew(new NewSupplierAddressesViewModel());
+                addBookmarkCreateNew(new NewProductsLogViewModel());
             }
         }
 
