@@ -68,6 +68,9 @@
     <DataTemplate DataType="{x:Type vmmm:NewOrderViewModel}">
         <vwww:NewOrderView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vmmm:NewOrderPositionViewModel}">
+        <vwww:NewOrderPositionsView/>
+    </DataTemplate>
     
     <!--Here is the end of conecting View with ViewModel-->
 

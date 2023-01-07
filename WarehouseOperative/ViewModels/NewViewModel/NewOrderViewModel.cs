@@ -151,6 +151,7 @@ namespace WarehouseOperative.ViewModels.NewViewModel
             {
                 Db.Orders.AddObject(Item);
                 Db.SaveChanges();
+                Messenger.Default.Send(Item);
             }
             catch (Exception e)
             {
