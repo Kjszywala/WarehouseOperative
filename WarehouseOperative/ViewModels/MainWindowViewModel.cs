@@ -341,9 +341,9 @@ from C# applications.");
             {
                 addBookmarkCreateNew(new NewEmployeeAddressesViewModel());
             }
-            else if (name == "Add EmployeeAnnualLeave")
+            else if (name == "Add EmployeeAnnualLeaves")
             {
-                addBookmarkCreateNew(new NewEmployeeAddressesViewModel());
+                addBookmarkCreateNew(new NewEmployeeAnnualLeavesViewModel());
             }
         }
 
