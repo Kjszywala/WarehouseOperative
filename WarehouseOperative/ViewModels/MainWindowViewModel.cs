@@ -185,6 +185,7 @@ namespace WarehouseOperative.ViewModels
                 new CommandViewModel("Add Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel())),"pack://application:,,,/Views/Content/Icons/leftaddemployee.png"),
                 new CommandViewModel("All Employees", new BaseCommand(()=>showAll<AllEmloyeesViewModel>()),"pack://application:,,,/Views/Content/Icons/leftaddemployees.png"),
                 new CommandViewModel("All Customers", new BaseCommand(()=>showAll<AllCustomersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallcustomers.png"),
+                new CommandViewModel("Add Order", new BaseCommand(()=>addBookmarkCreateNew(new NewOrderViewModel())),"pack://application:,,,/Views/Content/Icons/leftaddemployee.png"),
                 new CommandViewModel("All Orders", new BaseCommand(()=>showAll<AllOrdersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png")
             };
         }
@@ -362,6 +363,10 @@ from C# applications.");
             else if (name == "Add Customers")
             {
                 addBookmarkCreateNew(new NewCustomerAddressesViewModel());
+            }
+            else if (name == "Add Orders")
+            {
+                addBookmarkCreateNew(new NewCustomerViewModel());
             }
         }
 

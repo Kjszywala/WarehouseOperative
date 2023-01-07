@@ -65,6 +65,10 @@
     <DataTemplate DataType="{x:Type vmmm:NewCustomerViewModel}">
         <vwww:NewCustomersView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vmmm:NewOrderViewModel}">
+        <vwww:NewOrderView/>
+    </DataTemplate>
+    
     <!--Here is the end of conecting View with ViewModel-->
 
     <Style x:Key="MainHCCStyle" TargetType="{x:Type HeaderedContentControl}">

@@ -113,12 +113,14 @@ namespace WarehouseOperative.ViewModels.NewViewModel
             CustomerAddress = $"Postcode: {item.PostCode}, City: {item.City}, Country: {item.Country}";
             CustomerAddressId = item.Id;
         }
+
         public override void Save()
         {
             try
             {
                 Db.Customers.AddObject(Item);
                 Db.SaveChanges();
+                Messenger.Default.Send(Item);
             }
             catch (Exception e)
             {
