@@ -4,9 +4,8 @@ using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.ViewModels.Abstract;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Input;
-using WarehouseOperative.Helpers;
 using GalaSoft.MvvmLight.Messaging;
+using WarehouseOperative.Models.EntitiesForView;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
@@ -181,9 +180,9 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         /// <summary>
         /// Lists needed for combo box.
         /// </summary>
-        public List<QuantityTypes> quantityTypes { get; set; }
-        public List<Categories> categoriesList { get; set; }
-        public List<Suppliers> suppliers { get; set; }
+        public List<ComboBoxKeyAndValue> quantityTypes { get; set; }
+        public List<ComboBoxKeyAndValue> categoriesList { get; set; }
+        public List<ComboBoxKeyAndValue> suppliers { get; set; }
         private string _ProductsLogDescription;
         public string ProductsLogDescription
         {
@@ -210,14 +209,26 @@ namespace WarehouseOperative.ViewModels.NewViewModel
             {
                 IsActive = true,
                 CreationDate = DateTime.Now,
-                ModificationDate = DateTime.Now,
-                SupplierId = this.SupplierId,
-                CategoryId = this.CategoryId,
-                QuantityType = this.QuantityTypeId
+                ModificationDate = DateTime.Now
             };
-            quantityTypes = Db.QuantityTypes.Where(item => item.IsActive == true).ToList();
-            categoriesList = Db.Categories.Where(item => item.IsActive == true).ToList();
-            suppliers = Db.Suppliers.Where(item => item.IsActive == true).ToList();
+            //quantityTypes = Db.QuantityTypes.Where(item => item.IsActive == true).ToList();
+            //categoriesList = Db.Categories.Where(item => item.IsActive == true).ToList();
+            //suppliers = Db.Suppliers.Where(item => item.IsActive == true).ToList();
+            quantityTypes = Db.QuantityTypes.Where(item => item.IsActive == true).Select(item => new ComboBoxKeyAndValue()
+            {
+                Key = item.Id,
+                Value = item.title
+            }).ToList();
+            categoriesList = Db.Categories.Where(item => item.IsActive == true).Select(item => new ComboBoxKeyAndValue()
+            {
+                Key = item.Id,
+                Value = item.CategoryDescription
+            }).ToList();
+            suppliers = Db.Suppliers.Where(item => item.IsActive == true).Select(item => new ComboBoxKeyAndValue()
+            {
+                Key = item.Id,
+                Value = item.CompanyName
+            }).ToList();
             Messenger.Default.Register<ProductLogs>(this, GetProductLog);
         }
 

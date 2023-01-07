@@ -28,11 +28,11 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Quantity Type: " Margin="10,10,10,10" Grid.Row="1" Grid.Column="1"/>
-        <ComboBox Grid.Column="1" Grid.Row="1" Margin="0,8,150,8" Width="120" HorizontalAlignment="Right" ItemsSource="{Binding quantityTypes}" DisplayMemberPath="title" SelectedValue="{Binding QuantityTypeId}" SelectedValuePath="QuantityTypeId"/>
+        <ComboBox Grid.Column="1" Grid.Row="1" Margin="0,8,150,8" Width="120" HorizontalAlignment="Right" ItemsSource="{Binding quantityTypes}" DisplayMemberPath="Value" SelectedValue="{Binding QuantityTypeId}" SelectedValuePath="Key"/>
         <Label Content="Category: " Margin="10,10,10,10" Grid.Row="2" Grid.Column="1"/>
-        <ComboBox Grid.Column="1" Grid.Row="2" Margin="0,8,150,8" Width="120" HorizontalAlignment="Right" ItemsSource="{Binding categoriesList}" DisplayMemberPath="CategoryDescription" SelectedValue="{Binding CategoryId}" SelectedValuePath="CategoryId"/>
+        <ComboBox Grid.Column="1" Grid.Row="2" Margin="0,8,150,8" Width="120" HorizontalAlignment="Right" ItemsSource="{Binding categoriesList}" DisplayMemberPath="Value" SelectedValue="{Binding CategoryId}" SelectedValuePath="Key"/>
         <Label Content="Supplier: " Margin="10,10,10,10" Grid.Row="3" Grid.Column="1"/>
-        <ComboBox Grid.Column="1" Grid.Row="3" Margin="0,8,150,8" Width="120" HorizontalAlignment="Right" ItemsSource="{Binding suppliers}" DisplayMemberPath="CompanyName" SelectedValue="{Binding SupplierId}" SelectedValuePath="SupplierId"/>
+        <ComboBox Grid.Column="1" Grid.Row="3" Margin="0,8,150,8" Width="120" HorizontalAlignment="Right" ItemsSource="{Binding suppliers}" DisplayMemberPath="Value" SelectedValue="{Binding SupplierId}" SelectedValuePath="Key"/>
         <Label Margin="10,10,10,10" Grid.Row="5" Grid.Column="1" Content="{Binding ProductsLogDescription}"/>
         <Button Grid.Column="1" Grid.Row="4" Margin="10,10,30,10" Content="Add To Product Log" Command="{Binding AddCommand}"/>
         <Label Content="Title: " Margin="10,10,10,10" Grid.Row="0"/>
