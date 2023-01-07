@@ -208,7 +208,12 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         {
             Item = new Products()
             {
-                IsActive = true
+                IsActive = true,
+                CreationDate = DateTime.Now,
+                ModificationDate = DateTime.Now,
+                SupplierId = this.SupplierId,
+                CategoryId = this.CategoryId,
+                QuantityType = this.QuantityTypeId
             };
             quantityTypes = Db.QuantityTypes.Where(item => item.IsActive == true).ToList();
             categoriesList = Db.Categories.Where(item => item.IsActive == true).ToList();
