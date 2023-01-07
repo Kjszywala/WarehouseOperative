@@ -341,6 +341,10 @@ from C# applications.");
             {
                 addBookmarkCreateNew(new NewEmployeeAddressesViewModel());
             }
+            else if (name == "Add EmployeeAnnualLeave")
+            {
+                addBookmarkCreateNew(new NewEmployeeAddressesViewModel());
+            }
         }
 
         // this is the standard method for adding setting bookmark active

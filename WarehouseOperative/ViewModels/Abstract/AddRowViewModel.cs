@@ -29,6 +29,19 @@ namespace WarehouseOperative.ViewModels.Abstract
                 return _AddCommand;
             }
         }
+        private BaseCommand _AddCommand2;
+        public ICommand AddCommand2
+        {
+            get
+            {
+                if (_AddCommand2 == null)
+                {
+                    // pusta wywoluje load.
+                    _AddCommand2 = new BaseCommand(() => Add2());
+                }
+                return _AddCommand2;
+            }
+        }
         #endregion
 
         #region Konstruktor
@@ -93,6 +106,10 @@ namespace WarehouseOperative.ViewModels.Abstract
         public void Add()
         {
             Messenger.Default.Send("Add " + DisplayName);
+        }
+        public void Add2()
+        {
+            Messenger.Default.Send("Add EmployeeAnnualLeaves");
         }
         /// <summary>
         /// Closing the bookmark.

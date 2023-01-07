@@ -21,6 +21,7 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 ModificationDate = DateTime.Now
             };
             Messenger.Default.Register<EmployeeAddresses>(this, GetEmployeeAddress);
+            Messenger.Default.Register<EmployeeAnnualLeaves>(this, GetEmployeeAnnualLeave);
         }
         #endregion
 
@@ -86,7 +87,6 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 }
             }
         }
-        //private DateTime date = DateTime.Now;
         public DateTime HireDate
         {
             get
@@ -135,6 +135,23 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         }
         public string EmployeeAddress { get; set; }
 
+        public int? EmployeeAnnualLeaveId
+        {
+            get
+            {
+                return Item.EmployeeAnnualLeave;
+            }
+            set
+            {
+                if (value != Item.EmployeeAnnualLeave)
+                {
+                    Item.EmployeeAnnualLeave = value;
+                    OnPropertyChanged(() => EmployeeAnnualLeaveId);
+                }
+            }
+        }
+        public string EmployeeAnnualLeaves { get; set; }
+
         #endregion
 
         #region Methods
@@ -142,6 +159,11 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         {
             EmployeeAddress = $"Postcode: {item.PostCode}, City: {item.City}, Country: {item.Country}";
             EmployeeAddressId = item.Id;
+        }
+        private void GetEmployeeAnnualLeave(EmployeeAnnualLeaves item)
+        {
+            EmployeeAnnualLeaves = $"StartDate: {item.StartDate}, End Date: {item.EndDate}, Days Left: {item.DaysLeft}";
+            EmployeeAnnualLeaveId = item.Id;
         }
         public override void Save()
         {
