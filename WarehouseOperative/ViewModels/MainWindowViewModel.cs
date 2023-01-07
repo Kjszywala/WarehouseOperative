@@ -36,6 +36,20 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(() => addBookmarkCreateNew(new NewSupplierViewModel()));
             }
         }
+        public ICommand AddCustomerCommand
+        {
+            get
+            {
+                return new BaseCommand(() => addBookmarkCreateNew(new NewCustomerViewModel()));
+            }
+        }
+        public ICommand AllCustomersCommand
+        {
+            get
+            {
+                return new BaseCommand(() => showAll<AllCustomersViewModel>());
+            }
+        }
         public ICommand NewInvoiceCommand
         {
             get
@@ -344,6 +358,10 @@ from C# applications.");
             else if (name == "Add EmployeeAnnualLeaves")
             {
                 addBookmarkCreateNew(new NewEmployeeAnnualLeavesViewModel());
+            }
+            else if (name == "Add Customers")
+            {
+                addBookmarkCreateNew(new NewCustomerAddressesViewModel());
             }
         }
 

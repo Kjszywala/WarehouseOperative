@@ -59,6 +59,12 @@
     <DataTemplate DataType="{x:Type vmmm:NewEmployeeAnnualLeavesViewModel}">
         <vwww:EmployeeAnnualLeaveView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vmmm:NewCustomerAddressesViewModel}">
+        <vwww:NewCustomerAddressesView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmmm:NewCustomerViewModel}">
+        <vwww:NewCustomersView/>
+    </DataTemplate>
     <!--Here is the end of conecting View with ViewModel-->
 
     <Style x:Key="MainHCCStyle" TargetType="{x:Type HeaderedContentControl}">

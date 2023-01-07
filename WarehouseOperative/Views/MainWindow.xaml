@@ -154,14 +154,14 @@
                         <!--<AccessText>_K</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}" Command="{Binding Path=AddCustomerCommand}" >
                     <StackPanel>
                         <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/customer.png" Stretch="Fill"/>
                         <TextBlock Height="12" Text="Add Customer" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                         <!--<AccessText>_I</AccessText>-->
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}">
+                <ToggleButton Width="60" Height="70" Background="Transparent" Margin="2" Style="{StaticResource NavigationButton}" Command="{Binding Path=AllCustomersCommand}">
                     <StackPanel>
                         <Image Height="40" Width="40" Source="pack://application:,,,/Views/Content/Icons/customers.png" Stretch="Fill"/>
                         <TextBlock Height="12" Text="All Customers" Foreground="White" FontSize="9" VerticalAlignment="Top" HorizontalAlignment="Center"/>
