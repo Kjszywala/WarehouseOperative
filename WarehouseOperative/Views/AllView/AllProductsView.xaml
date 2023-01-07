@@ -14,16 +14,16 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="10">
+        <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding List}" AutoGenerateColumns="False" Margin="10">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="20" Header="Product Name" Binding="{Binding Path=ProductName}"/>
-                <DataGridTextColumn Width="*" Header="Product Code" Binding="{Binding Path=ProductCode}"/>
-                <DataGridTextColumn Width="*" Header="Description" Binding="{Binding Path=CategoryCategoryDescription}"/>
-                <DataGridTextColumn Width="*" Header="Supplier Company Name" Binding="{Binding Path=SupplierCompanyName}"/>
-                <DataGridTextColumn Width="*" Header="Product Log Description" Binding="{Binding Path=ProductLogsDescription}"/>
-                <DataGridTextColumn Width="*" Header="Actual Quantity" Binding="{Binding Path=ActualQuantity}"/>
-                <DataGridTextColumn Width="*" Header="Actual Price" Binding="{Binding Path=ActualPrice}"/>
-                <DataGridTextColumn Width="*" Header="Quantity Type" Binding="{Binding Path=QuantityTypesQuantityType}"/>
+                <DataGridTextColumn Width="auto" Header="Product Name" Binding="{Binding Path=ProductName}"/>
+                <DataGridTextColumn Width="auto" Header="Product Code" Binding="{Binding Path=ProductCode}"/>
+                <DataGridTextColumn Width="auto" Header="Description" Binding="{Binding Path=CategoryCategoryDescription}"/>
+                <DataGridTextColumn Width="auto" Header="Supplier Company Name" Binding="{Binding Path=SupplierCompanyName}"/>
+                <DataGridTextColumn Width="auto" Header="Product Log Description" Binding="{Binding Path=ProductLogsDescription}"/>
+                <DataGridTextColumn Width="auto" Header="Actual Quantity" Binding="{Binding Path=ActualQuantity}"/>
+                <DataGridTextColumn Width="auto" Header="Actual Price" Binding="{Binding Path=ActualPrice}"/>
+                <DataGridTextColumn Width="auto" Header="Quantity Type" Binding="{Binding Path=QuantityTypesQuantityType}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

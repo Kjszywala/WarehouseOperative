@@ -337,6 +337,10 @@ from C# applications.");
             {
                 addBookmarkCreateNew(new NewProductsLogViewModel());
             }
+            else if (name == "Add Employee")
+            {
+                addBookmarkCreateNew(new NewEmployeeAddressesViewModel());
+            }
         }
 
         // this is the standard method for adding setting bookmark active

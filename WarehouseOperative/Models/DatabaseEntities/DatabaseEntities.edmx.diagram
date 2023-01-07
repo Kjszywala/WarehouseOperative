@@ -10,12 +10,12 @@
         <EntityTypeShape EntityType="KjsCompany2Model.Customers" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
         <EntityTypeShape EntityType="KjsCompany2Model.EmployeeAddresses" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KjsCompany2Model.EmployeeAnnualLeaves" Width="1.5" PointX="0.75" PointY="23.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="KjsCompany2Model.Employees" Width="1.5" PointX="3" PointY="20.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="KjsCompany2Model.ErrorLogs" Width="1.5" PointX="8.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.Employees" Width="1.5" PointX="3" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.ErrorLogs" Width="1.5" PointX="0.5" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KjsCompany2Model.Invoices" Width="1.5" PointX="7.5" PointY="20.125" IsExpanded="true" />
         <EntityTypeShape EntityType="KjsCompany2Model.Orders" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="KjsCompany2Model.OrdersPositions" Width="1.5" PointX="7.5" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="KjsCompany2Model.PaymentMethods" Width="1.5" PointX="8.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.OrdersPositions" Width="1.5" PointX="8.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KjsCompany2Model.PaymentMethods" Width="1.5" PointX="10.25" PointY="19" IsExpanded="true" />
         <EntityTypeShape EntityType="KjsCompany2Model.ProductLogs" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="KjsCompany2Model.Products" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="KjsCompany2Model.QuantityTypes" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />

@@ -1,4 +1,6 @@
-﻿namespace WarehouseOperative.Views.NewView
+﻿using System;
+
+namespace WarehouseOperative.Views.NewView
 {
     /// <summary>
     /// Interaction logic for NewEmloyeeView.xaml

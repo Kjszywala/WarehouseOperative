@@ -38,7 +38,6 @@ namespace WarehouseOperative.ViewModels.AllViewModel
                             PostCode = employee.EmployeeAddresses.PostCode,
                             City = employee.EmployeeAddresses.City,
                             Country = employee.EmployeeAddresses.Country
-
                         }
                     );
             }

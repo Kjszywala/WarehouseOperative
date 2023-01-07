@@ -1,7 +1,7 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Windows;
 using WarehouseOperative.Models.DatabaseEntities;
-using WarehouseOperative.Models.EntitiesForView;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
@@ -10,7 +10,7 @@ namespace WarehouseOperative.ViewModels.NewViewModel
     {
         #region Constructor
         public NewEmployeeViewModel()
-            : base("Add Employee")
+            : base("Employee")
         {
             Item = new Employees()
             {
@@ -19,7 +19,8 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 Title = "New Employee",
                 CreationDate = DateTime.Now,
                 ModificationDate = DateTime.Now
-        };
+            };
+            Messenger.Default.Register<EmployeeAddresses>(this, GetEmployeeAddress);
         }
         #endregion
 
@@ -85,6 +86,7 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 }
             }
         }
+        //private DateTime date = DateTime.Now;
         public DateTime HireDate
         {
             get
@@ -131,84 +133,16 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 }
             }
         }
-        //public string FlatNumber
-        //{
-        //    get
-        //    {
-        //        return Item.FlatNumber;
-        //    }
-        //    set
-        //    {
-        //        if (value != Item.FlatNumber)
-        //        {
-        //            Item.JobTitle = value;
-        //            OnPropertyChanged(() => FlatNumber);
-        //        }
-        //    }
-        //}
-        //public string StreetName
-        //{
-        //    get
-        //    {
-        //        return Item.StreetName;
-        //    }
-        //    set
-        //    {
-        //        if (value != Item.StreetName)
-        //        {
-        //            Item.JobTitle = value;
-        //            OnPropertyChanged(() => StreetName);
-        //        }
-        //    }
-        //}
-        //public string PostCode
-        //{
-        //    get
-        //    {
-        //        return Item.PostCode;
-        //    }
-        //    set
-        //    {
-        //        if (value != Item.PostCode)
-        //        {
-        //            Item.JobTitle = value;
-        //            OnPropertyChanged(() => PostCode);
-        //        }
-        //    }
-        //}
-        //public string City
-        //{
-        //    get
-        //    {
-        //        return Item.City;
-        //    }
-        //    set
-        //    {
-        //        if (value != Item.City)
-        //        {
-        //            Item.JobTitle = value;
-        //            OnPropertyChanged(() => City);
-        //        }
-        //    }
-        //}
-        //public string Country
-        //{
-        //    get
-        //    {
-        //        return Item.Country;
-        //    }
-        //    set
-        //    {
-        //        if (value != Item.Country)
-        //        {
-        //            Item.JobTitle = value;
-        //            OnPropertyChanged(() => Country);
-        //        }
-        //    }
-        //}
+        public string EmployeeAddress { get; set; }
+
         #endregion
 
-        #region Save
+        #region Methods
+        private void GetEmployeeAddress(EmployeeAddresses item)
+        {
+            EmployeeAddress = $"Postcode: {item.PostCode}, City: {item.City}, Country: {item.Country}";
+            EmployeeAddressId = item.Id;
+        }
         public override void Save()
         {
             try
