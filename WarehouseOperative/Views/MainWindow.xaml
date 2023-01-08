@@ -14,7 +14,7 @@
         ResizeMode="CanResizeWithGrip"
         Title="WareHouse"
         Height="600"
-        Width="1000"
+        Width="1050"
         >
 
     <Window.Resources>
