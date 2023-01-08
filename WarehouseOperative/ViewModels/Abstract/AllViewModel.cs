@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using WarehouseOperative.Helpers;
 using WarehouseOperative.Models.DatabaseEntities;
@@ -18,7 +19,7 @@ namespace WarehouseOperative.ViewModels.Abstract
             }
         }
         //Load product command.
-        private BaseCommand _loadCommand;
+        private ICommand _loadCommand;
         public ICommand LoadCommand
         {
             get
@@ -29,6 +30,18 @@ namespace WarehouseOperative.ViewModels.Abstract
                     _loadCommand = new BaseCommand(() => Load());
                 }
                 return _loadCommand;
+            }
+        }
+        private ICommand _AddCommand;
+        public ICommand AddCommand
+        {
+            get
+            {
+                if (_AddCommand == null)
+                {
+                    _AddCommand = new BaseCommand(() => Add());
+                }
+                return _AddCommand;
             }
         }
         // All products here.
@@ -64,6 +77,10 @@ namespace WarehouseOperative.ViewModels.Abstract
         #region Helpers
         public abstract void Load();
 
+        public void Add()
+        {
+            Messenger.Default.Send("Show " + DisplayName);
+        }
         #endregion
     }
 }

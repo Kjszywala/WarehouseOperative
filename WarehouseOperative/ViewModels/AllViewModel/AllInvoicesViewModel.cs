@@ -2,7 +2,6 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
-using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.Models.EntitiesForView;
 using WarehouseOperative.ViewModels.Abstract;
 

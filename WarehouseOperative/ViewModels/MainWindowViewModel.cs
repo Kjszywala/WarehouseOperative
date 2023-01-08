@@ -184,7 +184,7 @@ namespace WarehouseOperative.ViewModels
                 new CommandViewModel("Add Employee", new BaseCommand(()=>addBookmarkCreateNew(new NewEmployeeViewModel())),"pack://application:,,,/Views/Content/Icons/leftaddemployee.png"),
                 new CommandViewModel("All Employees", new BaseCommand(()=>showAll<AllEmloyeesViewModel>()),"pack://application:,,,/Views/Content/Icons/leftaddemployees.png"),
                 new CommandViewModel("All Customers", new BaseCommand(()=>showAll<AllCustomersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallcustomers.png"),
-                new CommandViewModel("Add Order", new BaseCommand(()=>addBookmarkCreateNew(new NewOrderPositionViewModel())),"pack://application:,,,/Views/Content/Icons/leftaddemployee.png"),
+                new CommandViewModel("Add Order", new BaseCommand(()=>addBookmarkCreateNew(new NewOrderPositionViewModel())),"pack://application:,,,/Views/Content/Icons/addordericon.png"),
                 new CommandViewModel("All Orders", new BaseCommand(()=>showAll<AllOrdersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png")
             };
         }
@@ -292,7 +292,7 @@ namespace WarehouseOperative.ViewModels
                 @"Author: Kamil Szywala.This program was created for 
 Wyzsza Szkola Biznesu - National Luis University 
 in a purpose of end-semester project 
-from C# applications.");
+from C# applications.","Information");
         }
 
         /// <summary>
@@ -343,37 +343,53 @@ from C# applications.");
 
         private void Open(string name)
         {
-            if (name == "Add Supplier")
+            switch (name)
             {
-                addBookmarkCreateNew(new NewSupplierAddressesViewModel());
-            }
-            else if (name == "Add Product")
-            {
-                addBookmarkCreateNew(new NewProductsLogViewModel());
-            }
-            else if (name == "Add Employee")
-            {
-                addBookmarkCreateNew(new NewEmployeeAddressesViewModel());
-            }
-            else if (name == "Add EmployeeAnnualLeaves")
-            {
-                addBookmarkCreateNew(new NewEmployeeAnnualLeavesViewModel());
-            }
-            else if (name == "Add Customers")
-            {
-                addBookmarkCreateNew(new NewCustomerAddressesViewModel());
-            }
-            else if (name == "Add Orders")
-            {
-                addBookmarkCreateNew(new NewCustomerViewModel());
-            }
-            else if (name == "Add OrderPositions")
-            {
-                addBookmarkCreateNew(new NewOrderViewModel());
-            }
-            else if (name == "Add Invoices")
-            {
-                addBookmarkCreateNew(new NewOrderPositionViewModel());
+                case "Add Supplier":
+                    addBookmarkCreateNew(new NewSupplierAddressesViewModel());
+                    break;
+                case "Add Product":
+                    addBookmarkCreateNew(new NewProductsLogViewModel());
+                    break;
+                case "Add Employee":
+                    addBookmarkCreateNew(new NewEmployeeAddressesViewModel());
+                    break;
+                case "Add EmployeeAnnualLeaves":
+                    addBookmarkCreateNew(new NewEmployeeAnnualLeavesViewModel());
+                    break;
+                case "Add Customers":
+                    addBookmarkCreateNew(new NewCustomerAddressesViewModel());
+                    break;
+                case "Add Orders":
+                    addBookmarkCreateNew(new NewCustomerViewModel());
+                    break;
+                case "Add OrderPositions":
+                    addBookmarkCreateNew(new NewOrderViewModel());
+                    break;
+                case "Add Invoices":
+                    addBookmarkCreateNew(new NewOrderPositionViewModel());
+                    break;
+                case "Show Products":
+                    addBookmarkCreateNew(new NewProductViewmodel());
+                    break;
+                case "Show All Invoices":
+                    addBookmarkCreateNew(new NewInvoiceViewModel());
+                    break;
+                case "Show Customers":
+                    addBookmarkCreateNew(new NewCustomerViewModel());
+                    break;
+                case "Show All Employes":
+                    addBookmarkCreateNew(new NewEmployeeViewModel());
+                    break;
+                case "Show All Orders":
+                    addBookmarkCreateNew(new NewOrderViewModel());
+                    break;
+                case "Show Shippers":
+                    addBookmarkCreateNew(new NewShipperViewModel());
+                    break;
+                case "Show Suppliers":
+                    addBookmarkCreateNew(new NewSupplierViewModel());
+                    break;
             }
         }
 

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="Models\DatabaseEntities\DatabaseEntities.edmx" />
+    <None Remove="Views\Content\Icons\addordericon.png" />
     <None Remove="Views\Content\Icons\addshipper.png" />
     <None Remove="Views\Content\Icons\addsupplier.png" />
     <None Remove="Views\Content\Icons\boxes.png" />
@@ -64,6 +65,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Views\Content\Icons\addordericon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Views\Content\Icons\addshipper.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
