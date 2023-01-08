@@ -177,7 +177,6 @@ namespace WarehouseOperative.ViewModels
             Messenger.Default.Register<string>(this, Open);
             return new List<CommandViewModel>
             {
-                // Creat buttons
                 new CommandViewModel("Add Product", new BaseCommand(()=>addBookmarkCreateNew(new NewProductViewmodel())),"pack://application:,,,/Views/Content/Icons/leftaddproduct.png"),
                 new CommandViewModel("All Products", new BaseCommand(()=>showAll<AllProductsViewModel>()),"pack://application:,,,/Views/Content/Icons/leftproducts.png"),
                 new CommandViewModel("Add Invoice", new BaseCommand(()=>addBookmarkCreateNew(new NewInvoiceViewModel())),"pack://application:,,,/Views/Content/Icons/leftaddinvoice.png"),
@@ -371,6 +370,10 @@ from C# applications.");
             else if (name == "Add OrderPositions")
             {
                 addBookmarkCreateNew(new NewOrderViewModel());
+            }
+            else if (name == "Add Invoices")
+            {
+                addBookmarkCreateNew(new NewOrderPositionViewModel());
             }
         }
 
