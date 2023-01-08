@@ -29,7 +29,7 @@
                             >
                             <ToggleButton Width="auto" Height="auto" Background="Transparent" Margin="2" Command="{Binding AddCommand}" Cursor="Hand">
                                 <StackPanel>
-                                    <Image Height="40" Width="auto" Source="pack://application:,,,/Views/Content/Icons/saveandclose.png" Stretch="Fill"/>
+                                    <Image Height="40" Width="auto" Source="pack://application:,,,/Views/Content/Icons/addforall.png" Stretch="Fill"/>
                                 </StackPanel>
                             </ToggleButton>
                             <ToggleButton Width="auto" Height="auto" Background="Transparent" Margin="2" Command="{Binding Path=NewProductCommand}" Cursor="Hand">
