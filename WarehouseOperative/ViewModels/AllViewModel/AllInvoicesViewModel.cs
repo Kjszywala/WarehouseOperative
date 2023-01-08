@@ -3,11 +3,12 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using WarehouseOperative.Models.DatabaseEntities;
+using WarehouseOperative.Models.EntitiesForView;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.AllViewModel
 {
-    public class AllInvoicesViewModel : AllViewModel<Invoices>
+    public class AllInvoicesViewModel : AllViewModel<InvoicesForAllView>
     {
         #region Konstruktor
         public AllInvoicesViewModel()
@@ -21,10 +22,19 @@ namespace WarehouseOperative.ViewModels.AllViewModel
         {
             try
             {
-                List = new ObservableCollection<Invoices>(
+                List = new ObservableCollection<InvoicesForAllView>(
                         from invoices in WarehouseEntities.Invoices
                         where invoices.IsActive == true
-                        select invoices
+                        select new InvoicesForAllView()
+                        {
+                            InvoiceId = invoices.Id,
+                            CreationDate = invoices.CreationDate,
+                            ModificationDate = invoices.ModificationDate,
+                            InvoiceNumber = invoices.InvoiceNumber,
+                            OrderId = invoices.Orders.Id,
+                            PaymentMethod = invoices.PaymentMethods.Title,
+                            IsConfirmed = invoices.IsConfirmed
+                        }
                     );
             }
             catch (Exception e)

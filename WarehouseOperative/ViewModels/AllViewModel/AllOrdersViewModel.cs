@@ -26,14 +26,14 @@ namespace WarehouseOperative.ViewModels.AllViewModel
                     where orders.IsActive == true
                     select new OrdersForAllView
                     {
-                        OrderId = orders.Id,
+                        OrderId = orders.Orders.Id,
                         CustomersCustomerName = orders.Orders.Customers.CompanyName,
                         ProductsProductName = orders.Products.ProductName,
                         OrderQuantity = orders.Quantity,
                         ProductsUnitPrice = orders.Price,
                         CreationDate = orders.Orders.CreationDate,
                         ShipperName = orders.Orders.Shippers.CompanyName,
-                        EmployeeName = orders.Orders.Employees.LastName ,
+                        EmployeeName = orders.Orders.Employees.LastName,
                         PricePaid = orders.Orders.PricePaid
                     }
                 );

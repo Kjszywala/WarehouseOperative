@@ -16,14 +16,13 @@
         
         <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding List}" AutoGenerateColumns="False" Margin="10" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Invoice Id" Width="60" Binding="{Binding Path=Invoice_Id}"/>
-                <DataGridTextColumn Header="Invoice Number" Width="90" Binding="{Binding Path=Invoicenumber}"/>
-                <DataGridTextColumn Header="Invoice Date" Width="80" Binding="{Binding Path=InvoiceDate}"/>
-                <DataGridTextColumn Header="Order Id" Width="60" Binding="{Binding Path=OrderId}"/>
-                <DataGridTextColumn Header="Payment Method Id" Width="120" Binding="{Binding Path=PaymentMethodId}"/>
-                <DataGridTextColumn Header="Is Confirmed" Width="80" Binding="{Binding Path=IsConfirmed}"/>
-                <DataGridTextColumn Header="Product Id" Width="90" Binding="{Binding Path=ProductId}"/>
-                <DataGridTextColumn Header="Last Changed Data Time" Width="*" Binding="{Binding Path=LastChangedDataTime}"/>
+                <DataGridTextColumn Header="Invoice Id" Width="*" Binding="{Binding Path=InvoiceId}"/>
+                <DataGridTextColumn Header="Creation Date" Width="*" Binding="{Binding Path=CreationDate}"/>
+                <DataGridTextColumn Header="Modification Date" Width="*" Binding="{Binding Path=ModificationDate}"/>
+                <DataGridTextColumn Header="Invoice Number" Width="*" Binding="{Binding Path=InvoiceNumber}"/>
+                <DataGridTextColumn Header="Order Id" Width="*" Binding="{Binding Path=OrderId}"/>
+                <DataGridTextColumn Header="Payment Method" Width="*" Binding="{Binding Path=PaymentMethod}"/>
+                <DataGridTextColumn Header="Is Confirmed" Width="*" Binding="{Binding Path=IsConfirmed}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
