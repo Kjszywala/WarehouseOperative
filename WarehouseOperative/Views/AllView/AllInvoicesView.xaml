@@ -17,6 +17,7 @@
         <DataGrid Grid.Row="0" Name="DG2" ItemsSource="{Binding List}" AutoGenerateColumns="False" Margin="10" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Invoice Id" Width="*" Binding="{Binding Path=InvoiceId}"/>
+                <DataGridTextColumn Width="*" Header="Title" Binding="{Binding Path=Title}"/>
                 <DataGridTextColumn Header="Creation Date" Width="*" Binding="{Binding Path=CreationDate}"/>
                 <DataGridTextColumn Header="Modification Date" Width="*" Binding="{Binding Path=ModificationDate}"/>
                 <DataGridTextColumn Header="Invoice Number" Width="*" Binding="{Binding Path=InvoiceNumber}"/>

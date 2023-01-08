@@ -5,6 +5,7 @@ namespace WarehouseOperative.Models.EntitiesForView
     public class InvoicesForAllView
     {
         public int InvoiceId { get; set; }
+        public string Title { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime ModificationDate { get; set; }
         public string InvoiceNumber { get; set; }

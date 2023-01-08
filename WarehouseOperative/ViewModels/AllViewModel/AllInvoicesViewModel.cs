@@ -28,6 +28,7 @@ namespace WarehouseOperative.ViewModels.AllViewModel
                         select new InvoicesForAllView()
                         {
                             InvoiceId = invoices.Id,
+                            Title = invoices.Title,
                             CreationDate = invoices.CreationDate,
                             ModificationDate = invoices.ModificationDate,
                             InvoiceNumber = invoices.InvoiceNumber,

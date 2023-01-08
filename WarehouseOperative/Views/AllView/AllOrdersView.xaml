@@ -15,7 +15,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
         </Grid>
-        <DataGrid Margin="10" Grid.Row="0" Name="DG3" ItemsSource="{Binding List}" AutoGenerateColumns="False">
+        <DataGrid Margin="10" Grid.Row="0" Name="DG3" ItemsSource="{Binding List}" SelectedItem="{Binding ChoosenOrder}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*" Header="Order Id" Binding="{Binding Path=OrderId}"/>
                 <DataGridTextColumn Width="*" Header="Customer Name" Binding="{Binding Path=CustomersCustomerName}"/>

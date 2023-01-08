@@ -1,11 +1,16 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows;
+using System.Windows.Input;
+using WarehouseOperative.Helpers;
 using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.Models.EntitiesForView;
 using WarehouseOperative.ViewModels.Abstract;
+using WarehouseOperative.ViewModels.AllViewModel;
+using WarehouseOperative.Views.AllView;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
@@ -13,6 +18,7 @@ namespace WarehouseOperative.ViewModels.NewViewModel
     {
         #region Properties
 
+        Window window = new Window();
         public string Title
         {
             get
@@ -89,7 +95,25 @@ namespace WarehouseOperative.ViewModels.NewViewModel
             }
         }
         public List<ComboBoxKeyAndValue> PaymentMethodsList { get; set; }
-        public string OrderDetails { get; set; }
+
+        private string _OrderDetails;
+        public string OrderDetails
+        {
+            get
+            {
+                return _OrderDetails;
+            }
+            set
+            {
+                if (value != _OrderDetails)
+                {
+                    _OrderDetails = value;
+                    OnPropertyChanged(() => OrderDetails);
+                    window.Close();
+                }
+            }
+        }
+
 
         #endregion
 
@@ -109,17 +133,47 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 Key = item.Id,
                 Value = item.Title
             }).ToList();
-            Messenger.Default.Register<Orders>(this, GetInvoice);
+            Messenger.Default.Register<OrdersForAllView>(this, GetOrder);
         }
+        #endregion
+
+        #region Commands
+
+        private ICommand _ChooseOrderCommand;
+        public ICommand ChooseOrderCommand
+        {
+            get
+            {
+                if (_ChooseOrderCommand == null)
+                {
+                    _ChooseOrderCommand = new BaseCommand(() => ChooseOrder());
+                }
+                return _ChooseOrderCommand;
+            }
+        }
+
         #endregion
 
         #region Methods
 
-        private void GetInvoice(Orders item)
+        private void GetOrder(OrdersForAllView item)
         {
-            OrderDetails = $"Order Id: {item.Id}, Creation Date: {item.AddDate}, Price Paid: {item.PricePaid}";
-            OrderId = item.Id;
+            OrderDetails = $"Order Id: {item.OrderId}, Creation Date: {item.CreationDate}, Price Paid: {item.PricePaid}";
+            OrderId = item.OrderId;
         }
+
+        private void ChooseOrder()
+        {
+            
+            AllOrdersView allOrdersView = new AllOrdersView();
+            allOrdersView.DataContext = new AllOrdersViewModel();
+            window.Content = allOrdersView;
+            window.Background = System.Windows.Media.Brushes.DimGray;
+            window.Width = 1000;
+            window.Height = 500;
+            window.Show();
+        }
+
         public override void Save()
         {
             try
