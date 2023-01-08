@@ -52,11 +52,11 @@
                             
                             <Label Width="120" Height="30" Content="Sort" Margin="10,0,0,0"/>
                             <ComboBox Width="120" Margin="-85,0,0,0" Height="30" ItemsSource="{Binding SortComboBoxItems}" SelectedValue="{Binding SortField}"/>
-                            <CheckBox Content="Sort Descending" Foreground="White" IsChecked="{Binding OrderDescending}" Margin="15,0,0,0"/>
+                            <CheckBox Content="Sort Descending" Foreground="White" IsChecked="{Binding SortDescending}" Margin="15,0,0,0"/>
                             <Button Width="60" Height="30" Content="Sort" Command="{Binding SortCommand}" Margin="15,0,0,0"/>
                             <Label Width="120" Height="30" Content="Search" Margin="100,0,0,0"/>
                             <ComboBox Width="120" Height="30" ItemsSource="{Binding SearchComboBoxItems}" SelectedValue="{Binding SearchField}" Margin="-70,0,0,0"/>
-                            <TextBox Width="120" Height="20" Text="{Binding SearchText}" Margin="15,0,0,0"/>
+                            <TextBox Width="120" Height="30" Text="{Binding SearchText}" Margin="15,0,0,0"/>
                             <Button Width="60" Height="30" Content="Search" Command="{Binding SearchCommand}" Margin="15,0,0,0"/>
                         </StackPanel>
                         <ScrollViewer  

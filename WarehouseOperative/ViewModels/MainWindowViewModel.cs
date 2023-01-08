@@ -11,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Input;
 using WarehouseOperative.Helpers;
 using WarehouseOperative.ViewModels.AllViewModel;
+using WarehouseOperative.ViewModels.BuisnessLogicViewModel;
 using WarehouseOperative.ViewModels.NewViewModel;
 
 namespace WarehouseOperative.ViewModels
@@ -185,7 +186,8 @@ namespace WarehouseOperative.ViewModels
                 new CommandViewModel("All Employees", new BaseCommand(()=>showAll<AllEmloyeesViewModel>()),"pack://application:,,,/Views/Content/Icons/leftaddemployees.png"),
                 new CommandViewModel("All Customers", new BaseCommand(()=>showAll<AllCustomersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallcustomers.png"),
                 new CommandViewModel("Add Order", new BaseCommand(()=>addBookmarkCreateNew(new NewOrderPositionViewModel())),"pack://application:,,,/Views/Content/Icons/addordericon.png"),
-                new CommandViewModel("All Orders", new BaseCommand(()=>showAll<AllOrdersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png")
+                new CommandViewModel("All Orders", new BaseCommand(()=>showAll<AllOrdersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png"),
+                new CommandViewModel("Profit Report", new BaseCommand(()=>showAll<OrdersReportViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png")
             };
         }
         #endregion
