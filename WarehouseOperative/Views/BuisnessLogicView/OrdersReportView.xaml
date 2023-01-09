@@ -42,6 +42,48 @@
             <Label Grid.Column="1" Grid.Row="4" HorizontalContentAlignment="Right" Content="GBP" VerticalContentAlignment="Center"/>
             <Label Grid.Column="1" Grid.Row="4" HorizontalContentAlignment="Center" Content="{Binding Profit}" VerticalContentAlignment="Center"/>
         </Grid>
-
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalContentAlignment="Center" Content="Items Sold From-To"/>
+            <Label Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" Content="Data From" Grid.RowSpan="2"/>
+            <Label Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center" Content="Data To" Grid.RowSpan="2"/>
+            <DatePicker Grid.Row="2" Margin="10,0,10,0" SelectedDate="{Binding DateFrom, UpdateSourceTrigger=PropertyChanged}"/>
+            <DatePicker Grid.Column="1" Grid.Row="2" Margin="10,0,10,0" SelectedDate="{Binding DateTo, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Grid.ColumnSpan="2" Grid.Row="3" Content="Check Date" Margin="100,10,100,10" Command="{Binding MostItemsSoldDateCommand}"/>
+            <Label Grid.Column="0" Grid.Row="4" HorizontalContentAlignment="Center" Content="Date When Sold The Most:" VerticalContentAlignment="Center"/>
+            <Label Grid.Column="1" Grid.Row="4" HorizontalContentAlignment="Center" Content="{Binding ItemsSoldDate}" VerticalContentAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="200,0,200,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalContentAlignment="Center" Content="Items Sold From-To"/>
+            <Label Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" Content="Data From" Grid.RowSpan="2"/>
+            <Label Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center" Content="Data To" Grid.RowSpan="2"/>
+            <DatePicker Grid.Row="2" Margin="10,0,10,0" SelectedDate="{Binding DateFrom, UpdateSourceTrigger=PropertyChanged}"/>
+            <DatePicker Grid.Column="1" Grid.Row="2" Margin="10,0,10,0" SelectedDate="{Binding DateTo, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Grid.ColumnSpan="2" Grid.Row="3" Content="Check Items" Margin="100,10,100,10" Command="{Binding MostItemsSoldCommand}"/>
+            <Label Grid.Column="0" Grid.Row="4" HorizontalContentAlignment="Center" Content="Items Sold For choosen Dates:" VerticalContentAlignment="Center"/>
+            <Label Grid.Column="1" Grid.Row="4" HorizontalContentAlignment="Right" Content="{Binding Type}" VerticalContentAlignment="Center"/>
+            <Label Grid.Column="1" Grid.Row="4" HorizontalContentAlignment="Center" Content="{Binding Items}" VerticalContentAlignment="Center"/>
+        </Grid>
     </Grid>
 </UserControl>

@@ -57,7 +57,54 @@ namespace WarehouseOperative.ViewModels.BuisnessLogicViewModel
                 }
             }
         }
-
+        private string _Type;
+        public string Type
+        {
+            get
+            {
+                return _Type;
+            }
+            set
+            {
+                if (value != _Type)
+                {
+                    _Type = value;
+                    OnPropertyChanged(() => Type);
+                }
+            }
+        }
+        private decimal _Items;
+        public decimal Items
+        {
+            get
+            {
+                return _Items;
+            }
+            set
+            {
+                if (value != _Items)
+                {
+                    _Items = value;
+                    OnPropertyChanged(() => Items);
+                }
+            }
+        }
+        private DateTime _ItemsSoldDate;
+        public DateTime ItemsSoldDate
+        {
+            get
+            {
+                return _ItemsSoldDate;
+            }
+            set
+            {
+                if (_ItemsSoldDate != value)
+                {
+                    _ItemsSoldDate = value;
+                    OnPropertyChanged(() => ItemsSoldDate);
+                }
+            }
+        }
         #endregion
 
         #region Commands
@@ -74,7 +121,31 @@ namespace WarehouseOperative.ViewModels.BuisnessLogicViewModel
                 return _OrderProfitCommand;
             }
         }
+        private ICommand _MostItemsSoldDateCommand;
+        public ICommand MostItemsSoldDateCommand
+        {
+            get
+            {
+                if (_MostItemsSoldDateCommand == null)
+                {
+                    _MostItemsSoldDateCommand = new BaseCommand(() => MostItemsSoldDateC());
+                }
+                return _MostItemsSoldDateCommand;
+            }
+        }
 
+        private ICommand _MostItemsSoldCommand;
+        public ICommand MostItemsSoldCommand
+        {
+            get
+            {
+                if (_MostItemsSoldCommand == null)
+                {
+                    _MostItemsSoldCommand = new BaseCommand(() => ItemsSold());
+                }
+                return _MostItemsSoldCommand;
+            }
+        }
         #endregion
 
         #region Constructor
@@ -85,6 +156,7 @@ namespace WarehouseOperative.ViewModels.BuisnessLogicViewModel
             OrderB = new OrdersB(db);
             DateFrom = DateTime.Now;
             DateTo = DateTime.Now;
+            Type = "Szt";
         }
         #endregion
 
@@ -95,6 +167,15 @@ namespace WarehouseOperative.ViewModels.BuisnessLogicViewModel
             Profit = OrderB.Profit();
         }
 
+        private void MostItemsSoldDateC()
+        {
+            ItemsSoldDate = OrderB.MostItemsSold();
+        }
+
+        private void ItemsSold()
+        {
+            Items = OrderB.ItemsSold();
+        }
         #endregion
     }
 }
