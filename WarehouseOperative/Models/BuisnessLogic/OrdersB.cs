@@ -25,12 +25,19 @@ namespace WarehouseOperative.Models.BuisnessLogic
 
         public decimal Profit()
         {
-            var profit = Db.Orders.Where(item => 
-                item.CreationDate >= DateFrom && 
-                item.CreationDate <= DateTo)
-                .Sum(item => (item.PricePaid));
+            try
+            {
+                var profit = Db.Orders.Where(item =>
+                    item.CreationDate >= DateFrom &&
+                    item.CreationDate <= DateTo)
+                    .Sum(item => (item.PricePaid));
 
-            return profit;
+                return profit;
+            }
+            catch(Exception e)
+            {
+                return 0;
+            }
         }
 
         #endregion

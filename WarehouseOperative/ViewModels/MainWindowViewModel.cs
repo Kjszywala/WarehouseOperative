@@ -107,7 +107,6 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(() => showAll<ErrorLogViewModel>());
             }
         }
-        
         public ICommand AllProductsCommand
         {
             get
@@ -115,7 +114,6 @@ namespace WarehouseOperative.ViewModels
                 return new BaseCommand(() => showAll<AllProductsViewModel>());
             }
         }
-      
         public ICommand GetSuppliers
         {
             get
@@ -395,7 +393,6 @@ from C# applications.","Information");
             }
         }
 
-        // this is the standard method for adding setting bookmark active
         private void setActiveWorkspace(WorkspaceViewModel workspace) 
         {
             Debug.Assert(this.Workspaces.Contains(workspace));
