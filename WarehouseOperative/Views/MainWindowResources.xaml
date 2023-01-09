@@ -13,6 +13,9 @@
     <DataTemplate DataType="{x:Type vm:OrdersReportViewModel}">
         <vw:OrdersReportView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:ProductBViewModel}">
+        <vw:ProductBView/>
+    </DataTemplate>
     <DataTemplate DataType="{x:Type vmm:AllProductsViewModel}">
         <vww:AllProductsView/>
     </DataTemplate>

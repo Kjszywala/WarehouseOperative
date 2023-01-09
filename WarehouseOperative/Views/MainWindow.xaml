@@ -13,7 +13,7 @@
         Background="Transparent"
         ResizeMode="CanResizeWithGrip"
         Title="WareHouse"
-        Height="600"
+        Height="700"
         Width="1050"
         >
 

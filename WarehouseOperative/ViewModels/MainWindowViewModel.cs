@@ -185,7 +185,8 @@ namespace WarehouseOperative.ViewModels
                 new CommandViewModel("All Customers", new BaseCommand(()=>showAll<AllCustomersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallcustomers.png"),
                 new CommandViewModel("Add Order", new BaseCommand(()=>addBookmarkCreateNew(new NewOrderPositionViewModel())),"pack://application:,,,/Views/Content/Icons/addordericon.png"),
                 new CommandViewModel("All Orders", new BaseCommand(()=>showAll<AllOrdersViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png"),
-                new CommandViewModel("Profit Report", new BaseCommand(()=>showAll<OrdersReportViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png")
+                new CommandViewModel("Profit Report", new BaseCommand(()=>showAll<OrdersReportViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png"),
+                new CommandViewModel("Product Report", new BaseCommand(()=>showAll<ProductBViewModel>()),"pack://application:,,,/Views/Content/Icons/leftallorders.png")
             };
         }
         #endregion
