@@ -76,10 +76,12 @@
                 </ToggleButton>
                 <Menu Grid.Row="0" Grid.Column="1" Margin="3" Foreground="White" Background="Transparent" VerticalAlignment="Center">
                     <MenuItem Header="File" Style="{StaticResource TopLevelHeaderStyle}">
-                        <MenuItem Header="New Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
-                        <MenuItem Header="New Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
                         <MenuItem Header="Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
                         <MenuItem Header="Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                        <MenuItem Header="Customer" Command="{Binding Path=AddCustomerCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                        <MenuItem Header="Employee" Command="{Binding Path=AddEmployee}" />
+                        <MenuItem Header="Supplier" Command="{Binding Path=AddSupplierCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                        <MenuItem Header="Shipper" Command="{Binding Path=AddShipperCommand}" />
                         <Separator/>
                         <MenuItem Header="Save"/>
                         <MenuItem Header="Load"/>
@@ -88,17 +90,15 @@
                     </MenuItem>
 
                     <MenuItem Header="Edit" Style="{StaticResource TopLevelHeaderStyle}">
-                        <MenuItem Header="Go to all"/>
-                        <MenuItem Header="Go to file"/>
-                        <MenuItem Header="Go to recent file"/>
-                        <MenuItem Header="Go to type"/>
-                        <MenuItem Header="Go to file"/>
+                        <MenuItem Header="Invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                        <MenuItem Header="Products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                        <MenuItem Header="Customers" Command="{Binding Path=AllCustomersCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                        <MenuItem Header="Employees" Command="{Binding Path=GetEmployees}" />
+                        <MenuItem Header="Suppliers" Command="{Binding Path=GetSuppliers}" InputGestureText="Alt+O, Ctrl+A"/>
+                        <MenuItem Header="Shippers" Command="{Binding Path=AllShippersCommand}" />
                         <Separator/>
-                        <MenuItem Header="Go to next"/>
-                        <MenuItem Header="Go to previous"/>
-
-                        <MenuItem Header="Find invoice"/>
-                        <MenuItem Header="Find product"/>
+                        <MenuItem Header="Find invoice" Command="{Binding Path=AllInvoicesCommand}"/>
+                        <MenuItem Header="Find product" Command="{Binding Path=AllProductsCommand}"/>
 
                         <Separator/>
                         <MenuItem Header="Cut"/>
@@ -109,18 +109,19 @@
                         <MenuItem Header="Delete"/>
                     </MenuItem>
                     <MenuItem Header="Store" Style="{StaticResource TopLevelHeaderStyle}">
-                        <MenuItem Header="Add invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
-                        <MenuItem Header="All invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+L, Ctrl+W"/>
-                        <MenuItem Header="Add product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
-                        <MenuItem Header="All products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+K, Ctrl+E"/>
-                        <MenuItem Header="Add to database" InputGestureText="Alt+I,  Ctrl+Q"/>
-                        <MenuItem Header="Search in database" InputGestureText="Alt+J,  Ctrl+R"/>
+                        <MenuItem Header="Add Invoice" Command="{Binding Path=NewInvoiceCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                        <MenuItem Header="All Invoices" Command="{Binding Path=AllInvoicesCommand}" InputGestureText="Alt+L, Ctrl+W"/>
+                        <MenuItem Header="Add Product" Command="{Binding Path=NewProductCommand}" InputGestureText="Alt+O, Ctrl+A"/>
+                        <MenuItem Header="All Products" Command="{Binding Path=AllProductsCommand}" InputGestureText="Alt+K, Ctrl+E"/>
+                        <MenuItem Header="Add Customer" Command="{Binding Path=AddCustomerCommand}" InputGestureText="Alt+P, Ctrl+T"/>
+                        <MenuItem Header="All Customers" Command="{Binding Path=AllCustomersCommand}" InputGestureText="Alt+L, Ctrl+W"/>
+                        <MenuItem Header="Add Employee" Command="{Binding Path=AddEmployee}" InputGestureText="Alt+O, Ctrl+A"/>
+                        <MenuItem Header="All Employees" Command="{Binding Path=GetEmployees}" InputGestureText="Alt+K, Ctrl+E"/>
                     </MenuItem>
 
-                    <MenuItem Header="Action" Style="{StaticResource TopLevelHeaderStyle}"/>
-                    <MenuItem Header="Tools" Style="{StaticResource TopLevelHeaderStyle}"/>
-                    <MenuItem Header="Setup" Style="{StaticResource TopLevelHeaderStyle}"/>
-                    <MenuItem Header="Help" Style="{StaticResource TopLevelHeaderStyle}"/>
+                    <MenuItem Header="Help" Style="{StaticResource TopLevelHeaderStyle}">
+                        <MenuItem Header="Info" Command="{Binding Path=InfoCommand}" InputGestureText="Alt+K, Ctrl+E"/>
+                    </MenuItem>
 
                 </Menu>
             </Grid>
