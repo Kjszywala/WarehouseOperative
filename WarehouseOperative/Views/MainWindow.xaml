@@ -293,12 +293,12 @@
                 </Border>
             </Grid>
             <StatusBar Grid.Row="3" Margin="3" Style="{StaticResource StatusBarStyle}">
-                <StatusBarItem>
-                    <TextBlock Margin="5,0,0,0" >WSB-NLU Kamil Szywala</TextBlock>
+                <StatusBarItem HorizontalAlignment="Center">
+                    <TextBlock>WSB-NLU Kamil Szywala</TextBlock>
                 </StatusBarItem>
-                <StatusBarItem HorizontalAlignment="Right" >
+                <!--<StatusBarItem HorizontalAlignment="Right" >
                     <ProgressBar Width="100" Height="15" Value="70" Margin="1,0,5,1"/>
-                </StatusBarItem>
+                </StatusBarItem>-->
             </StatusBar>
         </Grid>
     </Border>
