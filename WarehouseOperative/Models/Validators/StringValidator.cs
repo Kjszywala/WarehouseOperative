@@ -8,7 +8,7 @@ namespace WarehouseOperative.Models.Validators
 
         public static string EmailCheck(string value)
         {
-            if (string.IsNullOrWhiteSpace(value)) 
+            if (string.IsNullOrWhiteSpace(value))
             {
                 return string.Empty;
             }
@@ -16,7 +16,7 @@ namespace WarehouseOperative.Models.Validators
 
             if (trimmedEmail.EndsWith("."))
             {
-                return "Incorrect email address"; 
+                return "Incorrect email address";
             }
             try
             {
@@ -29,8 +29,21 @@ namespace WarehouseOperative.Models.Validators
             }
         }
 
-        public static string IsLenghtCorrect(string value, int length) => value.Length > length ? "Lenght is not correct!" : string.Empty;
-        
+        public static string IsLenghtCorrect(string value, int length)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                return "";
+            }
+            if (value.Length > length)
+            {
+                return "Lenght is not correct!";
+            }
+            else
+            {                
+                return string.Empty;
+            }
+        }
         #endregion
     }
 }

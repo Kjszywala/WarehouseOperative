@@ -123,6 +123,14 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Methods
+        protected override bool IsValid()
+        {
+            return this[nameof(HouseNumber)] == string.Empty
+                && this[nameof(StreetName)] == string.Empty
+                && this[nameof(PostCode)] == string.Empty
+                && this[nameof(City)] == string.Empty
+                && this[nameof(Country)] == string.Empty;
+        }
 
         public override void Save()
         {

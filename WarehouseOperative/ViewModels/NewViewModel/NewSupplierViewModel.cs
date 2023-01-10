@@ -122,6 +122,13 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Methods
+        protected override bool IsValid()
+        {
+            return this[nameof(CompanyName)] == string.Empty
+                && this[nameof(ContactName)] == string.Empty
+                && this[nameof(ContactTitle)] == string.Empty;
+        }
+
         private void GetSupplierAddress(SupplierAddresses address)
         {
             SupplierAddress = $"Choosen addrees: {address.StreetName}, {address.PostCode}, {address.City}";

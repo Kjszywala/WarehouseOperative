@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using WarehouseOperative.Models.DatabaseEntities;
@@ -158,7 +159,11 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Methods
-
+        protected override bool IsValid()
+        {
+            return this[nameof(PricePaid)] == string.Empty
+                && this[nameof(Discount)] == string.Empty;
+        }
         private void GetCustomer(Customers item)
         {
             CustomerDetails = $"Name: {item.FirstName} {item.SecondName}, Id: {item.Id}.";

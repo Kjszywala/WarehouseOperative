@@ -172,7 +172,11 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Methods
-
+        protected override bool IsValid()
+        {
+            return this[nameof(Title)] == string.Empty
+                && this[nameof(InvoiceNumber)] == string.Empty;
+        }
         private void GetOrder(OrdersForAllView item)
         {
             OrderDetails = $"Order Id: {item.OrderId}, Creation Date: {item.CreationDate}, Price Paid: {item.PricePaid}";

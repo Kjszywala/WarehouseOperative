@@ -263,6 +263,16 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Methods
+        protected override bool IsValid()
+        {
+            return this[nameof(Title)] == string.Empty
+                && this[nameof(Notes)] == string.Empty
+                && this[nameof(ProductName)] == string.Empty
+                && this[nameof(ProductCode)] == string.Empty
+                && this[nameof(ActualQuantity)] == string.Empty
+                && this[nameof(ActualPrice)] == string.Empty
+                && this[nameof(Discount)] == string.Empty;
+        }
         /// <summary>
         /// Get Product log description for given log.
         /// </summary>

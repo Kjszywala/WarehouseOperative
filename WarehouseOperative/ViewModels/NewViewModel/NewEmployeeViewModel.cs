@@ -182,6 +182,14 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Methods
+        protected override bool IsValid()
+        {
+            return this[nameof(Email)] == string.Empty
+                && this[nameof(FirstName)] == string.Empty
+                && this[nameof(LastName)] == string.Empty
+                && this[nameof(Phone)] == string.Empty
+                && this[nameof(JobTitle)] == string.Empty;
+        }
         private void GetEmployeeAddress(EmployeeAddresses item)
         {
             EmployeeAddress = $"Postcode: {item.PostCode}, City: {item.City}, Country: {item.Country}";

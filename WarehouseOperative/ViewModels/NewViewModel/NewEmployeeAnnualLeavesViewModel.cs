@@ -88,6 +88,10 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Methods
+        protected override bool IsValid()
+        {
+            return this[nameof(DaysLeft)] == string.Empty;
+        }
 
         public override void Save()
         {

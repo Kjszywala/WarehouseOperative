@@ -71,6 +71,12 @@ namespace WarehouseOperative.ViewModels.NewViewModel
 
         #region Methods
 
+        protected override bool IsValid()
+        {
+            return this[nameof(CompanyName)] == string.Empty 
+                && this[nameof(Phone)] == string.Empty;
+        }
+
         public override void Save()
         {
             try

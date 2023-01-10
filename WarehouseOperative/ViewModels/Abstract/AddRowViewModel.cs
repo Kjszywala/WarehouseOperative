@@ -91,12 +91,24 @@ namespace WarehouseOperative.ViewModels.Abstract
         /// </summary>
         private void saveAndClose()
         {
-            //Save product.
-            Save();
-            //Close bookmark.
-            base.OnRequestClose();
-            MessageBox.Show("Successfully saved to database.", "Confirmation");
+            if (IsValid())
+            {
+                //Save product.
+                Save();
+                //Close bookmark.
+                base.OnRequestClose();
+                MessageBox.Show("Successfully saved to database.", "Confirmation");
+            }
+            else
+            {
+                MessageBox.Show("Correct the fields!", "Error");
+            }
         }
+        protected virtual bool IsValid()
+        {
+            return true;
+        }
+
         #endregion
 
         #region Helpers

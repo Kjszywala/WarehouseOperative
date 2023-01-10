@@ -105,7 +105,13 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Methods
-       
+        protected override bool IsValid()
+        {
+            return this[nameof(ProductLogDescription)] == string.Empty
+                && this[nameof(OldPrice)] == string.Empty
+                && this[nameof(NewPrice)] == string.Empty;
+        }
+
         /// <summary>
         /// Save item to db.
         /// </summary>

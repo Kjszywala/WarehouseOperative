@@ -155,6 +155,17 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         #endregion
 
         #region Save
+        protected override bool IsValid()
+        {
+            return this[nameof(StreetName)] == string.Empty
+                && this[nameof(PostCode)] == string.Empty
+                && this[nameof(City)] == string.Empty
+                && this[nameof(Country)] == string.Empty
+                && this[nameof(Phone)] == string.Empty
+                && this[nameof(Fax)] == string.Empty
+                && this[nameof(HomePage)] == string.Empty;
+        }
+
         public override void Save()
         {
             try
