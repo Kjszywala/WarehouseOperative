@@ -35,10 +35,10 @@
         <Label Content="Phone Number: " Margin="10,10,10,10" Grid.Row="3"/>
         <Label Content="Customer Address: " Margin="10,10,10,10" Grid.Row="6"/>
         <Label Content="{Binding CustomerAddress}" Margin="118,10,10,10" Grid.Row="6"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="0" Text="{Binding Path=CompanyName, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="1" Text="{Binding Path=FirstName, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=SecondName, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="3" Text="{Binding Path=PhoneNumber, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="0" Text="{Binding Path=CompanyName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="1" Text="{Binding Path=FirstName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=SecondName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="3" Text="{Binding Path=PhoneNumber, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
         <Button Grid.Column="1" Grid.Row="6" Margin="10" Content="Add Address" Command="{Binding AddCommand}"/>
     </Grid>
 </local:AddRowViewBase>

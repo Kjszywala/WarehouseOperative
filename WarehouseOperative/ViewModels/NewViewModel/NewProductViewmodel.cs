@@ -6,10 +6,12 @@ using System.Collections.Generic;
 using System.Linq;
 using GalaSoft.MvvmLight.Messaging;
 using WarehouseOperative.Models.EntitiesForView;
+using System.ComponentModel;
+using WarehouseOperative.Models.Validators;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewProductViewmodel : AddRowViewModel<Products>
+    public class NewProductViewmodel : AddRowViewModel<Products>, IDataErrorInfo
     {
         #region Properties
         public string Title
@@ -196,6 +198,32 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 {
                     _ProductsLogDescription = value;
                     OnPropertyChanged(() => _ProductsLogDescription);
+                }
+            }
+        }
+        public string Error => string.Empty;
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case nameof(Title):
+                        return StringValidator.IsLenghtCorrect(Title, 255);
+                    case nameof(Notes):
+                        return StringValidator.IsLenghtCorrect(Notes, 255);
+                    case nameof(ProductName):
+                        return StringValidator.IsLenghtCorrect(ProductName, 255);
+                    case nameof(ProductCode):
+                        return StringValidator.IsLenghtCorrect(ProductCode, 255);
+                    case nameof(ActualQuantity):
+                        return DecimalValidator.IsNotNegative(ActualQuantity);
+                    case nameof(ActualPrice):
+                        return DecimalValidator.IsNotNegative(ActualPrice);
+                    case nameof(Discount):
+                        return DecimalValidator.IsNotNegative(Discount);
+                    default:
+                        return string.Empty;
                 }
             }
         }

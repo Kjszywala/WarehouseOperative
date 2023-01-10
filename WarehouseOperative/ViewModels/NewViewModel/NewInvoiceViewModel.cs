@@ -9,13 +9,14 @@ using System.Windows.Input;
 using WarehouseOperative.Helpers;
 using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.Models.EntitiesForView;
+using WarehouseOperative.Models.Validators;
 using WarehouseOperative.ViewModels.Abstract;
 using WarehouseOperative.ViewModels.AllViewModel;
 using WarehouseOperative.Views.AllView;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewInvoiceViewModel : AddRowViewModel<Invoices>
+    public class NewInvoiceViewModel : AddRowViewModel<Invoices>, IDataErrorInfo
     {
         #region Properties
 
@@ -114,7 +115,22 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 }
             }
         }
-
+        public string Error => string.Empty;
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case nameof(Title):
+                        return StringValidator.IsLenghtCorrect(Title, 255);
+                    case nameof(InvoiceNumber):
+                        return StringValidator.IsLenghtCorrect(InvoiceNumber, 50);
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
 
         #endregion
 

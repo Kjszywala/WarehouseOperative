@@ -124,6 +124,8 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                         return DecimalValidator.IsNotNegative(Price);
                     case nameof(Quantity):
                         return DecimalValidator.IsNotNegative(Quantity);
+                    case nameof(Title):
+                        return StringValidator.IsLenghtCorrect(Title, 255);
                     default:
                         return string.Empty;
                 }

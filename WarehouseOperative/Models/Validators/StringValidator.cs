@@ -29,7 +29,7 @@ namespace WarehouseOperative.Models.Validators
             }
         }
 
-        public static string IsLenghtCorrect(string value) => value.Length > 255 ? "Lenght is not correct!" : string.Empty;
+        public static string IsLenghtCorrect(string value, int length) => value.Length > length ? "Lenght is not correct!" : string.Empty;
         
         #endregion
     }

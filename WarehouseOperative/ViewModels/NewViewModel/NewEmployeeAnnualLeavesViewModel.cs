@@ -1,12 +1,14 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using System;
+using System.ComponentModel;
 using System.Windows;
 using WarehouseOperative.Models.DatabaseEntities;
+using WarehouseOperative.Models.Validators;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewEmployeeAnnualLeavesViewModel : AddRowViewModel<EmployeeAnnualLeaves>
+    public class NewEmployeeAnnualLeavesViewModel : AddRowViewModel<EmployeeAnnualLeaves>, IDataErrorInfo
     {
         #region properties
 
@@ -55,7 +57,20 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 }
             }
         }
-
+        public string Error => string.Empty;
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case nameof(DaysLeft):
+                        return IntValidator.IsNegative(DaysLeft);
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
         #endregion
 
         #region Constructor

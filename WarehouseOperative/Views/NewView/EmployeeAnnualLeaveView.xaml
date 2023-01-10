@@ -27,8 +27,8 @@
         <Label Content="Start Date: " Margin="10,10,10,10" Grid.Row="0"/>
         <Label Content="End Date: " Margin="10,10,10,10" Grid.Row="1"/>
         <Label Content="Dayes Left: " Margin="10,10,10,10" Grid.Row="2"/>
-        <DatePicker Margin="150,10,107,10" Grid.Row="0" SelectedDate="{Binding StartDate, UpdateSourceTrigger=PropertyChanged}"/>
-        <DatePicker Margin="150,10,107,10" Grid.Row="1" SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=DaysLeft, UpdateSourceTrigger=PropertyChanged}"/>
+        <DatePicker Margin="150,10,107,10" Grid.Row="0" SelectedDate="{Binding StartDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <DatePicker Margin="150,10,107,10" Grid.Row="1" SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=DaysLeft, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
     </Grid>
 </local:AddRowViewBase>

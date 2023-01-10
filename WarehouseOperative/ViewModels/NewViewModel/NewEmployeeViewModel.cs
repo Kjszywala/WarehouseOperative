@@ -167,7 +167,13 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                     case nameof(Email):
                         return StringValidator.EmailCheck(Email);
                     case nameof(FirstName):
-                        return StringValidator.IsLenghtCorrect(FirstName);
+                        return StringValidator.IsLenghtCorrect(FirstName, 255);
+                    case nameof(LastName):
+                        return StringValidator.IsLenghtCorrect(LastName, 255);
+                    case nameof(Phone):
+                        return StringValidator.IsLenghtCorrect(Phone, 50);
+                    case nameof(JobTitle):
+                        return StringValidator.IsLenghtCorrect(JobTitle, 40);
                     default:
                         return string.Empty;
                 }

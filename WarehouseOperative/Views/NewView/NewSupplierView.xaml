@@ -29,9 +29,9 @@
         <Label Content="Contact Name: " Margin="10,10,10,10" Grid.Row="1"/>
         <Label Content="Contact Title: " Margin="10,10,10,10" Grid.Row="2"/>
         <Label Content="{Binding SupplierAddress}" Margin="10,10,10,10" Grid.Row="3"/>
-        <TextBox Margin="120,10,107,10" Grid.Row="0" Text="{Binding Path=CompanyName, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="120,10,107,10" Grid.Row="1" Text="{Binding Path=ContactName, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="120,10,107,10" Grid.Row="2" Text="{Binding Path=ContactTitle, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Margin="120,10,107,10" Grid.Row="0" Text="{Binding Path=CompanyName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="120,10,107,10" Grid.Row="1" Text="{Binding Path=ContactName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="120,10,107,10" Grid.Row="2" Text="{Binding Path=ContactTitle, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
         <Button Grid.Row="3" Grid.Column="1" Content="Add Address" Margin="30,10,30,15" Command="{Binding AddCommand}"/>
     </Grid>
 </local:AddRowViewBase>

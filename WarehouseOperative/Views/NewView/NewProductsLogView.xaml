@@ -25,9 +25,9 @@
         <Label Content="Log Description: " Margin="10,10,10,10" Grid.Row="1"/>
         <Label Content="Old Price: " Margin="10,10,10,10" Grid.Row="2"/>
         <Label Content="New Price: " Margin="10,10,10,10" Grid.Row="3"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="1" Text="{Binding Path=ProductLogDescription, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=OldPrice, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="3" Text="{Binding Path=NewPrice, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="1" Text="{Binding Path=ProductLogDescription, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=OldPrice, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="3" Text="{Binding Path=NewPrice, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
     </Grid>
 </local:AddRowViewBase>
 

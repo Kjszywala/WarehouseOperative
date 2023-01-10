@@ -42,12 +42,12 @@
         <Label Content="Actual Quantity: " Margin="10,10,10,10" Grid.Row="4"/>
         <Label Content="Actual Price: " Margin="10,10,10,10" Grid.Row="5"/>
         <Label Content="Discount: " Margin="10,10,10,10" Grid.Row="6"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="0" Text="{Binding Path=Title, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="1" Text="{Binding Path=Notes, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=ProductName, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="3" Text="{Binding Path=ProductCode, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="4" Text="{Binding Path=ActualQuantity, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="5" Text="{Binding Path=ActualPrice, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="6" Text="{Binding Path=Discount, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="0" Text="{Binding Path=Title, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="1" Text="{Binding Path=Notes, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=ProductName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="3" Text="{Binding Path=ProductCode, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="4" Text="{Binding Path=ActualQuantity, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="5" Text="{Binding Path=ActualPrice, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="6" Text="{Binding Path=Discount, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
     </Grid>
 </local:AddRowViewBase>

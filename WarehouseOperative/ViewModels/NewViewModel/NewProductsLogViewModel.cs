@@ -1,14 +1,16 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using System;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Input;
 using WarehouseOperative.Helpers;
 using WarehouseOperative.Models.DatabaseEntities;
+using WarehouseOperative.Models.Validators;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewProductsLogViewModel : AddRowViewModel<ProductLogs>
+    public class NewProductsLogViewModel : AddRowViewModel<ProductLogs>, IDataErrorInfo
     {
         #region Properties
         public DateTime LogsDate
@@ -71,7 +73,24 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 }
             }
         }
-       
+        public string Error => string.Empty;
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case nameof(ProductLogDescription):
+                        return StringValidator.IsLenghtCorrect(ProductLogDescription, 255);
+                    case nameof(OldPrice):
+                        return DecimalValidator.IsNotNegative(OldPrice);
+                    case nameof(NewPrice):
+                        return DecimalValidator.IsNotNegative(NewPrice);
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
         #endregion
 
         #region Constructor

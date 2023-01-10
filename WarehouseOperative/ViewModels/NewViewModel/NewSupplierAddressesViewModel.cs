@@ -1,12 +1,14 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using System;
+using System.ComponentModel;
 using System.Windows;
 using WarehouseOperative.Models.DatabaseEntities;
+using WarehouseOperative.Models.Validators;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewSupplierAddressesViewModel: AddRowViewModel<SupplierAddresses>
+    public class NewSupplierAddressesViewModel: AddRowViewModel<SupplierAddresses>, IDataErrorInfo
     {
         #region Constructor
 
@@ -121,6 +123,32 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 {
                     Item.HomePage = value;
                     OnPropertyChanged(() => HomePage);
+                }
+            }
+        }
+        public string Error => string.Empty;
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case nameof(StreetName):
+                        return StringValidator.IsLenghtCorrect(StreetName, 255);
+                    case nameof(PostCode):
+                        return StringValidator.IsLenghtCorrect(PostCode, 20);
+                    case nameof(City):
+                        return StringValidator.IsLenghtCorrect(City, 50);
+                    case nameof(Country):
+                        return StringValidator.IsLenghtCorrect(Country, 50);
+                    case nameof(Phone):
+                        return StringValidator.IsLenghtCorrect(Phone, 50);
+                    case nameof(Fax):
+                        return StringValidator.IsLenghtCorrect(Fax, 50);
+                    case nameof(HomePage):
+                        return StringValidator.IsLenghtCorrect(HomePage, 50);
+                    default:
+                        return string.Empty;
                 }
             }
         }

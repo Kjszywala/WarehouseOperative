@@ -2,10 +2,12 @@
 using System;
 using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.ViewModels.Abstract;
+using System.ComponentModel;
+using WarehouseOperative.Models.Validators;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewShipperViewModel : AddRowViewModel<Shippers>
+    public class NewShipperViewModel : AddRowViewModel<Shippers>, IDataErrorInfo
     {
         #region Properties
         public string CompanyName
@@ -38,6 +40,23 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 }
             }
         }
+        public string Error => string.Empty;
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case nameof(CompanyName):
+                        return StringValidator.IsLenghtCorrect(CompanyName, 255);
+                    case nameof(Phone):
+                        return StringValidator.IsLenghtCorrect(Phone, 50);
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+        #endregion
 
         #region Constructor
         public NewShipperViewModel()
@@ -49,6 +68,8 @@ namespace WarehouseOperative.ViewModels.NewViewModel
             };
         }
         #endregion
+
+        #region Methods
 
         public override void Save()
         {
@@ -62,6 +83,7 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 MessageBox.Show(e.Message);
             }
         }
+
         #endregion
 
     }
