@@ -75,12 +75,7 @@ namespace WarehouseOperative.ViewModels.AllViewModel
 
         protected override void Sort()
         {
-            if (string.IsNullOrEmpty(SearchText))
-            {
-                MessageBox.Show("Search box is empty!", "Status");
-                return;
-            }
-            switch (SearchField)
+            switch (SortField)
             {
                 case "Order Id":
                     List = new ObservableCollection<OrdersForAllView>(SortDescending ?

@@ -18,6 +18,7 @@
     <None Remove="Views\Content\Icons\closebookmark.png" />
     <None Remove="Views\Content\Icons\cubes.png" />
     <None Remove="Views\Content\Icons\customer.png" />
+    <None Remove="Views\Content\Icons\customerreport.png" />
     <None Remove="Views\Content\Icons\customers.png" />
     <None Remove="Views\Content\Icons\delete.png" />
     <None Remove="Views\Content\Icons\edit.png" />
@@ -38,7 +39,9 @@
     <None Remove="Views\Content\Icons\preview.png" />
     <None Remove="Views\Content\Icons\print.png" />
     <None Remove="Views\Content\Icons\product.png" />
+    <None Remove="Views\Content\Icons\productreport.png" />
     <None Remove="Views\Content\Icons\products.png" />
+    <None Remove="Views\Content\Icons\profitreport.png" />
     <None Remove="Views\Content\Icons\refreshbookmark.png" />
     <None Remove="Views\Content\Icons\removeall.png" />
     <None Remove="Views\Content\Icons\restore2.png" />
@@ -94,6 +97,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\customer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\customerreport.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\customers.png">
@@ -156,7 +162,13 @@
     <Resource Include="Views\Content\Icons\product.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Views\Content\Icons\productreport.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Views\Content\Icons\products.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\profitreport.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Views\Content\Icons\refreshbookmark.png">

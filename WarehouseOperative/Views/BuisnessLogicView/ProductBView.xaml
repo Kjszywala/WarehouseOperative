@@ -9,7 +9,7 @@
     <UserControl.Resources>
         <ResourceDictionary Source="/Views/BookmarksResources.xaml"/>
     </UserControl.Resources>
-    <Grid VerticalAlignment="Center">
+    <Grid VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
@@ -18,7 +18,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -38,5 +38,8 @@
         <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5" HorizontalContentAlignment="Center" Content="{Binding BestSeller}"/>
         <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" HorizontalContentAlignment="Center" Content="Latest Added Product:"/>
         <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" HorizontalContentAlignment="Center" Content="{Binding LatestAdded}"/>
+        <StackPanel Grid.ColumnSpan="3" Grid.Row="7" Height="auto">
+            
+        </StackPanel>
     </Grid>
 </UserControl>

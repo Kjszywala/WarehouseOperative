@@ -16,6 +16,9 @@
     <DataTemplate DataType="{x:Type vm:ProductBViewModel}">
         <vw:ProductBView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:CustomerBViewModel}">
+        <vw:CustomerBView/>
+    </DataTemplate>
     <DataTemplate DataType="{x:Type vmm:AllProductsViewModel}">
         <vww:AllProductsView/>
     </DataTemplate>
