@@ -41,7 +41,7 @@
         <Label Content="{Binding EmployeeAnnualLeaves}" Margin="145,10,10,10" Grid.Row="7"/>
         <TextBox Margin="150,10,107,10" Grid.Row="0" Text="{Binding Path=FirstName, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Margin="150,10,107,10" Grid.Row="1" Text="{Binding Path=LastName, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=Email, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Margin="150,10,107,10" Grid.Row="2" Text="{Binding Path=Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
         <TextBox Margin="150,10,107,10" Grid.Row="3" Text="{Binding Path=Phone, UpdateSourceTrigger=PropertyChanged}"/>
         <DatePicker Margin="150,10,107,10" Grid.Row="4" SelectedDate="{Binding HireDate, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Margin="150,10,107,10" Grid.Row="5" Text="{Binding Path=JobTitle, UpdateSourceTrigger=PropertyChanged}"/>

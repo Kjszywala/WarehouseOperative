@@ -1,15 +1,17 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.Models.EntitiesForView;
+using WarehouseOperative.Models.Validators;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewOrderPositionViewModel : AddRowViewModel<OrdersPositions>
+    public class NewOrderPositionViewModel : AddRowViewModel<OrdersPositions>, IDataErrorInfo
     {
         #region Properties
 
@@ -108,6 +110,24 @@ namespace WarehouseOperative.ViewModels.NewViewModel
                 Value = item.ProductName
             }).ToList();
             Messenger.Default.Register<Orders>(this, GetOrder);
+        }
+
+        public string Error => string.Empty;
+
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case nameof(Price):
+                        return DecimalValidator.IsNotNegative(Price);
+                    case nameof(Quantity):
+                        return DecimalValidator.IsNotNegative(Quantity);
+                    default:
+                        return string.Empty;
+                }
+            }
         }
 
         #endregion

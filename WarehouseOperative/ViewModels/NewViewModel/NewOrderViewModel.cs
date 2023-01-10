@@ -1,15 +1,17 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using WarehouseOperative.Models.DatabaseEntities;
 using WarehouseOperative.Models.EntitiesForView;
+using WarehouseOperative.Models.Validators;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewOrderViewModel : AddRowViewModel<Orders>
+    public class NewOrderViewModel : AddRowViewModel<Orders>, IDataErrorInfo
     {
         #region Properties
         public int? CustomerId
@@ -105,6 +107,24 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         public List<ComboBoxKeyAndValue> EmployeesList { get; set; }
         public List<ComboBoxKeyAndValue> ShippersList { get; set; }
         public string CustomerDetails { get; set; }
+
+        public string Error => string.Empty;
+
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case nameof(PricePaid):
+                        return DecimalValidator.IsNotNegative(PricePaid);
+                    case nameof(Discount):
+                        return DecimalValidator.IsNotNegative(Discount);
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
 
         #endregion
 

@@ -1,12 +1,14 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using System;
+using System.ComponentModel;
 using System.Windows;
 using WarehouseOperative.Models.DatabaseEntities;
+using WarehouseOperative.Models.Validators;
 using WarehouseOperative.ViewModels.Abstract;
 
 namespace WarehouseOperative.ViewModels.NewViewModel
 {
-    public class NewEmployeeViewModel : AddRowViewModel<Employees>
+    public class NewEmployeeViewModel : AddRowViewModel<Employees>, IDataErrorInfo
     {
         #region Constructor
         public NewEmployeeViewModel()
@@ -152,6 +154,25 @@ namespace WarehouseOperative.ViewModels.NewViewModel
         }
         public string EmployeeAnnualLeaves { get; set; }
 
+        public string CustomerDetails { get; set; }
+
+        public string Error => string.Empty;
+
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case nameof(Email):
+                        return StringValidator.EmailCheck(Email);
+                    case nameof(FirstName):
+                        return StringValidator.IsLenghtCorrect(FirstName);
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
         #endregion
 
         #region Methods
